@@ -1,0 +1,259 @@
+mysql -u root -pmysql
+show databases;
+show tables;
+describe **tableName**;
+
+CREATE DATABASE db_name;
+CREATE TABLE example ( id smallint unsigned not null auto_increment, name varchar(20) not null, constraint pk_example primary key (id) );
+INSERT INTO example ( id, name ) VALUES ( null, 'Sample data' );
+
+
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+
+CREATE DATABASE dbname;
+USE dbname;
+CREATE TABLE tablename ( id smallint unsigned not null auto_increment, name varchar(20) not null, constraint pk_example primary key (id) );
+INSERT INTO tablename ( id, name ) VALUES ( null, 'Sample data' );
+
+
+mysql -u username -p < example.sql
+
+// DELETE MYSQL TABLES AND DATABASES
+DROP TABLE tablename;
+DROP DATABASE dbname;
+
+// DELETE MYSQL USERS
+SELECT user FROM mysql.user GROUP BY user;
+DELETE FROM mysql.user WHERE user = 'username';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------
+CREATE TABLE members (
+    member_id INT AUTO_INCREMENT,
+    name VARCHAR(100),
+    PRIMARY KEY (member_id)
+);
+ 
+CREATE TABLE committees (
+    committee_id INT AUTO_INCREMENT,
+    name VARCHAR(100),
+    PRIMARY KEY (committee_id)
+);
+---------------------------------------------------------
+INSERT INTO members(name)
+VALUES('John'),('Jane'),('Mary'),('David'),('Amelia');
+ 
+INSERT INTO committees(name)
+VALUES('John'),('Mary'),('Amelia'),('Joe');
+---------------------------------------------------------
+select * from members.members m join members.committees;
+member_id, name, committee_id, name
+'1','John','1','John'
+'1','John','2','Mary'
+'1','John','3','Amelia'
+'1','John','4','Joe'
+'2','Jane','1','John'
+'2','Jane','2','Mary'
+'2','Jane','3','Amelia'
+'2','Jane','4','Joe'
+'3','Mary','1','John'
+'3','Mary','2','Mary'
+'3','Mary','3','Amelia'
+'3','Mary','4','Joe'
+'4','David','1','John'
+'4','David','2','Mary'
+'4','David','3','Amelia'
+'4','David','4','Joe'
+'5','Amelia','1','John'
+'5','Amelia','2','Mary'
+'5','Amelia','3','Amelia'
+'5','Amelia','4','Joe'
+---------------------------------------------------------------------------------------
+select * from members.members m join members.committees c on m.name = c.name;
+'1','John','1','John'
+'3','Mary','2','Mary'
+'5','Amelia','3','Amelia'
+---------------------------------------------------------------------------------------
+select * from members.members m inner join members.committees c using (name);
+'John','1','1'
+'Mary','3','2'
+'Amelia','5','3'
+---------------------------------------------------------------------------------------
+select * from members.members m left join members.committees c using (name);
+name, member_id, committee_id
+'John','1','1'
+'Mary','3','2'
+'Amelia','5','3'
+'Jane','2',NULL
+'David','4',NULL
+---------------------------------------------------------------------------------------
+select * from members.members m right join members.committees c using (name);
+name, committee_id, member_id
+'John','1','1'
+'Mary','2','3'
+'Amelia','3','5'
+'Joe','4',NULL
+---------------------------------------------------------------------------------------
+select * from members.members m right join members.committees c using (name) where m.member_id is not null;
+'John','1','1'
+'Mary','2','3'
+'Amelia','3','5'
+---------------------------------------------------------------------------------------
+// MySQL CROSS JOIN clause
+//Unlike the inner join, left join, and right join, the cross join clause does not have a join condition. The right join makes a Cartesian product of rows from the joined tables. The cross join combines each row from the first table with every row from the right table to make the result set.
+select * from members.members m cross join members.committees;
+member_id, name, committee_id, name
+'1','John','1','John'
+'1','John','2','Mary'
+'1','John','3','Amelia'
+'1','John','4','Joe'
+'2','Jane','1','John'
+'2','Jane','2','Mary'
+'2','Jane','3','Amelia'
+'2','Jane','4','Joe'
+'3','Mary','1','John'
+'3','Mary','2','Mary'
+'3','Mary','3','Amelia'
+'3','Mary','4','Joe'
+'4','David','1','John'
+'4','David','2','Mary'
+'4','David','3','Amelia'
+'4','David','4','Joe'
+'5','Amelia','1','John'
+'5','Amelia','2','Mary'
+'5','Amelia','3','Amelia'
+'5','Amelia','4','Joe'
+
+
+---------------------------------------------------------------------------------------
+use classicmodels;
+select status, count(*) as count from orders group by status;
+status, count
+'Shipped','303'
+'Resolved','4'
+'Cancelled','6'
+'On Hold','4'
+'Disputed','3'
+'In Process','6'
+
+
+---------------------------------------------------------------------------------------
+use classicmodels;
+select 
+	status, 
+	SUM(quantityOrdered * priceEach) as amount 
+from orders
+inner join orderdetails using (orderNumber)
+group by status;
+
+'Shipped','8865094.64'
+'Resolved','134235.88'
+'Cancelled','238854.18'
+'On Hold','169575.61'
+'Disputed','61158.78'
+'In Process','135271.52'
+
+
+---------------------------------------------------------------------------------------
+SELECT 
+    orderNumber,
+    SUM(quantityOrdered * priceEach) AS total
+FROM
+    orderdetails
+GROUP BY 
+    orderNumber;
+---------------------------------------------------------------------------------------
+SELECT 
+    YEAR(orderDate) AS year,
+    SUM(quantityOrdered * priceEach) AS total
+FROM
+    orders
+INNER JOIN orderdetails 
+    USING (orderNumber)
+WHERE
+    status = 'Shipped'
+GROUP BY 
+    YEAR(orderDate);
+
+year, total
+'2003','3223095.80'
+'2004','4300602.99'
+'2005','1341395.85'
+
+
+---------------------------------------------------------------------------------------
+SELECT 
+    YEAR(orderDate) AS year,
+    SUM(quantityOrdered * priceEach) AS total
+FROM
+    orders
+INNER JOIN orderdetails 
+    USING (orderNumber)
+WHERE
+    status = 'Shipped'
+GROUP BY 
+    year
+HAVING 
+    year > 2003;
+
+
+'2004','4300602.99'
+'2005','1341395.85'
+
+---------------------------------------------------------------------------------------
+use classicmodels;
+
+SELECT 
+    YEAR(o.orderDate) AS year, 
+    COUNT(o.orderNumber) as count,
+	SUM(d.quantityOrdered * d.priceEach) as total
+FROM
+    orders o
+INNER JOIN 
+	orderdetails d
+USING 
+	(orderNumber)
+GROUP BY 
+    year
+ORDER BY
+    year DESC;
+
+
+'2005','523','1770936.71'
+'2004','1421','4515905.51'
+'2003','1052','3317348.39'
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+

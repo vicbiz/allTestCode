@@ -1,0 +1,39 @@
+ng new my-app
+cd my-app
+ng serve   -or-  npm start   -or-  yarn start
+
+
+// Create Component
+ng generate component componentName 
+ng g c componentName
+
+// add to Router App
+import { HomeComponent } from './home/home.component';
+import { ListComponent } from './list/list.component';
+import { AboutComponent } from './about/about.component';
+
+
+const routes: Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'list', component: ListComponent},
+  { path: 'about', component: AboutComponent},
+];
+
+
+
+//Build PROD
+ng build --prod
+
+npm i g lite-server
+
+cd dist/my-app
+lite-server
+
+
+
+
+
+
+
+
+
