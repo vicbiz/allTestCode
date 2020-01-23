@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Just Redux</title>
+</head>
+
+<body>
+	<h1 id="number">0</h1>
+	<button id="increment">+</button>
+	<button id="decrement">-</button>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.6.0/redux.js"></script>
+
+	<script type="text/javascript">
+
+	const elNumber = document.getElementById("number");
+	const btnIncrement = document.getElementById("increment");
+	const btnDecrement = document.getElementById("decrement");
+
+	const increment = (diff) => ({ type: 'INCREMENT', diff: diff });
+	const decrement = (diff) => ({ type: 'DECREMENT', diff: diff });
+
+	const initialState = {
+		number: 0
+	}
+
+	// Reducer
+	const counter = (state = initialState, action) => {
+		console.log("action",action.type);
+		switch(action.type){
+			case 'INCREMENT':
+				return {
+					number: state.number + action.diff
+				};
+			case 'DECREMENT':
+				return {
+					number: state.number - action.diff
+				};
+			default:
+				return state;
+		}
+	}
+
+	const { createStore } = Redux;
+	const store = createStore(counter);
+
+	const render = () => {
+		elNumber.innerText = store.getState().number;
+		console.log("got number from store");
+	}
+
+	store.subscribe(render);
+
+	render();
+
+	btnIncrement.addEventListener('click', () => {
+		store.dispatch(increment(10));
+	})
+
+	btnDecrement.addEventListener('click', () => {
+		store.dispatch(decrement(5));
+	})
+
+	</script>
+</body>
+</html>

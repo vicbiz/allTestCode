@@ -1,0 +1,4 @@
+// Extra JS for Hot Fox
+$(document).ready(function(){
+
+});

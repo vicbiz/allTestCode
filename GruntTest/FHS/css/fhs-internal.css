@@ -1,0 +1,1262 @@
+
+
+body.CLIENTview #global-header { background: none repeat scroll 0 0 #333333; padding: 14px 0;}
+body.CLIENTview #mainContentBlock { background: url("../images/data/bg-01.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);}
+body.CLIENTview #flyOutCloseBtn { background: none; color: #333333; cursor: pointer; display: inline-block; float: right; font-size: 20px; font-weight: 100; left: 263px; padding: 5px 8px 4px; position: absolute; top: 0;}
+
+#global-header {height: 110px; padding: 14px 0; }
+#global-header .headerLogo{display: inline-block; position: relative; top: 7px; }
+
+#topHeadWelcome, #topHeadNav, #topHeadWelcome a {color:#ffffff}
+#topHeadWelcome {margin: 10px 0;}
+#topHeadWelcome a{text-decoration: underline;}
+
+
+
+/* NAVIGATION ************************************************************************/
+nav {display: inline-block;float: right;position: relative;top: 13px;left: 0;}
+nav a{color:#ffffff;text-transform: uppercase;}
+nav a:hover,nav a:focus{color:#ffffff;text-decoration: none;}
+nav ul > li {float: left;list-style: none;}
+
+nav > ul > li{display: inline-block;position: relative;cursor: pointer;}
+nav > ul > li:hover{position: relative;z-index: 2000;}
+
+nav > ul > li:hover, nav > ul > li:hover > a{}
+nav > ul > li, nav > ul > li > a{padding: 0 6px 10px 6px;}
+nav > ul > li > div.submenu{display: none;background: #cccccc;border-radius: 6px;padding: 10px;width : 250px;}
+nav > ul > li:hover > div.submenu{display: block;position: absolute;top: 100%;left: -50px;z-index: 1000;}
+
+nav > ul div.submenu{ padding-top: 5px;}
+
+nav > ul div.submenu > ul{padding: 2px;display: inline-block;}
+nav > ul div.submenu > ul > li,nav > ul div.submenu > ul > li > a{font-size: 14px;}
+
+nav > ul div.submenu > ul > li{width: 225px;}
+nav > ul div.submenu > ul > li:hover{background: #663366;}
+
+nav > ul div.submenu > ul > li > a{display: block;padding: 5px 10px;}
+nav > ul div.submenu > ul > li > a:hover{color:#ffffff;}
+
+nav > ul div.submenu > ul > li,nav > ul div.submenu > ul > li > a {font-size: 14px;}
+nav > ul div.submenu > ul > li:hover{}
+
+nav > ul div.submenu ul li{margin: 2px 0}
+
+nav > ul div.submenu > ul > li:hover > a{}
+nav div.submenu > ul > li > div.submenu,nav div.submenu > ul > li > a + div.submenu {display: none;}
+nav div.submenu > ul > li:hover div.submenu,nav div.submenu > ul > li:hover a + div.submenu {display: block;position: absolute;top: -2px;left: 75%;z-index: 1000;}
+nav li:hover{position: relative;z-index: 2000;}
+nav > ul > li > div.submenu a {color:#000000;}
+
+.caret {border-bottom-color: #FFFFFF;border-top-color: #FFFFFF;margin-left: 10px;}
+nav > ul > li > ul .caret{border-bottom-color: #000000;border-top-color: #000000;}
+nav > ul > li > ul a:hover .caret{border-bottom-color: #FFFFFF;border-top-color: #FFFFFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* evaluation Page *************************************************************/
+#evaluationForm form{margin-bottom: 50px;}
+#evaluationForm #statusText{ margin: 12px 0 0 0;}
+#evaluationForm #topInfoBlock{ padding: 14px 0;}
+#evaluationForm #contentHeader{ padding-top: 30px;}
+#evaluationForm #contentHeader h1{ padding-top: 20px;}
+#evaluationForm #assetInfoLine{margin: 10px 0 10px;}
+#evaluationForm .fieldcontain{ margin-top:20px; margin-bottom:20px;}
+#evaluationForm .labelLeft{ display: inline-block; position: relative; top: 6px; white-space: nowrap; }
+#evaluationForm #selectEvalType .icons{ top:-4px}
+#evaluationForm .pickList .pickList_list { border: none; width: 426px; min-height: 220px;}
+#evaluationForm .pickList .pickList_list .pickList_listItem{ margin-bottom: 10px;}
+#evaluationForm .pickList .pickList_list{ border: 2px solid #BDC3C7; border-radius: 6px 6px 6px 6px; box-shadow: none; color: #34495E; height: 41px; padding: 8px 12px; transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s; }
+#evaluationForm .pickList .pickList_controlsContainer{ padding: 33px 50px 20px;}
+#evaluationForm .pickList .pickList_listLabel{text-align: left;}
+#evaluationForm .pickList{ display: inline-block !important;}
+#evaluationForm .pickListErrorMsg{padding-left:10px;}
+#evaluationForm .pickListBlock {margin-bottom: 30px;}
+#evaluationForm .dropdown-menu li{ text-align: left; }
+#evaluationForm .error{ border: 1px solid #FF0000;}
+#evaluationForm .errorMsg{ color:#ff0000 !important; }
+#evaluationForm #includeEES{ float: right; width:270px; }
+#evaluationForm .blockLabel{ margin: 40px 0 30px; padding: 20px 0;}
+#evaluationForm #createAssignments .col-md-4{ padding: 0 !important;}
+#evaluationForm #helRequiredField{ color:#ff0000; padding-top:30px;}
+#evaluationForm .noSpaceCol{ width:30%; float:left; display: inline-block}
+#evaluationForm .col-left{display: inline-block; margin-right: 6px; }
+#evaluationForm .col-right{width:70%;display: inline-block}
+#evaluationForm .col-sm-12{ margin-top: 20px; margin-bottom: 20px;}
+#evaluationForm #selectEvalType{padding-bottom: 0; padding-left: 0;}
+#evaluationForm #selectEvalType .radio.col-sm-4{padding-left: 0;}
+#evaluationForm #selectEvalType .displayInputValue.evaluationType{left: -10px;}
+#evaluationForm #createAssignments .labelLeft{top:-16px;}
+#evaluationForm #submitButtons .btn{ margin: 30px 0 30px 30px; padding: 15px 80px; text-transform: uppercase; }
+#evaluationForm #submitButtons input{width: 300px;}
+#evaluationForm .evaluationTypeError{color:#ff0000;}
+#evaluationForm #viewAssetNotesLink{ float: right; font-size: 16px; position: relative; top: 42px;}
+#evaluationForm .outedEvaluatorList{display: inline-block; padding-left: 20px; padding-top: 10px;}
+#evaluationForm .outedEvaluatorList .outedEvaluator{margin: 0 10px; cursor: pointer}
+#evaluationForm .outedEvaluatorList .outedEvaluator:hover{color: #78d2db;}
+#evaluationForm .outedEvaluatorList.disabled{color: #cccccc;}
+
+#evaluationForm #competitive{margin-top: 20px;}
+#evaluationForm #cpNumberSelect button#compSetNumber{width: 80px;}
+#evaluationForm #compSetReviewerSelector{ display: inline-block; width: 250px;margin-right: 10px;margin-left: 13px;}
+
+
+#evalMerge #contentHeader h1{padding:20px 0 10px 0;}
+#evalMerge #contentHeader{padding:20px 0;}
+#evalMerge .inputLabel{display: inline-block; margin: 0 0 10px; top: 9px;}
+#evalMerge .evalMergeNameField{display: block; width: 400px;}
+#evalMerge .row{margin: 20px 0;}
+#evalMerge .paneRow{margin: 0; padding: 20px 0;}
+#evalMerge .btnCancel{margin-right: 20px;}
+
+.scoreOverallblock {display: inline-block;width: 210px;}
+.scoreOverallblock .scoreOverall{display: inline-block;line-height: 1; margin: 0;}
+.scoreRefreshOverall{display: inline-block;height: 100px;padding: 40px 0 0 10px;position: absolute;width: 50px;}
+.scoreSectionWrap {padding: 0 0 0 45px;}
+.scoreSectionWrap div{padding: 4px 0;}
+.scoreSectionWrap .scoreSectionblock {display: inline-block;}
+.scoreSectionWrap .scoreSectionblock .scoreSection{background: #ffffff;margin-bottom: 3px;padding: 4px 12px;}
+.scoreSectionWrap .scoreRefreshSection{display: inline-block;padding: 19px 0 0 10px;position: absolute;width: 50px;}
+
+.scoreOverallHeader{margin-top: 50px;margin-bottom: 10px; padding-bottom: 10px;}
+.refreshOverallScore{display: inline-block; position: relative; top:45px;}
+.scoreOverallTitleBlock{margin-bottom: 10px;}
+.overallScoreBlock{background:#663366;padding: 20px 0 10px;}
+.overallScoreBlock p{text-align: center; color:#ffffff; padding: 0; line-height: 1}
+.overallScoreBlock .overallTitle{text-transform: uppercase;}
+.overallScoreBlock .overallScore{}
+.overallScoreBlock .overallRatio{}
+.scoreOverallContent { padding: 50px 0; margin-bottom:50px; border: 1px solid #cccccc;}
+.scoreOverallContent .scoreOverall3Blocks{margin-bottom: 10px;}
+.scoreOverallContent .scoreOverallBlock{padding: 10px 20px;}
+.scoreOverallContent .tableContentTitle{display: inline-block;position: relative;top: 30px;z-index: 1;}
+/*.scoreOverallContent .scoreOverallBlockTitle{display: inline-block;}*/
+.scoreOverallContent .helpIcon {color: #78D2DB;cursor: pointer;font-size: 14px;margin-left: 5px;position: relative;top: -2px;}
+.blockFirst{padding-right: 0;}
+.blockLast{padding-left: 0;}
+
+
+
+.displayInputValue{border: 1px solid #CCCCCC;display: inline-block;padding: 10px;width: 400px; color:#cccccc; min-height: 40px;}
+.displayInputValue.evaluationInstructions{padding-bottom: 300px;}
+.displayInputValue.evaluationType{position:relative; left:-25px;}
+#evaluationForm #createAssignments .labelLeft.showValueOnly{top:0;}
+#evaluationForm #createAssignments .displayInputValue{width:260px;}
+#evaluationForm #shopNumber{width: 150px;}
+#evaluationForm #shopNumberSelect button#shopNumber{width: 80px;}
+
+#assetManageForm, .tableFilterDropDown{ display: inline-block; margin-bottom: 10px; }
+#assetManageForm .typeahead.dropdown-menu{z-index: 1002;}
+
+#assetManageForm .assetManageFormTxt,.assetManageFormSelect,.assetManageFormInput{display: inline-block;margin-right: 10px;position: relative;float:left;}
+#assetManageForm .assetManageFormTxt{top: 10px;}
+#assetManageForm .assetManageFormSelect{}
+#assetManageForm .assetManageFormInput{margin-bottom: 0;display: none;}
+#assetManageForm .assetManageFormInput #assetNameList{height: 45px;}
+#assetManageForm #search, .searchForm{ padding: 13px 30px 10px; position: relative;}
+
+#assetManageForm button#assetType {background: #ffffff;border: 2px solid #BDC3C7;color:#999999;}
+#assetManageForm button#assetType .caret {border-bottom-color: #BDC3C7;border-top-color: #BDC3C7;}
+#ratingReportsAssetHistory #downloadReport{float: right;}
+
+#userManageForm{display: inline-block;}
+#userManageForm span{float: left;margin-right: 10px;}
+#userManageForm .userManageFormTxt{position: relative;top: 10px;}
+
+
+.mergeTextItalic{font-style: italic;}
+.dropdown-menu.typeahead{z-index:1002;}
+
+ul {padding: 0;list-style: none outside none;}
+ul li {margin: 10px 0;}
+
+
+
+/******************************************************************/
+/*                          Client Page                           */
+/******************************************************************/
+
+body.CLIENTview #global-header{border-bottom:10px solid #906E94; height:140px;}
+#clientApp #clientLeftMenu{background: #DEDEDE; min-height: 1500px; padding: 0;}
+#clientApp #clientLeftMenu .leftMenuList{padding: 0 10px; margin: 0;}
+#clientApp #clientLeftMenu .leftMenuList.selected{background: #878787; color:#ffffff; padding: 10px;}
+#clientApp #clientLeftMenu .leftMenuList span{font-size: 14px; display: inline-block;}
+#clientApp #clientLeftMenu .leftMenuList .leftMenuText{width: 95%}
+#clientApp #clientLeftMenu .leftMenuList .leftMenuText a{color:#333333;font-size: 13px; text-transform: uppercase;}
+#clientApp #clientLeftMenu .leftMenuList .leftMenuText a:hover, #clientApp .clientSubMenu ul li a:hover{text-decoration: underline;}
+#clientApp #clientLeftMenu .leftMenuList.selected .leftMenuText a, #clientApp .clientSubMenu ul li a{color:#ffffff;}
+#clientApp .clientSubMenu.topSlideIn{background: #535353; border-left:10px solid #7B7A7A; padding: 10px 20px; color:#ffffff; height: 370px; overflow: scroll !important; overflow-x: hidden !important; display: none;}
+
+#clientApp .clientSubMenu.leftSlideIn{background: #EAEAEA; padding: 10px 0; color:#ffffff; display: none;}
+#clientApp .clientSubMenu.leftSlideIn li{ padding: 3px 20px; margin: 0;}
+#clientApp .clientSubMenu.leftSlideIn li a{ color:#333333;}
+
+#clientApp #clientLeftMenu .active{ background: #906E94;}
+#clientApp #clientLeftMenu .leftMenuList.active .leftMenuMore, #clientApp #clientLeftMenu .leftMenuList.active .leftMenuText a, #clientApp #clientLeftMenu .active a{ color:#ffffff;}
+#clientApp .clientSubMenu.leftSlideIn .subMenuBlock{margin: 0;}
+
+#clientApp #clientLeftMenu .allReportLeftMenu{ background: #A0A0A0; padding-top:10px; padding-bottom:10px;}
+#clientApp #clientLeftMenu .allReportLeftMenu.active{ background: #906E94;}
+#clientApp #clientLeftMenu .allReportLeftMenu .leftMenuText a{ color:#ffffff;}
+
+#clientApp #clientLeftMenu #salesNameBlock, #clientApp #clientLeftMenu #salesContact{padding:10px; color:#ffffff;}
+#clientApp #clientLeftMenu #salesNameBlock p, #clientApp #clientLeftMenu #salesContact p{margin: 0;line-height: 20px;}
+#clientApp #clientLeftMenu #salesNameBlock{background: #878787;  border-bottom: 1px solid #999999;}
+#clientApp #clientLeftMenu #salesContact{background: #878787}
+#clientApp #clientLeftMenu #salesNameBlock .salesTitle{font-size:17px;}
+#clientApp #clientLeftMenu #salesContact p a{font-size: 14px; color:#ffffff}
+
+#clientApp #clientLeftMenuBlock{min-height: 500px;}
+
+
+
+#leftMenuBottomBlock{margin-top: 100px;}
+#leftMenuBottomBlock #leftPromoBlock{margin-bottom: 30px; border: 1px solid #dedede; min-height: 70px;position: relative;}
+#leftMenuBottomBlock #leftPromoBlock img{max-width: 248px;}
+
+#clientApp .clientTopMenuBlock{ border-bottom: 1px solid #eeeeee;}
+#clientApp .clientTopDropdownMenu{display: inline-block; margin: 0 0 20px 0; padding: 0; position: relative; top: 10px;}
+#clientApp .clientTopDropdownMenu a{display: inline-block; position: relative; top: 1px;}
+#clientApp .clientTopDropdownMenu .btn-group.select{margin: 0 10px 2px;}
+#clientApp .clientTopDropdownMenu #clientAccessible{margin: 0 5px 0 14px;position: relative; top: 1px;}
+#clientApp .clientOverallHeader {margin-top: 30px;margin-bottom: 30px;}
+#clientApp .clientPageHeaderEvaluationTitle {margin-top:10px;}
+#clientApp .clientTopIconGroup{display: inline-block;float: right;padding: 3px 5px 4px;position: relative;top: 0;}
+
+.reportModuleWrap {padding-right: 0;}
+.reportModule {border: 1px solid #eeeeee; margin-bottom: 20px; margin-right: 10px; padding: 10px; min-height: 450px;}
+.reportModule .moduleTitle{margin: 0 0 30px 0;}
+.reportModule .fui-question{font-size: 14px; cursor: pointer; color: #78D2DB; margin-left: 8px;}
+.reportModule .commingSoon{text-align: center;}
+.reportModule .moduleData.bigNumbers{text-align: center;}
+.reportModule .bigNumbers{margin-top:100px; color:#55BDCA; font-size: 7em;}
+.reportModule .percent{font-size: 0.5em;}
+
+.reportModule .plusLink{position: absolute; right: 20px; width: 100%; height: 0;}
+.reportModule .plusLink a{display: inline-block; float: right; left: 10px; position: relative; top: -67px;}
+
+
+#cpAnalysisContent .reportModule .plusLink{position: relative; right: 0px; width: 100%; height: 0;}
+#cpAnalysisContent .reportModule .plusLink.rankDetail{top:56px;}
+
+
+.reportModule .dataTables_wrapper, .reportModule table.dataTable{clear: none;}
+.reportModule #overallScore.sideBySide{padding-top: 34px;display: block;}
+/*.reportModule #overallScore.sideBySide .rbd{border-right: 1px solid #cccccc}*/
+.rbd{border-right: 1px solid #cccccc}
+.reportModule.fullWidth{min-height: 320px; }
+.reportModule #overallScore.sideBySide div{text-align: center;}
+.reportModule #overallScore.sideBySide .scoreText{font-size: 1.3em; color:#999999}
+.reportModule #overallScore.sideBySide .bigNumber{text-align: center;color:#55BDCA; font-size: 7em;}
+
+#scoreDetailsTabBlock, .tabToggleBlock {position: relative; border-right: none;position: relative; top: 2px}
+#scoreDetailsTabBlock .tabMenu, .tabToggleBlock .tabMenu{background:#78D2DB;color:#ffffff; display: inline-block; position: relative;padding: 10px 20px;cursor:pointer; border:1px solid #cccccc; top:1px;}
+#scoreDetailsTabBlock .tabMenu.selected, .tabToggleBlock .tabMenu.selected{background: #ffffff; color:#333333; border-bottom: none;}
+#tabContentWrap{border:1px solid #cccccc;padding:10px; padding-top:20px; display: inline-block; margin-right: 10px; min-width:100%;}
+
+
+.reportModule .viewEEBlock{text-align: right; position: relative;margin-bottom: 20px;}
+.reportModule .fui-question.disabled,.reportModule .disabledTitle {color: #cccccc;cursor: default;}
+
+.reportModule .barGraphChart{width:100%;height:300px;}
+.reportModule .cpBarchart{width:100%;height:350px;}
+.reportModule .cpBarchart.graphSamll{margin-left: 36px !important; margin-top: 20px !important; width: 70%;}
+.reportModule .cpBrandBarchart.graphSamll{margin: 20px auto 50px; width: 70%;}
+
+
+.reportModule .dashboardModule svg{top:-50px !important;}
+.reportModule .morris-hover{top:60px !important;}
+
+.reportModuleWrap.barCharts.col-lg-3{width: 450px;}
+.reportModule .noDataServiceComparison{text-align: center; margin-top: 170px;}
+.reportModule .noAccountabilityData{color:#888888; font-size:16px; padding:20px 40px 0}
+.reportModule #overallScore.sideBySide .ratingTextModule{text-align: left;}
+.reportModule #overallScore1 .ratingTextModule{font-size: 14px; line-height: 24px; padding: 10px 20px 0 33px;}
+.reportModule #overallScore1 .noRatingMsgModule{font-size: 16px; line-height: 24px; padding: 10px 60px 0 60px;}
+.reportModule #overallScore1 .ratingTextModule .ratingTextModuleTitle{font-size:20px; text-align: left; margin-bottom: 3px;}
+.reportModule #overallScore1 .ratingTextModule  a{font-size: 11px;}
+
+.ratingIconWrap{display: inline-block; float: left; margin: 0px 25px 0 0; min-height: 140px;}
+
+
+.reportModule #overallScore1{background:#F4F4F4;}
+.reportModule #overallScore1,.reportModule #overallScore2 {padding: 30px 20px 20px 20px;}
+.reportModule #overallScore2 .bigNumber{color:#B4B4B4 !important;}
+.gsrpScoreBlock .reportModule .moduleTitle{margin-bottom: 0;}
+
+.reportModule .legend{ margin-top:20px; text-align: center;}
+.reportModule .legend .legendItem{ display: inline-block;margin-right: 10px;}
+.reportModule .legend .legendItem .squareBox{display: inline-block; height: 12px; margin-right: 10px; width: 12px;}
+
+
+.faqModule .moduleData{padding:0 20px 0 20px;}
+.faqModule .reportModule .faqList p{ line-height: 16px; margin-bottom: 20px;}
+.faqModule .reportModule .faqList a{ color:#999999; font-size:14px;}
+.faqModule .reportModule .faqList a:hover{ color:#333333;}
+.faqModule .reportModule .faqSeeAll{ font-size: 14px;}
+
+
+.reportModule .benchMarkBarGraphChart svg{ top:-20px !important; }
+.reportModule .benchMarkFlag{ text-align: center; position: absolute; width: 100%; margin-top: 40px;  }
+.reportModule .benchMarkFlag .bLeft{margin-right: 30px;}
+.reportModule .benchMarkFlag span span{display: inline-block; height: 12px; width: 12px; margin-right: 10px;}
+.reportModule .benchMarkFlag .box1{background: #B4B4B4;}
+.reportModule .benchMarkFlag .box2{background: #535353;}
+
+
+.scoreBoxWrap{padding-left: 0;}
+.scoreBox{background: #704675; color:#ffffff; padding: 20px; margin-top: 1px;}
+.execSummary .scoreBox{min-height: 126px;}
+.scoreBox .scoreBoxContent{display: inline-block; width: 100%;}
+.scoreBox .scoreBoxTitle{padding-top: 30px;}
+
+.scoreBox .scoreBoxNumber{text-align: center;}
+.scoreBox .scoreBoxNumber .bScores{font-size: 2.2em; margin-top: 7px;}
+.scoreBox .scoreBoxNumber #pbScore{font-size: 2em; margin-top: 9px;}
+
+#coreStandardPage .scoreBoxTitle{padding-top: 17px;}
+#coreStandardPage .scoreBox .scoreBoxNumber{text-align: right;}
+
+.contentBlock { margin-top: 20px; }
+.contentBlock p{ font-size: 0.9em; color:#333333; }
+.reportTitleBlock{ margin-top: 20px; margin-bottom: 20px;}
+
+.clientSelectOptions{ margin-bottom: 30px; padding-top: 30px;padding-bottom: 30px; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #EEEEEE;}
+.clientSelectOptions .selecDropdowns{display: inline-block; position: relative; margin-right: 10px; }
+
+#ytdSectionFacility.clientSelectOptions{margin-bottom: 0;}
+
+
+.clientSelectOptions .scoreBox, .eeReportPage .scoreBox{padding: 5px 0;margin-top: 10px;min-height: 62px;}
+.clientSelectOptions .scoreBox .scoreBoxTitle, .eeReportPage .scoreBox .scoreBoxTitle {padding-top: 20px;}
+.clientSelectOptions .YNTrackerScoreBox{padding: 10px 0}
+
+
+
+
+.hiddenColumn{display: none;}
+.checkboxServiceFacivity{display: inline-block; position: relative;top: 25px;z-index: 1;}
+.yesNoNaAnswer {color: #FFFFFF;display: inline-block;font-size: 14px;padding: 10px;text-align: center;width: 50px;}
+.yesNoNaAnswer.Yes{background: #4FBE35}
+.yesNoNaAnswer.No{background: #CF3C36}
+.yesNoNaAnswer.NA{background: #535353}
+.yesTxt{color: #4FBE35}
+.noTxt{color: #CF3C36}
+
+
+/*#selectClassification .dropdown-menu { width: 500px;}*/
+
+#eeColorChart{display: inline-block; float: right;margin-bottom: 20px;font-family: "Lato",Helvetica,Arial,sans-serif;}
+#emotionalTimelineChartModule #eeColorChart{display: inline-block; float: none;margin-bottom: 20px;}
+#emotionalTimelineChartModule .eeColorChartWrap, .eeTimelineChartKeyChartModule .eeColorChartWrap{text-align: center;}
+.eeTimelineChartKeyChartModule .eeColorChartWrap #eeColorChart{float: none; margin-bottom: 0;}
+
+#eeColorChart span{margin: 0 1px;}
+#eeColorChart .chartText{font-size: 11px;padding: 0 2px;position: relative;top: 7px;}
+.eeBox{display: inline-block;width: 30px;height: 30px;}
+.eeScore {display: inline-block; padding: 10px; color:#ffffff;}
+.colorBgTable .eeScore{display: table-cell;}
+
+.eeScoreNA{background: #9E9E9E !important;}
+
+.tableWrapBlock{margin-top: 30px; margin-bottom: 50px;}
+.tableWrapBlock .dataTables_wrapper{margin-top: 20px;}
+.sectionScoreBlock{ display: inline-block; float: right;}
+
+label.nowrap {white-space: nowrap}
+#create-asset h2, #edit-asset h2{margin: 30px 0 10px; }
+#create-asset .fieldcontain,#edit-asset .fieldcontain{margin-bottom: 10px; padding-left: 30px; }
+#create-asset .buttons, #edit-asset .buttons{margin: 30px 0 50px;padding-left: 54%;}
+#create-asset .buttons .btn, #edit-asset .buttons .btn{margin-left: 10px;}
+#create-asset label, #edit-asset label, #edit-user label, #create-user label {width: 150px; display: inline-block;}
+#create-asset input[type=text], #edit-asset input[type=text]{width: 50%; display: inline-block;}
+#edit-user input[type=text], #create-user input[type=text]{width: 300px; display: inline-block;}
+#create-user input[type=password]{width: 300px; display: inline-block;}
+
+#create-asset .leftSide, #edit-asset .leftSide{width: 60%; display: inline-block;}
+#create-asset .rightSide, #edit-asset .rightSide{width: 40%; display: inline-block;}
+#create-asset .rightSide, #edit-asset .rightSide{float: right;}
+#create-asset .leftSide input[type=text], #create-asset .leftSide input[type=url], #edit-asset .leftSide input[type=text], #edit-asset .leftSide input[type=url]{width: 70%; display: inline-block;}
+#create-asset .leftSide input[type=number], #edit-asset .leftSide input[type=number]{width: 30%; display: inline-block;}
+
+#create-asset .rightSide .fieldcontain, #edit-asset .rightSide .fieldcontain{padding-left: 0;}
+#create-asset #notes, #edit-asset #notes{height: 324px;}
+#create-asset #children_chosen, #edit-asset #children_chosen{width: 70% !important;}
+#create-asset #outedUsers_chosen, #edit-asset #outedUsers_chosen{width:100% !important;}
+
+#create-asset .dropdown-menu, #edit-asset .dropdown-menu{width: 350px; height: 200px; overflow: scroll;}
+#create-asset #ajaxMsg, #edit-asset #ajaxMsg{display: inline-block;}
+#create-asset #ajaxMsg.loading, #edit-asset #ajaxMsg.loading{color:#cccccc;}
+#create-asset #ajaxMsg.noData, #edit-asset #ajaxMsg.noData{color:#ff0000;}
+
+#assetGroupForm .fieldcontain{margin-bottom: 10px; padding-left: 0px; }
+#assetGroupForm label {margin-right: 30px; display: inline-block;}
+#assetGroupForm input[type=text]{width: 30%; display: inline-block;}
+#assetGroupForm input[type=checkbox]{margin-right: 10px; display: inline-block;}
+#assetGroupForm .buttons{width:900px; text-align: right; margin-top: 30px;}
+#assetGroupForm .buttons a{margin-right: 20px;}
+#assetGroupForm .select2-container{width: 900px !important;}
+#assetGroupForm #s2id_compSetReportYears{width: 470px !important;}
+#duplicateAssetGroupBtn{float: right;}
+
+
+
+
+#show-asset{margin-bottom: 50px;}
+#show-asset .labelText{font-weight: bold; margin-left: 30px; margin-right: 10px;}
+#createAsset, #createUser{display: inline-block;float: right;position: relative;top: -70px;}
+#archiveAssetLink {display: inline-block;float: right;position: relative;}
+
+#clientPhotos .filePanelWrap .thumbWrap{margin-bottom: 10px;}
+#clientPhotos .filePanelWrap .metaShortDescription{color:#999999;}
+#clientPhotos .filePanelWrap .thumbWrap img{max-height: 210px; max-width:280px;}
+#clientPhotos .filePanelWrap {background: none repeat scroll 0 0 #FFFFFF;border: medium none;float: left;margin: 10px;width: 300px;padding: 0 10px;min-height: 260px;}
+
+#attachments .attachIcon{position: relative;}
+
+.checkbox.disabled{color:#999999;}
+#clientApp .redact{text-decoration: none;text-shadow: none; color: #333333;}
+#clientApp table.dataTable td *{font-size:1em !important;}
+
+#noEvaluationMsgBlock{padding: 300px 0; text-align: center;}
+
+
+#edit-user .checkBoxGroup, #create-user .checkBoxGroup{padding-left: 160px;}
+#edit-user .checkBoxGroup input[type="checkbox"], #create-user .checkBoxGroup input[type="checkbox"]{margin-right: 10px;}
+#edit-user .fieldcontain, #create-user .fieldcontain{margin: 10px 0;}
+/*#edit-user #userName, #create-user #userName{width:583px;}*/
+#edit-user #editPasswordBtn, #create-user #editPasswordBtn{display: inline-block; margin-left: 9px; width:297px;}
+#edit-user #assets, #create-user #assets{width: 50%;}
+.chosen-container-multi .chosen-choices li.search-field input[type="text"]{height: auto !important;}
+.chosen-container-multi .chosen-choices{padding: 10px !important;}
+#edit-user fieldset.buttons, #create-user fieldset.buttons{text-align: right; width: 803px; margin: 20px 0}
+#edit-user fieldset.buttons a, #create-user fieldset.buttons a{text-transform: uppercase;}
+#edit-user fieldset.buttons input, #create-user fieldset.buttons input{margin-left: 20px}
+
+
+/* Contact us Modal */
+/*#contact{background: #f5f4f0;}*/
+#contact #contactTag{display: none;}
+#contactContent{padding-top: 0;line-height: 20px;}
+#contactContent h2{font-size: 20px;margin: 20px 0;text-transform: uppercase;}
+#contactContent a{color:#9476d7;}
+#contactContent a:hover{color:#9476d7;}
+#contactContent h3{font-size: 15px;}
+#contactContent p,#contactContent li,#contactContent a{font-size: 14px;}
+#contactContent .contact-left, #contactContent .contact-right{float: left; margin-left: 50px;width: 310px;}
+#contact .contact-topBlock{font-size: 14px;margin-bottom: 40px;width:240px;float: left;}
+#contact .ratingDistrict{font-size: 18px;font-weight: bold; margin-left: 30px;margin-bottom: 10px; clear:both;}
+#contactUsModal .modal-dialog, #contactUsModal .modal-content { width: 800px;}
+
+/*Just for Client Face Flexible Display*/
+body.CLIENTview{width: 100%;height: 100%;}
+body.CLIENTview .container{height: 100%;max-width: 100%;}
+html.fhsApp {height: 86%;min-height: 86%;}
+body.CLIENTview #clientApp #clientLeftMenu {height: 100%;min-height: 100%;}
+body.CLIENTview #global-footer {margin-top: 0; line-height: 23px; color: #777777;}
+body.CLIENTview #mainContent{display: table;table-layout: fixed;border-spacing: 0;width: 100%;}
+body.CLIENTview #clientLeftMenu{display: table-cell;float: none;height: 100%;max-width: 250px;padding: 0;vertical-align: top;width: 250px;}
+body.CLIENTview #contentBlock{display: table-cell;float: none;height: 100%;vertical-align: top;width: 100%;padding-bottom: 50px;}
+body.CLIENTview .dataTable{width: 100% !important;}
+body.CLIENTview .dataTable th{text-transform: uppercase;}
+body.CLIENTview #serviceComparison.disabled{text-align: center;}
+body.CLIENTview .topHeadNavWrap{padding-top: 20px;}
+body.CLIENTview #serviceComparisonContent #serviceComparison{height: 450px; width:55%;margin: 100px auto 100px;}
+
+
+body#appInternal-App #global-footer {color: #777777; z-index: 0;}
+
+.barHoverDataWrap{position: absolute;}
+.barHoverData{background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #CCCCCC;display: inline-block;left: 122px;padding: 2px 5px;position: relative;top: -8px;}
+
+#submittedEvaluationsReport {margin: 20px;}
+#submittedEvaluationsReport .selectDateWrap{margin-bottom:30px; }
+#submittedEvaluationsReport .selectDateWrap .selectDateMsg {margin-bottom: 10px; display: inline-block;}
+#submittedEvaluationsReport .selectDateWrap .selectDateRow {margin: 10px 0;}
+#submittedEvaluationsReport .selectDateWrap .selectDateRow label, .selectDateRow label{width:110px; display: inline-block;}
+#submittedEvaluationsReport .selectDateWrap .selectDateRow input{width:200px; display: inline-block;}
+#submittedEvaluationsReport .selectDateWrap .selectDateRow .calIcon, #generateReportForm .selectDateRow .calIcon{position: relative;left:-40px;}
+#submittedEvaluationsReport .selectDateWrap .buttons, #generateReportForm .buttons{margin: 20px 0;}
+#submittedEvaluationsReport .tableWrap{display: inline-block;margin-bottom: 50px; width: 100%;}
+#submittedEvaluationsReport #assetGroupScoresReportFormWrap #s2id_assetGroupId{display: inline-block; margin-bottom: 10px;}
+#submittedEvaluationsReport .blankSpace {width:117px; display:inline-block;}
+#submittedEvaluationsReport #sectionOrClassification{ border:1px solid #ccc; padding: 20px; border-radius: 5px; margin:20px 0;}
+#submittedEvaluationsReport #secOrClassWrap{margin: 10px 0;}
+
+#submittedEvaluationsReport label[for="evaluationTypeId"] {
+    position: relative;top:8px;
+}
+
+
+#internalReportPage {min-height: 700px;}
+#internalReportPage #generateReport1, #internalReportPage #generateReport2 {display: none;}
+#assetScoreTrackingPage #selectReportTypeWrap, #assetScoreTrackingPage #generateReport1 {display: none;}
+
+
+#generateReportForm label{width:200px; display: inline-block;}
+#generateReportForm .selectDateRow{margin-bottom: 10px;}
+#generateReportForm .selectDateRow .select{margin-bottom: 0px;}
+#generateReportForm .selectDateRow input{width:200px; display: inline-block;}
+#generateReportForm .selectDateWrap .selectDateRow input{width:216px; display: inline-block;}
+#generateReportForm .errorMsg{color:#ff0000; margin-top: 20px; margin-left: 200px;}
+#generateReportForm #assetIdTypeAhead{ width:220px;}
+.errorMsg{color:#ff0000;}
+
+
+#ratingLink .colSideBySide{ width: 45%; display: inline-block;}
+#ratingLink label{width:200px; display: inline-block;}
+#ratingLink #lastAggregatedDate{ padding-left: 735px;}
+#ratingLink .downloadLogoURLLabel{ width: auto; margin-right: 20px;}
+#ratingLink #downloadLogoURL{ display: inline-block; width: 500px;}
+#ratingLink .buttons .btn {
+    width: 100px;
+}
+.fullWidth { display: block !important; width: 100% !important;}
+.underline{ border-bottom: 1px solid #cccccc; padding-bottom: 10px; margin-bottom: 20px;}
+
+
+
+
+
+
+#assetScoreTrackingPage #internalReportTitleWrap {border-top: 1px solid #CCCCCC;margin: 60px 0 20px;padding: 40px 0 0;text-align: center;}
+#assetScoreTrackingPage .internalReportTitle1{font-size: 32px;}
+#assetScoreTrackingPage .internalReportTitle2{font-size: 20px; margin-top: 10px;}
+#assetScoreTrackingPage #downloadReport {position: relative;float: right;top: -50px;}
+
+#assetScoreTrackingPageTables {padding:10px 20px;}
+#assetScoreTrackingPageTables .internalReportTable td{ text-align: center;}
+#assetScoreTrackingPageTables .internalReportTable td:first-child{text-align: left}
+
+#generateReportForm .error {color:#ff0000;}
+
+.signNegative{color:#ff0000;}
+.signPositive{color:#00A201;}
+
+
+body.ALLview #global-footer{margin-top: 50px;}
+
+.editListPage label, .optionDropdownChoose label{width:170px;}
+.editListPage #btnReorderSections{float:right; padding-left: 10px;}
+
+.optionCheckboxChoose{margin: 20px 0;}
+.optionCheckboxChoose input{margin-right: 5px;}
+.optionCheckboxChoose label{margin-right: 20px;}
+
+
+#reorderList li{display: inline-block;vertical-align:middle;width:150px;margin-right: 10px;border:1px solid #ccc;border-radius: 6px;height: 170px;padding: 10px;overflow: hidden;background: #ffffff;}
+#reorderList li.changedSeq{border-color:#663366;border-width: 2px;}
+#reorderList li .qIdx{font-size: 20px;font-weight: bold;}
+#reorderList li .orgQidex{font-weight: normal;color: #cccccc;display: none;}
+#reorderList li .qText{height: 100px;margin-top: 10px;overflow: scroll;}
+
+.btnGroup{margin: 10px 0;text-align: right;padding-right: 44px;}
+
+#edit-standard table,#edit-standard .fieldcontain {margin-bottom: 20px;}
+#edit-standard table td{text-align: center;}
+#edit-standard form{width: 70%;margin:0 auto}
+#edit-standard #archiveStandardLink{float: right; position: relative; top: 35px;}
+#edit-standard #archiveStandardLink a{margin-right: 10px;}
+
+
+#accountabilityTopInfo p{margin-bottom: 0; font-size:1.1em;}
+#accountabilityTopInfo .detailTitles{font-weight: bold;padding-left: 10px;}
+#accountabilityDetailsTable{margin:20px 0 50px;}
+
+#ytdDetailTopInfo p{margin-bottom: 0;}
+#ytdDetailTopInfo .detailTitles{font-weight: bold;padding-left: 0px;}
+#ytdDetailTopInfo{margin:20px 0 50px;}
+
+
+
+.scoreBox.oneBox{display: inline-block;float: right;}
+.scoreBox.oneBox span{display: inline-block;}
+.scoreBox.oneBox span:first-child{margin-right: 10px;position: relative; top: -2px;}
+#accountabilityHistorySectionHeader h2{display: inline-block;margin-right: 20px;}
+#showAllAssignment{display: inline-block;}
+#assignBtn{float: right;top:-10px;position: relative;}
+.assignEmailInput{display:inline-block; width: 490px;margin-right: 10px;}
+
+#CreateAssignmentsPage #createAssignment .dataTables_filter{position: relative;top:-55px;}
+#CreateAssignmentsPage #createAssignment #assignBtn{position: relative;top:26px;z-index: 1;}
+#CreateAssignmentsPage .viewAllAccountabilityLink{position: relative;top:20px;}
+#CreateAssignmentsPage .assignTypeColumn .assignOption{margin-right: 10px;}
+#CreateAssignmentsPage .clientSelectOptions .scoreBox .scoreBoxTitle, #missedStandardsPage .clientSelectOptions .scoreBox .scoreBoxTitle{
+padding-top:0;min-height: 53px;text-align: center;vertical-align: middle;display: inline-block;display: -webkit-inline-box;display: -moz-inline-box;display: -ms-inline-flexbox;display: -webkit-inline-flex;
+display: inline-flex;-webkit-box-pack: center;-moz-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-ms-flex-align: center;-webkit-align-items: center;
+align-items: center;-webkit-box-orient: vertical;-moz-box-orient: vertical;}
+
+.emailResolutionPageTitle{border-top:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;margin-top:20px; padding: 20px 0 10px}
+#modalResolveBtn{left: 381px; padding: 11px 20px; position: relative; top: 80px;}
+
+.successUpdating{font-size:24px; color:#139453;}
+#assignmentTableOpenWrap, #assignmentTableResolvedWrap{display: none;}
+
+
+.fRight{float:right;}
+.fLeft{float:left;}
+.aLeft{text-align: left !important;}
+.aCenter{text-align: center !important;;}
+.aRight{text-align: right !important;;}
+
+#ratingBenchmarkEditPage .benchmarEditkRowWrap{margin-top: 30px;}
+#ratingBenchmarkEditPage .benchmarEditkRow{margin: 10px 0 10px 40px;}
+#ratingBenchmarkEditPage .colSideBySide{display: inline-block;}
+#ratingBenchmarkEditPage .benchmarEditkRow div input{width:150px; display: inline-block;}
+#ratingBenchmarkEditPage .benchmarEditkRow .col-left{width: 190px; font-size: 14px;}
+#ratingBenchmarkEditPage .benchmarEditkRow .col-right{width: 250px;}
+#ratingBenchmarkEditPage #saveBtn{margin: 20px 0 20px 720px; width: 150px;}
+
+.sideBySide{display: inline-block;}
+#homeDropboxWrap .sideBySide{margin-right: 20px; position: relative; top: 32px; z-index: 1;}
+#homeDropboxWrap.publishedFilter .sideBySide{top: 0px; z-index: 1;}
+.submittedEval #homeDropboxWrap .sideBySide{margin-right: 10px; position: relative; top:40px;}
+.submittedEval #homeDropboxWrap .sideBySide .dropdown-menu{max-height: 400px; overflow: scroll;}
+#homeDropboxWrap h2{position: relative; top: 10px;}
+
+
+#assignedFinalRatingOnlyWrap{position: relative; top:24px;}
+#assignedFinalRatingOnlyWrap label, #approvedOnlyWrap label{ margin-left: 5px;}
+#fullWidthTable, .fullWidthTable{margin: 0px 20px 150px;}
+
+#ratingCalculatorTableWrap{margin: 0 30px;}
+#ratingCalculatorTableWrap table td{text-align: center;}
+#ratingCalculatorTableWrap table td:nth-child(1){text-align: left;}
+
+/*.calculatorMenuWrap #downloadReport { display: inline-block; left: 640px; position: relative; top: -50px; }*/
+
+.reportViewTrackingMenuWrap {position: relative;top: -10px;}
+.reportViewTrackingMenuWrap .sideBySide {display: inline-block;position: relative;margin: 0 0 0 14px;top: 35px; z-index: 1}
+.reportViewTrackingMenuWrap .downloadReportBtn {float: right;position: relative;right: 30px;top: 10px;}
+.reportViewTrackingMenuWrap .userName{width:100px;}
+.reportViewTrackingMenuWrap .userEmail{width:150px;}
+
+#create-user .brandDropdown .fhsSelect {width: 350px;}
+#create-user .brandDropdown button {width: 400px;}
+#create-user .brandDropdown label, #create-user .assetDropdown label {width: 160px;}
+
+
+.smallScoreWrap{ background: none repeat scroll 0 0 #663366; color: #FFFFFF; font-size: 16px; margin-top: 3px; padding: 8px 10px; text-align: center; }
+.smallScoreWrap .smallScore{ margin:0 10px; }
+.smallScoreWrap .wideScore{ display: block; text-align: center; }
+
+.scaffold-list .pagination{margin-left: 10px;}
+.scaffold-list .pagination span, .pagination a{margin-right: 10px;}
+
+/*body#appInternal-App > .container > .container{min-height: 1000px;}*/
+
+#assetIntg{min-height: 700px;}
+#assetIntg .sideBySide{width: 49%; display: inline-block; border: 1px solid #cccccc; margin-bottom: 20px; padding: 20px;margin-right: 10px;}
+#assetIntegration #search.form-control{ display: inline-block; position: relative; top: -4px; width: 200px;}
+#assetIntegration #selectType #submit{position: relative; top:-5px; margin-left: 20px;}
+#assetIntegration #selectType .btn-group.select{margin-right: 20px;}
+
+
+#assetIntegrationSelect .select2-container{width:80% !important;}
+#assetIntegrationSelect label{width: 100px;}
+#assetIntegrationSelect .searchBtn{position: relative;top: -6px;}
+
+#assetIntegration .previewMerge .pRemain, #assetIntegration .previewMerge .pArchived{min-height: 60px;}
+#assetIntegration .pRemain{color: #139453;}
+#assetIntegration .pArchived{color:#ff0000;}
+
+
+#assetIntegration #selectType, #assetIntegration #selectAssets .assetListWrap{ margin-bottom: 20px; }
+.assetIntegrationMsg{margin-bottom: 20px; color:#139453;}
+#assetIntg .dataTables_length label{width: auto !important;}
+
+.manageUsers {margin: 20px 20px 100px 20px;}
+.manageUsers .btn{text-transform: uppercase;}
+.manageUsers .message{color:#ff0000;}
+.manageUsers form #title{left: 3px; position: relative;}
+.manageUsers .createNewUserReportBtn{margin-left: 10px;}
+.manageUsers #outedAssets_chosen{display: inline-block; width: 627px !important;}
+.manageUsers #userList_wrapper{margin-top: 0;position: relative;top: -40px;}
+
+.inputHelpTxt p{font-size: 14px; margin:0px; line-height: 18px;}
+
+.inputHelpTxt{display: none; padding: 3px 0 0 20px; position: absolute; color:#999999;}
+.helpPopup{padding: 14px 0 0 20px; position: absolute; color:#78d2db; cursor: pointer;}
+.helpPopup.passwordHelp{padding: 1px 0 0 10px; }
+.checkBoxGroup #generatePassword{position: relative; top:1px; margin-top: 0 !important;}
+
+.editPassword .message{color:#ff0000;}
+
+#ytdTopLeft{}
+#ytdTopRight{position: relative;text-align: right;top: 15px;}
+.ytdCheckBoxWrap{display: inline-block;;background: #eeeeee;}
+.ytdCheckBoxWrap .legendService,.ytdCheckBoxWrap .legendFacility{border-radius: 50%;display: inline-block;margin: 0 10px;height: 11px;width: 12px;}
+.legendText{width: 80px; display: inline-block; text-align: left;}
+.legendServiceCheckbox{background-color: #949494;display: inline-block;font-size: 20px;padding: 10px 15px;cursor: pointer;}
+
+.legendServiceCheckbox.disabled {cursor: not-allowed;}
+.fui-check{color:#AAAAAA;}
+.fui-check.checked{color:#ffffff;}
+
+.ui-datepicker .ui-datepicker-header {background-color: #64c9d3;}
+.ui-datepicker:before {border-color: transparent transparent #64c9d3;}
+.ui-datepicker {border: 7px solid #64c9d3;}
+.ui-datepicker .ui-datepicker-prev:hover,
+.ui-datepicker .ui-datepicker-next:hover {background-color: #56AEB8;}
+.ui-datepicker {box-shadow: none;}
+
+.capitalized {text-transform: capitalize;}
+.assetParent{color:#DB1E6B;}
+
+.standardForm label{min-width: 140px;}
+.standardForm .radioSelect{display: inline-block;}
+.standardForm .radioSelect p{margin: 0;}
+.standardForm #multiple-choice{margin-top: 50px;}
+.standardForm ul.dropdown-menu{width: 400px;}
+
+#edit-standard, #new-standard{min-height: 1650px;}
+#edit-standard #core, #new-standard #core{width: 400px;}
+
+#myEvalRadio span{margin-right: 20px;}
+#myEvalRadio span input{margin-right: 10px;}
+
+#edit-permission label{display: inline-block; width:100px; float: left;}
+#edit-permission input{display: inline-block; width: 50%;}
+#edit-permission .fieldcontain{margin-bottom: 10px;}
+#edit-permission .buttons,#show-help .buttons {padding-left: 100px;}
+#edit-permission .buttons input,#show-help .buttons .btn{width:100px; margin-right: 10px;}
+#edit-permission .fieldcontain select{margin-bottom: 10px; width:50%; padding-top: 20px;}
+#edit-permission .fieldcontain select option{padding: 5px 10px}
+
+#show-help .fieldcontain, #edit-help .fieldcontain, #create-help .fieldcontain{margin-bottom: 10px;}
+#show-help .fieldcontain *{font-size: 14px;}
+#show-help .labels{width: 100px; display: inline-block; float: left;}
+#show-help .helpTextData{width: 50%; display: inline-block; padding: 10px;  border: 2px solid #eeeeee; border-radius: 6px; margin-bottom: 10px;}
+
+#edit-help label, #create-help label{width: 100px; display: inline-block;}
+
+#questionListForm #standardExcelDownloadLink{display: inline-block;margin-left: 34px;}
+
+.btnRight{float: right;}
+
+#show-help .helpTextData ul, #helpPage #helpContent ul {list-style-type: disc;list-style-position: inside;padding-left: 30px;}
+#show-help .helpTextData ol, #show-help .helpTextData ol, #helpPage #helpContent ol, #helpPage #helpContent ol {list-style-type: decimal;list-style-position: inside;padding-left: 30px;}
+#show-help .helpTextData ul ul, #show-help .helpTextData ol ul, #helpPage #helpContent ul ul, #helpPage #helpContent ol ul {list-style-type: circle;list-style-position: inside;margin-left: 15px;padding-left: 30px;}
+#show-help .helpTextData ol ol, #show-help .helpTextData  ul ol, #helpPage #helpContent ol ol, #helpPage #helpContent  ul ol {list-style-type: lower-latin;list-style-position: inside;margin-left: 15px;padding-left: 30px;}
+
+#edit-promo .fieldcontain input{width:1000px;}
+#edit-promo .fieldcontain .sTitle{font-size: 18px;}
+#edit-promo .fieldcontain input.longInput{width:600px;}
+#edit-promo .standardForm .lableInputSideBySide{display: inline-block;}
+#edit-promo .standardForm label.lableInputSideBySide{min-width: 100px;}
+#edit-promo .fieldcontain{margin-bottom: 10px;}
+#edit-promo .btnGroup {text-align: left;}
+#edit-promo .btnGroup .btn {width: 100px;}
+
+#promoTopRightBtnWrap{text-align: center; margin-top: 20px;}
+#promoTopRightBtnWrap img{width:100%; max-width: 1000px;}
+
+#plaqueFormPage{ max-width: 1170px; margin: 0 auto;}
+#plaqueFormPage label{width:130px;}
+#plaqueFormPage input{display: inline-block;}
+#plaqueFormPage input.inputLong{width:753px;}
+#plaqueFormPage input.inputMid{width:500px;}
+#plaqueFormPage input.inputShort{width:300px;margin-right: 40px;}
+#plaqueFormPage input.inputSShort {width: 220px;margin-bottom: 10px;}
+#plaqueFormPage textarea{width:870px;}
+#plaqueFormPage .col-sm-12{margin: 10px 0;padding-left: 0px;}
+#plaqueFormPage .subTitle{font-family: "Roboto Slab",serif;font-size: 16px;font-weight: bold;margin: 30px 0 20px;}
+#plaqueFormPage input.submit{margin: 20px 0 20px 0px;width: 100px;text-transform: uppercase;}
+
+/*.keyColor0{background: #700072;}*/
+/*.keyColor1{background: #188BE5;}*/
+.keyColor0{background: #188BE5;}
+.keyColor1{background: #700072;}
+.eeHelpTxt{margin: 20px 0 10px;font-size: 14px;}
+
+
+
+.fullWidthContent{margin: 0 auto; padding: 0px 40px 10px;max-width: 1170px;}
+.fullWidthContent .clientTopIconGroup{float: right;position: relative;top: -10px;}
+
+#compSelectHeaderBlock{background: #EEEEEE;padding:10px 20px;border-bottom: 1px solid #cccccc;position: relative;}
+#compSelectHeaderBlock #compSetListMsg{margin: 10px 0 0 10px;}
+#compSelectHeaderBlock .compSetListItem{display: inline-block;padding: 10px;margin: 10px 5px 10px;background: #D3E9F2;cursor: pointer;}
+#compSelectHeaderBlock .compSetListItem .compSet{margin-right: 10px;}
+#compSelectHeaderBlock .compSetListItem.active{background: #ffffff;}
+#compSelectHeaderBlock .compSetListItem .compStatus{padding: 5px 10px;color: #ffffff;border-radius: 5px;font-size: 12px;}
+#compSelectHeaderBlock .compSetListItem .compStatus{display:inline-block;min-width:50px;text-align: center;}
+#compSelectHeaderBlock .compSetListItem .compStatus.NEW{background: #21A234;}
+#compSelectHeaderBlock .compSetListItem .compStatus.INCOMPLETE{background: #F80010;}
+#compSelectHeaderBlock .compSetListItem .compStatus.SAVED{background: #6A6A6A;}
+#compSelectHeaderBlock .compSetListItem .compStatus.SUBMITTED{background: #ffffff;color: #000000;}
+#compSelectHeaderBlock .compSetListItem .compStatus.APPROVED{background: #ffffff;color: #54BFC8;}
+
+#selectCompetitorsContent{padding-top: 20px;}
+#selectCompetitorsContent #instuctionMsg{margin: 20px 0 20px 0;}
+#selectCompetitorsContent #instuctionMsg ul{list-style-type: disc;padding: 0 0 0 20px;}
+#selectCompetitorsContent #instuctionMsg ul li{font-size: 14px;color:#333333;margin: 0;}
+
+#selectCompetitorsContent .dataTables_length { left: 610px; width: 200px !important; }
+#selectCompetitorsContent #sectedBucketBlock{border: 1px solid #cccccc;padding: 20px 10px; background: #ffffff;width: 1090px !important;}
+
+#selectCompetitorsContent #sectedBucketBlock #btnGroup{float: right;}
+#selectCompetitorsContent #sectedBucketBlock #btnMsg{display: inline-block; margin-right: 10px; color:#78d2db;}
+
+#selectCompetitorsContent input[type="text"] {width: 200px;background: #fbfbfb;height: 30px;margin: 0 0 5px 6px;padding: 4px 10px;font-size: 14px;line-height: 1.428571429;color: #555555;vertical-align: middle;background-color: #ffffff;border: 1px solid #cccccc;border-radius: 4px;-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;}
+#selectedTable{width: 100%;}
+#selectedTable th{text-align: center;}
+#selectedTable th, #selectedTable td{width: 33.3%;border: 1px solid #ccc;padding: 10px;}
+#selectedTable .removeX{background: #54BFC8;padding: 4px 5px 0px 5px;margin-right: 5px;color: #ffffff;}
+#selectedTable .selectedPropName{ margin: 10px 0;}
+#selectedTable .selectedPropName .tooltip{background: none repeat scroll 0 0 #ffffff;background: none repeat scroll 0 0 #78d2db;color:#ffffff;border: 1px solid #cccccc;border-radius: 5px;margin: -34px 0 0 -49px;padding: 5px 10px;position: absolute;}
+#selectedTable td{vertical-align: top;}
+#cpAssetTable .selectCB{text-align: center;}
+#selectedBucket td{height: 100px;}
+#slotAvailMsg{margin-top: 20px;}
+#selectedBucket .removeX{cursor:pointer; display: inline-block;}
+#selectCompetitorsPage{margin-bottom: 40px;}
+#selectCompetitorsPage .sMsg{ color:#ff0000;}
+#selectCompetitorsPage .sGood {}
+#selectCompetitorsPage .sError{color:#ff0000;}
+#selectCompetitorsPage #cDetail{color:#ff0000; text-decoration: underline; font-style: italic;}
+/*#cpAssetTable_wrapper{top: -30px; position: relative;}*/
+#cpAssetTable_wrapper{position: static;}
+
+#cpSelectWrap{margin: 40px 0 0 0;}
+#cpSelectWrap #cpSelectHeader{z-index: 10;}
+#selectCompetitorsContent .cpH2{margin-bottom: 20px;}
+#cpDropboxWrap {position:absolute;}
+#cpDropboxWrap label{margin-right: 10px;}
+#readonlyCpName{display: inline-block; margin: 0 0 10px 10px;}
+
+
+#cpStatus{left: 400px; position: relative; top: -40px;}
+#cpStatus input{margin-left: 10px;}
+
+body.CLIENTview #cpAnalysisContent {margin: 20px auto;}
+#cpAnalysisContent .reportModule #overallScore2 {padding: 0px 20px 20px 20px;}
+#cpAnalysisContent .sideBySideWrap{display: inline-block;min-height: 100px;border-bottom: 1px solid #cccccc;margin-bottom: 40px;}
+#cpAnalysisContent .sideBySideWrap .moduleTitle{margin: 5px 0 0 0;}
+
+#cpSelector{position: absolute;padding: 7px 0 0 10px;}
+#cpAnalysisContent .sideBySideRight{padding: 0px 0 0 20px;}
+
+.cpRankLegend{margin-bottom: 20px;}
+.cpBarchart, .cpBrandBarchart {height: 450px;margin: 0 0 100px;}
+
+.cpRankCircle{color: #ffffff;font-size: 47px;position: relative;text-align: center;top: 6px;}
+.cpRankCircleWrap{margin: 0 20px 0 10px;}
+.circle {width: 70px;height: 70px;-moz-border-radius: 35px;-webkit-border-radius: 35px;border-radius: 35px;}
+.rank1{background: #2AC347;}
+.cpRankTitle{font-size: 20px;}
+#cpSlideWrap{border:1px solid #eeeeee;padding: 0 !important;}
+#cpSlideHeader{padding: 15px 0 5px 20px;}
+#cpSlideTitle{display: inline-block;height: 40px;}
+#cpListOpenCloseWrap{display: inline-block;float: right;left: 10px;position: relative;top: -5px;}
+#cpListOpenCloseTxt{color: #78d2db;cursor: pointer;position: relative;top: -13px;}
+#cpListOpenClose{cursor: pointer;-moz-user-select: none;background: none repeat scroll 0 0 #bdc3c7;border: medium none;color: #ffffff;display: inline-block;font-size: 30px;line-height: 42px;margin-left: 10px;padding: 9px 12px 10px;position: relative;text-align: center;text-decoration: none;top: -10px;transition: all 0.25s linear 0s;width: 61px;}
+#cpSlideContent{padding: 10px;}
+#cpSlideListDiv{padding: 10px 20px;margin-bottom: 10px;display: inline-block;}
+#cpAnalysisContent .reportModule{min-height: 50px;padding: 10px 10px 0 10px;}
+#cpSlideListDiv li{margin: 0;width: 47%;display: inline-block;}
+#cpAnalysisContent .cpBarchart, .cpBrandBarchart, .corpBarchart{margin: 0 0 50px;}
+
+
+
+/*.CorporateReportLayout #clientLeftMenuBlock{border-top: 1px solid #dedede;}*/
+
+.CorporateReportLayout .cpTab{display: none;}
+.CorporateReportLayout .corpBarchart{width: 100% !important;}
+.CorporateReportLayout .cpEEScore{min-height: 80px !important;}
+
+.CorporateReportLayout .btnSelections{margin: 20px 0;}
+.CorporateReportLayout .btnSelections .btnClearMySelection{margin:0 30px 0 0;}
+
+.ratingHelpText{
+    /*color: #78d2db;  */
+    position: relative;  text-align: right;  top: -35px;}
+
+
+.bdrBottom{border-bottom: 1px solid #eeeeee;}
+.rankKey{display: inline-block;height: 13px;width: 13px;}
+.rankKeyTd{text-align: center; color:#ffffff;}
+.rankCell{color:#ffffff;}
+
+.rank1, .rankTd1, .rankTd2, .rankTd3{background: #2CBE43 !important;}
+.rank2, .rankTd4, .rankTd5, .rankTd6{background: #FFA400 !important;}
+.rank3, .rankTd7, .rankTd8, .rankTd9, .rankTd10, .rankTd11, .rankTd12, .rankTd13, .rankTd14, .rankTd15, .rankTd16, .rankTd17, .rankTd18, .rankTd19, .rankTd20{background: #ff0000 !important;}
+.rank4, .rankTdNA {background: #cccccc !important; color:#000000;}
+.rankTdNA .cpRankCircle{font-size: 27px; line-height: 75px; position: relative; top: -2px;}
+
+.cpClientRankTable th{font-size: 12px;}
+#cpHeader{margin: 20px 0 30px;}
+.cpCircleTextBlock{position: relative;top: 2px; margin-bottom: 20px;}
+.hideChart{height:0px !important;margin-bottom: 0px !important;overflow: hidden;}
+#cpOverallScore1{width: 95%;}
+.threeColDashboard{padding-top: 13px;}
+.cpMenu #salesNameBlock{margin-top: 300px;}
+.plusLink.rankDetail{position: relative;top: -10px;}
+.cpTblTtitle{font-size: 18px;margin-bottom: 10px;}
+#show-asset h2{margin: 30px 0 10px 0;}
+.assetViewTable {width: 500px;}
+.assetViewTable td{padding:10px;}
+.assetViewTable tr td:first-child{width:200px;}
+
+#sendEmailToUsersBtn{display: inline-block; position: relative; top: 20px; z-index: 10;}
+#unansweredQuestionList ul{margin-left: 10px;margin-top: 10px;}
+#unansweredQuestionList ul li {margin: 0;}
+#unansweredQuestionList #autoNAunansweredQ{text-align: right;}
+.assetDetailUserInfo{text-align: right;}
+#show-asset .gsrpStatus{display: inline-block; margin-right: 10px;}
+#create-asset .gsrpStatus, #edit-asset .gsrpStatus{display: inline-block;font-size: 14px;margin-right: 10px;}
+#show-asset .gsrpStatusHelp, #create-asset .gsrpStatusHelp, #edit-asset .gsrpStatusHelp, #assetGroupForm .helpIcon{color:#78d2db;position: relative; top: 0px; cursor: pointer;font-size: 16px;}
+#gsrpYears_chosen{width: 100% !important;}
+#gsrpOnlyLable{margin: 0 20px 0 5px;}
+
+#announceBar{background: none repeat scroll 0 0 #d3e9ef;  height: 48px;  margin: 5px; padding: 12px 10px 0; overflow: hidden;display: none;}
+#announceBar p{font-size: 15px;display: inline-block;}
+#announceBar a{font-style: italic; color:#333333;}
+#announceBar #announceBarClose{display: inline-block; float: right; cursor: pointer;position: absolute; right: 20px;}
+/*#announceBar #announceBarClose:hover{text-decoration: underline;}*/
+
+
+.assetGroupScoresSubmitWrap #downloadReport{display: inline-block; float: right;}
+
+
+.tdToolTip { font-size:14px; color:#ffffff; position: absolute; background: #88b7d5; border: 4px solid #c2e1f5; padding:10px;text-align: center;
+    display: block;
+    min-width: 500px;
+    max-width: 500px;
+    /*white-space: nowrap;*/
+}
+/*.tdToolTip:after, .arrow_box:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }*/
+/*.tdToolTip:after { border-color: rgba(136, 183, 213, 0); border-top-color: #88b7d5; border-width: 13px; margin-left: -13px; }*/
+/*.tdToolTip:before { border-color: rgba(194, 225, 245, 0); border-top-color: #c2e1f5; border-width: 10px; margin-left: -10px; }*/
+
+
+/*.tdToolTipArrow { font-size:14px; color:#ffffff; position: absolute; background: #88b7d5; border: 4px solid #c2e1f5; padding:10px; min-width: 100px;text-align: center; white-space: nowrap;}*/
+/*.tdToolTipArrow:after { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }*/
+/*.tdToolTipArrow:after { border-color: rgba(136, 183, 213, 0); border-top-color: #88b7d5; border-width: 13px; margin-left: -13px; }*/
+/*.tdToolTipArrow:before { border-color: rgba(194, 225, 245, 0); border-top-color: #c2e1f5; border-width: 10px; margin-left: -10px; }*/
+
+
+/*.tdToolTipMoveLeft:after {*/
+    /*border-width: 0;*/
+    /*margin-left: 0px !important;*/
+    /*left: 70%;*/
+/*}*/
+/*.tdToolTipMoveLeft:before {*/
+    /*border-width: 0;*/
+    /*margin-left: -3px !important;;*/
+    /*left: 70%;*/
+/*}*/
+.tdToolTip hr{height: 1px;margin: 5px 0; padding: 0;}
+
+.tdToolTipArrow{position: absolute;}
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(136, 183, 213, 0);
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #88b7d5;
+    /*border-top: 15px solid #ff0000;*/
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgba(136, 183, 213, 0);
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid rgba(136, 183, 213, 0);
+}
+
+
+
+#clientApp table.dataTable .tdToolTip { font-size:12px !important;}
+#ratingCalculatorCheckBoxOptions, #ratingReportsCheckBoxOptions, .tableCheckBoxOptions, .tableFilterCheckBoxWrap{display: inline-block;position: relative;top: 30px;z-index: 1;}
+#evalListCheckBoxOptions{display: inline-block;position: relative;top: 37px;z-index: 1;}
+#ratingCalculatorCheckBoxOptions label, #ratingReportsCheckBoxOptions label, .tableCheckBoxOptions label, #evalListCheckBoxOptions label{margin-right:20px;}
+#ratingCalculatorCheckBoxOptions input, #ratingReportsCheckBoxOptions input, .tableCheckBoxOptions input, #evalListCheckBoxOptions input{margin-right:3px;}
+#filterOptionsWrap #gsrp{margin: 0 5px 0 10px;}
+
+#evalCalculatorPage .evalNoteIcon{cursor: pointer;}
+#evalReportPage .evalNoteIcon{cursor: default;}
+#evalReportPage .evalNoteIcon.fui-chat{cursor: pointer;}
+.evalNoteIcon.fui-chat{color:#88b7d5}
+#evalNoteModal .btn.etcBtn{float: left; position: relative; top: 38px;}
+#evalNoteModal .evalTitle{font-weight: bold; }
+#evalNoteModal .form-control[disabled]{color: #333333;}
+
+.chosen-select{display: none;}
+#create-asset .form-control, #edit-asset .form-control, #create-asset .chosen-container-multi .chosen-choices, #edit-asset .chosen-container-multi .chosen-choices{border: 1px solid #bdc3c7 }
+#create-asset select.fhsSelect2, #edit-asset select.fhsSelect2{max-width: 460px; overflow: hidden;}
+#assetGroupSelectAsset #s2id_assets{width: 900px !important;}
+#assetGroupSelectAsset #s2id_assets .select2-choices{padding: 10px;}
+#archivedFilterChkbox{margin: 0 5px 0 20px;}
+#viewAssetRightSide{padding-top: 30px;padding-bottom: 30px}
+#assets_chosen{width:628px !important}
+
+#ratingReportsFilters{margin-bottom: 20px;}
+.tblCenter th, .tblCenter td{text-align: center;}
+/*th.aLeft, td.aLeft{text-align: left;}*/
+.titleDescription{font-size: 15px; font-family: "Lato",Helvetica,Arial,sans-serif; font-weight: 400; margin-top: 10px;}
+.pageContainer{min-height: 650px;}
+.smallTable{width: 1170px;margin: 0 auto;}
+
+.tableContainerWrap, #internalReportsList, #ratingReportIndexPage, #submittedEvaluationsReport{min-height: 600px; margin-bottom: 100px;}
+#ratingReportIndexPage a{text-transform: uppercase;}
+
+.loadingTableData{text-align: center; padding: 250px 0;}
+.WideBtn{width: 220px;}
+#evalCalculatorPage{padding-bottom: 100px;}
+#standardsPDFGenerator{min-height: 1100px;}
+#standardsPDFGenerator .chosen-container-multi{min-width: 500px; margin-bottom: 10px;}
+
+.fakeLink, .fakeLink:hover{color:#333333; text-decoration: none;}
+
+#publishingToolPage .dataTables_wrapper{margin-bottom: 50px;}
+#publishingToolPage .tableContentWrap{margin-bottom: 50px; padding-bottom: 50px;}
+#publishingToolPage .btnWrap{text-align: center;}
+
+#publishingToolPage #notifiableTable tr th:nth-child(2) {
+    width: 550px;
+}
+#publishingToolPage tr th, #publishingToolPage tr td:first-child, #publishingToolPage tr td:last-child {
+    text-align: center;
+}
+.processMsgBox{ display: none; background: none repeat scroll 0 0 #E3E3E3; border-bottom: 1px solid #333333; padding: 10px; position: fixed; text-align: center; z-index: 10000;width: 100%;}
+.processed td{color: #ff0000 !important;}
+.newAddedRow td{background: #F5FFE5 !important;}
+.disabledLabel{color:#cccccc;}
+
+.largeSizePopupWrap .modal-dialog{ width: 950px;}
+.largeSizePopupWrap .modal-content{ width: 100%;}
+.largeSizePopupWrap #popupContent{height: 455px;}
+.largeSizePopupWrap #popupNav{left: 710px; position: absolute; top: -50px;}
+.largeSizePopupWrap #popupNav span{margin-right: 10px; padding-left: 30px; padding-right: 30px;}
+.largeSizePopupWrap .modal-footer{height: 75px;}
+.largeSizePopupWrap button.close, .largeSizePopupWrap .modal-footer{display: none;}
+.largeSizePopupWrap #acknowledgeBtn{margin: 30px auto; width: 200px; display: block;}
+.dashboardHelpModal img{ width:100%;}
+.hContent{display: none;}
+#hEmbargoContent{height: 350px;}
+
+.eeQuestion{padding-bottom: 5px;}
+.eeQuestion .divider{width:50%; margin: 0px auto 10px; font-size: 20px;}
+
+/*.dataTable .tblCol0{width: 100px !important;}*/
+.eeReportPage h1{margin: 20px 0 10px;}
+.eeColorChartViewDetail{text-align: center; font-size: 11px; margin-top:5px;}
+
+#popupContent .current{display: block;}
+#popupContent .tipText{padding: 0 0 0 20px; margin-bottom: 10px;}
+
+
+span.eeScore { display: block; margin: 0 auto; text-align: center; width: 110px;}
+.eeText{cursor: pointer;}
+
+
+[tooltip]:before {position : absolute;content : attr(tooltip);opacity : 0;transition: all 0.15s ease;color:#ffffff;background: #78d2db;border-radius: 5px;}
+[tooltip]:hover:before {opacity : 1;margin-top: -35px;margin-left: -60px;padding:5px 10px;}
+[tooltip]:not([tooltip-persistent]):before {pointer-events: none;}
+
+#publishingToolPage #notifiableTable tr td:not(:nth-child(2)),
+#publishingToolPage #publishableTable tr td:not(:first-child){text-align: center;}
+
+#eeColorChartHelpImg{width: 100%;}
+#eeColorChartHelpImgPdf{width: 60%; margin-top: 40px;}
+
+.eeText span{float: right;}
+
+#regionFilter ul.dropdown-menu{width: 300px;}
+#completedEvaluationsPage #homeDropboxWrap .sideBySide{z-index: 2;}
+
+.noScroll{overflow: hidden;}
+#pageLoadingOverlay {position: fixed;top: 0;bottom: 0;left: 0;right: 0;-webkit-animation: loadingStart 3s 300ms linear 1 both;-moz-animation: loadingStart 3s 300ms linear 1 both;-o-animation: loadingStart 3s 300ms linear 1 both;animation: loadingStart 3s 300ms linear 1 both;background: rgba(0, 0, 0, 0.6);text-align: center;z-index: 99999;overflow: hidden;}
+#pageLoadingOverlay #loading {height: 57px;position: absolute;top: 50%;left: 50%;margin: -28px 0 0 -25px;color:#ffffff;text-align:center;}
+
+#pickListDataLoading{background: rgba(255, 255, 255, 0.8);height: 290px;padding-top: 148px;position: absolute;text-align: center;top: -15px;width: 1070px;z-index: 1004;}
+
+#pageLoadingOverlay{display: table;height: 100%;width: 100%;}
+#ajaxDataLoading{display: table-cell;vertical-align:middle;}
+#ajaxDataLoading span{text-align: center;z-index: 1004; color:#ffffff;}
+
+
+#subRegions_chosen{width: 550px !important;}
+
+#assetGroups_chosen{width: 470px !important;}
+#assetGroupInfoTable{width: auto;}
+#assetGroupViewPage #assetViewTable_wrapper, #assetGroupViewPage .assetDetailUserInfo, #assetGroupUserTable_wrapper{position: relative; top: -40px;}
+#assetGroupViewPage #sendEmailToUsersBtn{top:0; margin-bottom: 10px;}
+#assetGroupViewPage .dataTables_length, #assetGroupViewPage .dataTables_paginate{display: none;}
+#assetGroupViewPage .dataTables_info{float: right;}
+
+#assetGroupListBlock #assetGroupListFilter, #assetGroupViewPage #assetGroupViewAssetListFilter, .tableFilterWrap{display: inline-block; z-index: 10;position: relative;}
+#assetGroupListBlock #assetTable_wrapper{top:-30px;}
+
+#assetGroupListBlock  #assetGroupListFilter label{ width: 300px;}
+
+.tableHasFilter .dataTables_wrapper{
+    position: relative;
+    top:-40px;
+}
+
+
+#cpBacktoindex{float: left;font-size: 16px;  margin-top: 20px;}
+
+.corporateReportIndexTable thead th{font-size: 14px; font-weight: normal;}
+.corporateReportIndexTable thead th.bigFont{font-size: 16px; font-weight: bold; width: 30%;}
+.corporateReportIndexTable .groupPopIcon{color: #999999; cursor: pointer;}
+.corporateReportIndexTable .groupPopIcon:hover{color: #88b7d5;}
+.crIndexModuleTitle{font-weight: bold; margin-bottom: 10px;}
+.listIndented{margin-left: 20px;}
+.listIndented li{margin: 5px 0;}
+
+.barGraphLargeWrap .barInfo{display: inline-block; padding-left: 10px;}
+.barGraphLargeWrap .barInfo .negative{color:#ff0000;}
+.barGraphLargeWrap .barInfo .positive{color:#609E3B;}
+.barGraphLargeWrap {display: table;}
+.barGraphLargeWrap canvas, .barGraphLargeWrap .barInfo, .cpBarText1, .cpBarText2{display: table-cell; vertical-align: middle;}
+
+
+#clientApp #clientLeftMenu #m-corpindex{background: #878787; color:#ffffff; padding: 10px;}
+#clientApp #clientLeftMenu #m-corpindex a{color:#ffffff;}
+
+
+#cpDashboard .helpIcon{margin-right: 10px;}
+#cpDashboard .cpModuleTitleText,
+.cpSectionPage .cpModuleTitleText,
+.cpOverallPage .cpModuleTitleText,
+#cpListSER .cpModuleTitleText{font-family: "Lato",Helvetica,Arial,sans-serif; font-size: 14px; font-weight: 400;}
+
+#cpDashboard .reportModule{min-height: 0px;}
+#cpDashboard .cpAvgBarModule .cpBarText1{font-size:17px; width: 150px;}
+#cpDashboard .cpAvgBarModule .cpBarText2{font-size:30px; width: 150px; color:#47AFBE;}
+#cpDashboard .cpAvgBarModule .chart-key{text-align: left; margin: 0 0 0 300px;}
+
+.cpAvgToolText{line-height: 20px;}
+.cpRatingWrap{display: table; width: 95%;}
+.cpRatingCell{display: table-cell; vertical-align: top; text-align: center; }
+/*.cpRatingTextBlock{vertical-align: top;}*/
+.cpRatingIcon, .cpRatingTextBlock{display: inline-block;vertical-align: top; height: 150px;}
+.cpRatingIcon img{height: 117px; margin-right: 10px;}
+.cpRatingTextBig, .cpRatingTextSmall{display: inline-block; color:#47AFBE;}
+.cpRatingTextBig a:hover, .cpRatingTextSmall a:hover{text-decoration: none;}
+.cpRatingTextBig{font-size: 80px;}
+.cpRatingTextSmall{font-size: 14px;}
+
+.cpBreakdown .moduleData{padding-right: 15px;}
+.cpBreakdown .bgLightGray{display: table; width: 100%; height: 80px;}
+.cpBreakdown .col-md-4{padding-right: 0px;}
+.cpBreakdown .bigNumber{font-size: 30px; color:#47AFBE;}
+.cpBreakdown .colLeft, .cpBreakdown .colRight{display: table-cell; vertical-align: middle;}
+.cpBreakdown .colLeft{width: 59%;}
+.cpBreakdown .colRight{width: 39%;}
+
+.cpListingPage{min-height: 1000px;}
+.cpListingPage .assetType{text-transform: uppercase;}
+
+#cpSelectSection, #cpSelectClassification{margin: 10px 0 0;}
+.classSectionName{ font-size: 20px; font-weight: bold; padding-top: 20px; }
+
+.tooltipLink{color:#ffffff; text-decoration: underline;}
+.tooltipLink:hover{color:#B0F2F7;}
+
+.dropdwonLabel{font-size:16px;}
+
+
+/* Page Preloading Message */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    padding-top:20%;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.8);
+    color:#ffffff;
+    display: none;
+}
+
+.archivedAsset{color:#ff0000;}
+#subRegionHelp{position:absolute; width: 1030px; display: none;}
+#subRegionHelpText{position:relative; top:-42px; float:right; color:#999999;}
+
+#assetGroupNoteEdit{position: relative; width: 900px;}
+#assetGroupNoteEdit .fieldcontain{width: 300px; float: right;}
+#assetGroupNoteEdit .fieldcontain #notes{height: 160px;}
+
+.archiveModalLink{font-size: 14px;}
+
+.allLowerCase{text-transform: lowercase;}
+.archivedText{color:#ff0000;}
+
+#deleteAssetGroup{position: absolute;}
+#deleteAssetGroup a{position: relative;top: 40px;}
+
+#subRegionWrap .many-to-one.fhsSelect2{width: 70% !important;}
+
+#selectAssetGroupWrap #s2id_assetGroupId{ display: inline-block; margin: 0 0 10px; }
+
+.dotList { list-style: square; padding-left: 40px;}
+
+
+.CLIENTview .competitiveAnalysisModule{margin-bottom: 30px;}
+/*.CLIENTview .competitiveAnalysisModule .rankingBlock{ padding: 20px 0 10px 0;}*/
+/*.CLIENTview .competitiveAnalysisModule .circle {*/
+    /*border-radius: 50px;*/
+    /*height: 100px;*/
+    /*width: 100px;*/
+/*}*/
+/*.CLIENTview .competitiveAnalysisModule .rankingBlock .cpRankCircle{font-size: 66px;}*/
+/*.CLIENTview .competitiveAnalysisModule .rankingBlock .cpCircleTextBlock{font-size: 20px;}*/
+/*.CLIENTview .competitiveAnalysisModule .rankingBlock .cpCircleTextBlock .cpRankTitle{font-size: 30px;}*/
+
+
+
+/* To change position of close button to Top Right Corner */
+#colorbox #cboxClose
+{
+    top: 0;
+    right: 0;
+}
+#cboxLoadedContent{
+    margin-top:28px;
+    margin-bottom:0;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+// Extra JS for Hot Fox
+$(document).ready(function(){
+	var url = document.URL;
+	if(url.indexOf("beta.forbestravelguide")>-1){
+		console.log("for beta site");
+		if($(".videoBgWrap").length > 0){
+		    var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+		    // alert("isIOS : "+isIOS);
+		    if (isIOS) {
+
+		        // Disable Video Backgrond iOS device.
+
+		        $(".videoBg video").remove();
+		        $(".video-responsive .video, .video-responsive .canvas, .heroLinkBottom").hide();
+		        $(".fullWidth.videoBgWrap").removeClass("videoBgWrap");
+		        $(".videoBgWrap").css("background-image","url("+$(".videoBgWrap").attr("data-bgFallBack")+")");
+
+		        // var iHeight = window.screen.height;
+		        // if(iHeight > 480) {
+		        //     // console.log('iPhone 5 or above...');
+		        //     var canvasVideo = new CanvasVideoPlayer({
+		        //         videoSelector: '.video',
+		        //         canvasSelector: '.canvas',
+		        //         timelineSelector: false,
+		        //         autoplay: true,
+		        //         makeLoop: true,
+		        //         pauseOnClick: false,
+		        //         audio: false
+		        //     });
+		        // } else {
+		        //     $(".video-responsive .video, .video-responsive .canvas, .heroLinkBottom").hide();
+		        //     $(".videoBgWrap").css("background-image","url("+$(".videoBgWrap").attr("data-bgFallBack")+")");
+		        // }
+		    }else {
+		        // Use HTML5 video
+		        $(".video-responsive .canvas").hide();
+		        // document.querySelectorAll('.canvas')[0].style.display = 'none';
+		    }
+		}
+	}
+
+
+
+	if($("#ftg-destinations-landing").length > 0){
+        $(document).on("click", "#filterButtonWrap a[data-filter='1']", function(){$(".mapFilterControl.hotel").trigger("click");});
+        $(document).on("click", "#filterButtonWrap a[data-filter='2']", function(){$(".mapFilterControl.restaurant").trigger("click");});
+        $(document).on("click", "#filterButtonWrap a[data-filter='3']", function(){$(".mapFilterControl.spa").trigger("click");});
+	}
+
+});

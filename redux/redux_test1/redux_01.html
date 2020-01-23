@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>React & Redux</title>
+	
+</head>
+
+<body>
+
+	<div id="greeting-div"></div>
+
+    <script src="https://fb.me/react-15.0.0.js"></script>
+    <script src="https://fb.me/react-dom-15.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.6.0/redux.js"></script>
+	<script type="text/babel">
+		var ReduxDemo = React.createClass({
+			render: function() {
+				// Reducer : state & action
+				const reducer = function(state, action){
+					if(action.type === 'ATTACK'){
+						return action.payload
+					}
+					if(action.type === 'GREENATTACK'){
+						return action.payload
+					}
+					return state;
+				}
+				
+				// Store : reducer & state
+				const store = Redux.createStore(reducer, "initial_State");
+
+				// Subscript
+				store.subscribe( ()=> {
+					console.log("Store respond as",store.getState() );
+				});
+
+				// Dispatch
+				store.dispatch( {type: 'ATTACK', payload: 'Iron Man'} );
+				store.dispatch( {type: 'GREENATTACK', payload: 'HULK'} );
+
+				return (
+					<div>Testing</div>
+				);
+
+			}
+		});
+
+		ReactDOM.render(
+		<ReduxDemo/>,
+		document.getElementById('greeting-div')
+		);
+	</script>
+
+
+</body>
+</html>

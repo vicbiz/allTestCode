@@ -1,0 +1,46 @@
+
+
+#global-header { padding: 5px 0; }
+#global-header .headerLogo{display: inline-block; margin: 2px 0 2px 60px; position: relative;}
+#topHeadHelp, .topHeadLogInOut {display: inline-block; color:#ffffff; position: relative; top: 10px;}
+#topHeadHelp a, .topHeadLogInOut a, #topHeadHelp a:hover, .topHeadLogInOut a:hover {color:#ffffff;}
+/*#topHeadHelp, .topHeadLogInOut {display: inline-block; color:#ffffff; margin-right: 30px; position: relative; top: 10px;}*/
+
+#login {margin: 15px 0px;padding: 0px;text-align: center;}
+#login .inner {width: 340px;padding-bottom: 6px;margin: 60px auto;text-align: left;}
+#login .inner .fheader {color: #999999;font-size: 32px;margin: 0 0 14px;}
+#login .inner .cssform p {clear: left;margin: 0;padding: 4px 0 3px 0;margin-bottom: 15px;height: 1%;}
+#login .inner .cssform input[type='text'] {width: 100%;}
+#login .inner .cssform label {font-size: 16px;padding-right: 10px;padding-top: 3px;}
+#login #remember_me_holder {padding-left: 0;}
+#login #remember_me_holder input{margin-right: 10px;}
+#login #submit {margin-left: 15px;}
+#login #remember_me_holder label {float: none;margin-left: 0;text-align: left;width: 200px}
+#login .inner .login_message {padding: 6px 25px 20px 25px;color: #c33;}
+#login .inner .text_ {width: 100%;}
+#login .inner .chk {height: 12px;}
+#login #submit{ width:210px; text-transform: uppercase; font-size:17px; padding: 12px 0;margin: 0 0 0 72px;}
+::-webkit-input-placeholder { text-align: center; font-size:17px }
+::-moz-placeholder { text-align: center; font-size:17px } /* firefox 19+ */
+:-ms-input-placeholder { text-align: center; font-size:17px } /* ie */
+input:-moz-placeholder { text-align: center; font-size:17px }
+
+/* performEvaluation Single Q/A view ---  showSection */
+.qaSingleView .sectionTitleBlock .sectionTitle{ display: inline-block; position: relative; top: 3px;}
+.qaSingleView .sectionTitleBlock #setNAall{ display: inline-block;}
+.qaSingleView .sectionTitleBlock #naToAllInput{ display: inline-block; padding: 2px 20px; margin-right: 14px;}
+.qaSingleView .sectionTitleBlock .questionNumber{text-align: left;font-size: 2.3em; padding-left: 0;}
+.qaSingleView .sectionTitleBlock .questionNav{font-size: 1.8em; font-weight:300 }
+.qaSingleView .sectionTitleBlock .questionNav span{display: inline-block; margin: 0 5px;}
+.qaSingleView .sectionTitleBlock .questionNav .qNavCurrent {display: inline; }
+.qaSingleView .sectionTitleBlock .qRow{margin: 10px 0;}
+.qaSingleView .sectionTitleBlock .questionText{}
+.qaSingleView #jumpToQuestion {background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: 1px solid #78D2DB; font-weight: 300; text-align: center; width: 55px; color:#78D2DB;}
+.qaSingleView .viewCommentBtn{margin-left: 17px; padding-top: 13px;}
+.qaSingleView .commentViewLink{margin-left: 15px;margin-right: 15px;}
+.qaSingleView .answerSelectNA{position: relative;top: 0px;}
+.qaSingleView .qAnswerChoice > div{ padding-left: 0;}
+.qaSingleView .qNavPrev a,.qaSingleView .qNavNext a{color:#333333;}
+.qaSingleView .elapsedTimeSecond .fhsSelect button{ width: 100px;height: 23px;padding: 15px !important; top:4px;width: 70px;}
+.qaSingleView .elapsedTimeSecond .fhsSelect .filter-option{top:5px;}
+.qaSingleView .elapsedTimeSecond .fhsSelect .caret{ top:4px;}

@@ -1,0 +1,90 @@
+/* Extra CSS for Hot Fix */
+
+
+/* Added Repo */
+@media only screen and (max-width: 920px) {
+	body #destinationLandingPage #mapCanvas{
+		height: 480px;
+	}
+	body #destinationLandingPage .listViewButtonWrap{
+		top: 500px;
+	}
+	body#ftg-property.modal-open #propImageBlockWrap.modal .propImg {
+    padding: 0;
+	}
+
+	body #destinationPropertiesPage .filter-container{
+		    margin-bottom: 0px;
+	}
+	body #collectionDetailPage .filter-container{
+	 	    margin-bottom: 0px;
+	}	
+}
+
+/* Added Repo */
+@media only screen and (max-width: 420px) {
+	body #awardWinnerList #mapQuery::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	font-size:13px;
+	}
+	body #awardWinnerList #mapQuery::-moz-placeholder { /* Firefox 19+ */
+	font-size:13px;
+	}
+	body #awardWinnerList #mapQuery:-ms-input-placeholder { /* IE 10+ */
+	font-size:13px;
+	}
+	body #awardWinnerList #mapQuery:-moz-placeholder { /* Firefox 18- */
+	font-size:13px;
+	}
+
+	body #mapAddressSearchWrap #mapAddressSearch{
+		width: 330px;
+	}
+
+	body #destinationLandingPage #mapCanvas{
+		height: 240px;
+		margin-bottom: 80px;
+	}
+	body #destinationLandingPage .listViewButtonWrap{
+		top: 325px;
+	}
+	body #bigMapWrap #mapAddressSearch input {
+	    width: 65%;
+	}	
+}
+
+
+/* Added Repo */
+@media only screen and (max-width: 414px) {
+	body #propertyListWrap #propertyList .propBox {
+		height: 360px;
+	}
+}
+@media only screen and (max-width: 360px) {
+	body #propertyListWrap #propertyList .propBox {
+		height: 350px;
+	}
+}
+
+
+
+
+
+/* Not Added Repo */
+.alertify .alert nav, .alertify .dialog nav {
+    text-align: center !important;
+}
+.alertify .alert nav button:not(.btn):not(.pure-button):not(.md-button):not(.mdl-button), .alertify .dialog nav button:not(.btn):not(.pure-button):not(.md-button):not(.mdl-button){
+	border: 1px solid #cccccc !important;
+}
+
+body #peopleList .midImageWrap .peopleTitle, body #peopleList .midImageWrap .peopleSubTitle, body #peopleList .midImageWrap .sacGroup, body #peopleList .midImageWrap .sacTitle, body #peopleList .midImageWrap .sacSubTitle{
+	opacity: 1;
+	color: #dddddd;
+}
+
+
+
+
+
+
+

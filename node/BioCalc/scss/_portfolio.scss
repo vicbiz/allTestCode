@@ -1,0 +1,124 @@
+// Styling for the portfolio section
+.portfolio {
+  margin-bottom: -15px;
+  .portfolio-item {
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    margin-bottom: 15px;
+    .portfolio-item-caption {
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      opacity: 0;
+      background-color: fade-out($primary, .1);
+      &:hover {
+        opacity: 1;
+      }
+      .portfolio-item-caption-content {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @media (min-width: 576px) {
+    margin-bottom: -30px;
+    .portfolio-item {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.portfolio-modal {
+  .portfolio-modal-dialog {
+    padding: 3rem 1rem;
+    min-height: calc(100vh - 2rem);
+    margin: 1rem calc(1rem - 8px);
+    position: relative;
+    z-index: 2;
+    -moz-box-shadow: 0 0 3rem 1rem fade-out(black, .5);
+    -webkit-box-shadow: 0 0 3rem 1rem fade-out(black, .5);
+    box-shadow: 0 0 3rem 1rem fade-out(black, .5);
+    .close-button {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      i {
+        line-height: 38px;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  @media(min-width: 768px) {
+    .portfolio-modal-dialog {
+      min-height: 100vh;
+      padding: 5rem;
+      margin: 3rem calc(3rem - 8px);
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.chart{
+  height: 350px;
+  display: none;
+}
+.pickDOB{
+  text-align: center;
+}
+.infoText{
+  margin-top: 30px;
+  min-height: 70px;
+}
+.resultBox{
+  min-height: 300px;
+  max-width: 350px;
+  padding: 20px;
+  margin: 30px auto;
+  .subTitle{
+    font-family: 'Poiret One', cursive;
+  }
+  h5{
+    font-size: 30px;
+    color: #ffffff;
+  }
+}
+.resultP{
+  background: #1d83c1;
+}
+.resultE{
+  background: #ba4c63;
+}
+.resultI{
+  background: #18bc9c;
+}
+.resultBox{
+  color: #ffffff;
+  .month{
+    text-align: left;
+    display: none;
+  }
+  .date{
+    font-size: 160px;
+    line-height: 160px;
+  }
+  .day{
+    display: none;
+  }
+  .year{
+    text-align: right;
+    display: none;
+  }
+  .fulldate{
+    font-size: 13px;
+    text-align: center;
+  }
+}

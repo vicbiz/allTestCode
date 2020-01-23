@@ -1,0 +1,25 @@
+
+
+1. Create React App
+
+	npx create-react-app test
+
+	create-react-app test
+
+	npm init react-app my-app
+
+	yarn create react-app my-app
+
+2. Inside the newly created project, you can run some built-in commands:
+
+	npm start or yarn start
+
+
+3. npm run build or yarn build
+
+
+
+
+
+
+

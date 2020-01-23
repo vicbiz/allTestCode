@@ -1,0 +1,4 @@
+Hello World
+Writing to Files
+If you want to write to files, you need to use the writer class to output text to a file. The following example shows how this can be done.
+If you open the file Example.txt, you will see the words “Hello World” printed to the file.

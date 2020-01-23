@@ -1,0 +1,12 @@
+/* Extra CSS for Hot Fix */
+body#ftg-property .atThisPropList {
+    width: 100%;
+}
+
+body.mobileDevice .videoBgWrap{
+	display: none;
+}
+
+body #propertyListWrap #propertyList {
+    width: 100%;
+}

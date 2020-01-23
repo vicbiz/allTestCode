@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Test jQuery when</title>
+	<meta charset="utf-8"/>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+	<style type="text/css" media="screen">
+		.memberWrap {
+			display: inline-block;
+			width: 30%;
+			margin: 20px;
+		}
+		.member_photo{
+			width: 300px;
+			height: 300px;
+			overflow: hidden;
+		}
+		.member_photo img{
+			width: 300px;
+		}
+		.member_bio{
+			height: 500px;
+			overflow: scroll;
+		}
+	</style>
+
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+		var showLoadingImgFn = function(){
+			$("#mainContent").append("<h1 id='loading'>Loading...</h1>");
+		};
+
+		var hideLoadingImgFn = function(){
+			$("#mainContent #loading").remove();
+		};
+
+		var updateList = function(data){
+			$.each(data.template.groups, function(idx, group){
+				$.each(group.teamMembers, function(idx, member){
+					// var html = "<div><div class='name'>"+member.name+"</div>"
+					var html =	`
+					          	<div class="memberWrap">
+					          		<div class="member_photo"><img src="${member.imgUrl}"></div>
+					          		<div class="member_name"><h2>${member.name}</h2></div>
+					          		<div class="member_title"><h3>${member.title}</h3></div>
+					          		<div class="member_subtitle">${member.subtitle}</div>
+					          		<div class="member_bio">${member.bio}</div>
+					          	</div>
+					`;
+					$("#mainContent").append(html);
+					// console.log(idx, member.name, member.title, member.bio);
+				})
+			});
+		};
+
+
+		//************************************************************************************
+
+		$.when( $.ajax( "https://www.forbestravelguide.com/our-team.json" ) ).then(function( data, textStatus, jqXHR ) {
+			// console.log("---------------------------");
+			// console.log( "textStatus 1",textStatus );
+			// console.log( jqXHR.status, textStatus, data );
+			// console.log("---------------------------");
+		});
+
+		//************************************************************************************
+
+		$.when( $.ajax( "https://www.forbestravelguide.com/our-team.json" ) ).done(function( data, textStatus, jqXHR ) {
+			// console.log("---------------------------");
+			// console.log( "textStatus 2",textStatus );
+			// console.log( jqXHR.status, textStatus, data );
+			// console.log("---------------------------");
+		});
+
+		//************************************************************************************
+
+
+		function xhr_get(url) {
+			return $.ajax({
+				url: url,
+				type: 'get',
+				dataType: 'json',
+				beforeSend: showLoadingImgFn()
+			})
+			.always(function() {
+				// remove loading image
+				hideLoadingImgFn();
+			})
+			.fail(function() {
+				// handle request failures
+				// console.log("fail");
+			});
+		}
+
+		xhr_get('https://www.forbestravelguide.com/our-team.json').done(function(data) {
+			// console.log("---------------------------");
+			// console.log("xhr_get", data);
+			// console.log("---------------------------");
+		});
+
+		//************************************************************************************
+
+
+
+		function xhr_get2(url) {
+			return $.ajax({
+					url: url,
+					type: 'get',
+					dataType: 'json'
+				})
+				.pipe(function(data, xhr) {
+					return xhr != 'success' ? $.Deferred().reject( data ) : data;
+				})
+				.fail(function(data) {
+					if ( data.responseCode ) {
+						console.log( data.responseCode );
+					}
+				});
+		}
+
+		xhr_get2('https://www.forbestravelguide.com/our-team.json').done(function(data) {
+			// console.log("---------------------------");
+			// console.log("xhr_get 2", data);
+			// updateList(data);
+			// console.log("---------------------------");
+		});
+
+
+
+	});
+
+
+
+
+
+	var monica = {
+		name: 'Monica Galler',
+		total: 400,
+		deductMonthlyFee: function(fee){
+			this.total = this.total - fee;
+			console.log(this.name + ' remaining balance is ' + this.total);
+			return this.name + ' remaining balance is ' + this.total;
+		}
+	}
+
+	// console.log(monica.dedectMonthlyFee(0));
+
+	var jae = {name: 'Jae Moon', total: 500}
+	var jaeFeeDeductor = monica.deductMonthlyFee.bind(jae, 200);
+	jaeFeeDeductor();
+	jaeFeeDeductor();
+
+	var rachel = {name: 'Rachel Green', total: 1500};
+	var rachelFeeDeductor = monica.deductMonthlyFee.bind(rachel, 200);
+	rachelFeeDeductor(); //"Rachel Green remaining balance is 1300"
+	rachelFeeDeductor(); //"Rachel Green remaining balance is 1100"
+                
+
+	// If an older browser dont have bind function, how will you shim it
+	Function.prototype.bind = Function.prototype.bind || function(context){
+	  var self = this;
+	  return function(){
+	    return self.apply(context, arguments);
+	  };
+	}
+
+
+	var isTwoPassed = function(){
+		console.log("typeof :"+typeof arguments);
+		console.log("arguments :",Array.isArray(arguments));
+		console.log("arguments.length :"+arguments.length);
+		var args = Array.prototype.slice.call(arguments);
+		console.log(args.indexOf(2));
+		return args.indexOf(2) != -1;
+	}
+
+	isTwoPassed(1,4) //false
+	isTwoPassed(5,3,1,2) //true
+
+
+
+
+	//-----------------------------------------
+	var getMaxArray = function(arr){
+		return Math.max.apply(null, arr);
+	}
+
+	var sampleArray = [500,30,1500,200];
+	var max = getMaxArray(sampleArray);
+	console.log(max);
+
+
+
+
+	//-----------------------------------------
+	var foo = 'outside'; 
+	var foo2 = 'aaa';
+	function logIt(){
+		console.log(foo); 
+		console.log(foo2); 
+		var foo = 'inside';
+	} 
+	logIt();
+
+
+
+	//-----------------------------------------
+	console.log(0.10+0.20 == 0.30) // False.... !!!!
+	console.log(0.10 *10 + 0.20*10 == 0.30*10) // True.... !!!!
+
+	console.log(typeof(NaN)); // number
+
+
+
+	//-----------------------------------------
+	function indexOfMax(arr) {
+	    if (arr.length === 0) {
+	        return -1;
+	    }
+	    var max = arr[0];
+	    var maxIndex = 0;
+	    for (var i = 1; i < arr.length; i++) {
+	        if (arr[i] > max) {
+	            maxIndex = i;
+	            max = arr[i];
+	        }
+	    }
+	    return maxIndex;
+	}
+	var sampleArray1 = [520,3230,1500,29500,3];
+	var idx = indexOfMax(sampleArray1);
+	console.log("idx : "+idx);
+
+	var i = sampleArray1.indexOf(Math.max(...sampleArray1));
+	console.log("i : "+i);
+
+
+
+
+
+
+	// The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+	var array1 = [1, 2, 3];
+	console.log(array1.unshift(4, 5));	// expected output: 5
+	console.log(array1);              	// expected output: Array [4, 5, 1, 2, 3]
+
+	function log(){
+	  var args = Array.prototype.slice.call(arguments);
+	  args.unshift('(app)');
+	  console.log.apply(console, args);
+	}
+
+	log('my message'); //(app) my message
+	log('my message', 'your message'); //(app) my message your message 
+
+
+
+
+	//-----------------------------------------
+	for(var i = 0; i < 10; i++) {
+	    setTimeout((function(i) {
+	      console.log(i);
+	    })(i), 10)
+	}
+
+	for(var i = 0; i < 10; i++) {
+	  setTimeout(console.log.bind(console, i), 10);
+	}
+
+
+
+	</script>
+
+
+
+</head>
+<body>
+	<div id="mainContent">
+		<h1>jQuery AJAX testing... (when, done)</h1>
+		
+	</div>
+
+</body>
+</html>

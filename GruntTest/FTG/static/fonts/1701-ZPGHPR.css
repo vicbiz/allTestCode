@@ -1,0 +1,31 @@
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2017 Schwartzco Inc.
+        License: 1701-ZPGHPR     
+*/
+
+
+@font-face {
+  font-family: 'Canela Web';
+  src: url('https://secure.s.forbestravelguide.com/images/fonts/Canela-Regular-Web.eot');
+  src: url('https://secure.s.forbestravelguide.com/images/fonts/Canela-Regular-Web.eot?#iefix') format('embedded-opentype'),
+       url('https://secure.s.forbestravelguide.com/images/fonts/Canela-Regular-Web.woff2') format('woff2'),
+       url('https://secure.s.forbestravelguide.com/images/fonts/Canela-Regular-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.Canela-Regular-Web {
+  font-family: 'Canela Web';
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
