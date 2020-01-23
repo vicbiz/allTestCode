@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Biorhythm in jQuery/JS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="A simple biorhythm coded in jQuery/JS. Displays a 15-day range of physical, emotional and intellectual cycles." />
+<meta name="keywords" content="biorhythm, biorhythm physical, biorhythm emotional, biorhythm intellectual, biorhythm jquery, biorhythm javascript, js-jquery, biorhythm cycle, jose rainulf pineda, rainulf" />
+
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/935cb224/cloudflare-static/rocket.min.js"></script>
+<script data-rocketsrc="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/rocketscript"></script>
+<script language="javascript" type="text/rocketscript" data-rocketsrc="https://www.meandweb.net/ig/bio/flot/jquery.flot.min.js"></script>
+<STYLE type=text/css>
+	body, td{font-size: 12px; color: #000000; font-family: verdana}
+	a{text-decoration:none}
+	A:hover {color: #ff0000; text-decoration: none}
+	input {font-family: verdana; border-style: ridge; background-color: #EEEEEE}
+	.ud input { width: 60px; }
+	td{font-size: 10px; color: #808080; text-align: center; }
+</style>
+</head>
+<body>
+	<table>
+		<tr class="h">
+			<td colspan=3><i>Please enter your birthday information:</i></td>
+		</tr>
+		<tr class="h ud">
+			<td><input type="text" id="y" value="" /></td>
+			<td><input type="text" id="m" value="" /></td>
+			<td><input type="text" id="d" value="" /></td>
+		</tr>
+		<tr class="h">
+			<td><strong>Year</strong><br /><i>(eg. 1986)</i></td>
+			<td><strong>Month</strong><br /><i>(eg. 6)</i></td>
+			<td><strong>Day</strong><br /><i>(eg. 15)</i></td>
+		</tr>
+		<tr>
+			<td colspan=3 class="h"><br /><input id="cz" type="submit" value=" Show me my biorhythm " /></td>
+		</tr>
+		<tr>
+			<td colspan=3>
+				<div class="s" style="width:300px; display: none;">
+					<table width=300>
+						<tr>
+							<td width=50>&nbsp;</td>
+							<td><span style="width:20px;height:20px;background-color:#EDC240;"> &nbsp;- </span>&nbsp;<i>Physical</i></td>
+							<td><span style="width:20px;height:20px;background-color:#AFD8F8;"> &nbsp;- </span>&nbsp;<i>Emotional</i></td>
+							<td><span style="width:20px;height:20px;background-color:#CB4B4B;"> &nbsp;- </span>&nbsp;<i>Intellectual</i></td>
+						</tr>
+					</table>
+				</div>
+				<div id="bd" style="width:800px;height:600px"></div>
+				<br />
+				<div id="zd"></div>
+			</td>
+		</tr>
+	</table>
+
+<script type="text/rocketscript">
+$("#cz").click(function(){
+
+console.log("clicked");
+
+	td = new Date();
+
+	by = $("#y").val();
+	bm = $("#m").val();
+	bd = $("#d").val();
+
+	bdd = new Date(by, bm-1, bd);
+	var od = 1000*60*60*24;
+	var dsb = Math.ceil((td.getTime()-bdd.getTime())/(od))-1;
+	var nd = 15;
+	var wp = new Array();
+	var we = new Array();
+	var wi = new Array();
+	var dy = new Array();
+
+	var todayP = Math.sin(2*Math.PI*(dsb)/23)*100;
+	var todayE = Math.sin(2*Math.PI*(dsb)/28)*100;
+	var todayI = Math.sin(2*Math.PI*(dsb)/33)*100;
+
+	console.log(`today Physical: ${todayP} , today Emotional: ${todayE} , today Intellectual: ${todayI}`);
+
+
+	for(var i = 0; i < nd; i++)
+	{
+		wp.push([i+1, Math.sin(2*Math.PI*(dsb+i)/23)*100]);
+		we.push([i+1, Math.sin(2*Math.PI*(dsb+i)/28)*100]);
+		wi.push([i+1, Math.sin(2*Math.PI*(dsb+i)/33)*100]);
+
+		to_d = td.getDate();
+		dy.push([i+1, to_d]);
+		td.setTime(td.getTime() + 86400000);
+	}
+
+	console.log(dy);
+
+	$(document).ready(function(){
+		$.plot($("#bd"), [
+			{
+				data: wp,
+			},
+			{
+				data: we,
+			},
+			{
+				data: wi,
+			},
+			
+		], {
+			series:
+			{
+				lines: { show: true },
+			},
+			xaxis:
+			{
+				ticks: dy,
+			},
+			yaxis:
+			{
+				ticks: 10,
+				min: -110,
+				max: 110
+			},
+			grid: {
+				backgroundColor: { colors: ["#fff", "#eee"] },
+			},
+		});
+
+		// $(".h").css("display", "none");
+		$(".s").css("display", "block");
+		sg();
+	});
+});
+
+function cd(){var weekday=new Array(7);weekday[0]="Sunday";weekday[1]="Monday";weekday[2]="Tuesday";weekday[3]="Wednesday";weekday[4]="Thursday";weekday[5]="Friday";weekday[6]="Saturday";return weekday[bdd.getDay()];}
+function sg(){var s = 1901;if(bm==1&&bd>=20||bm==2&&bd<=18){z="Aquarius";}if(bm==1&&bd>31){z="Huh?";}if(bm==2&&bd>=19||bm==3&&bd<=20){z="Pisces";}if(bm==2&&bd>29){z="Huh?";}if(bm==3&&bd>=21||bm==4&&bd<=19){z="Aries";}if(bm==3&&bd>31){z="Huh?";}if(bm==4&&bd>=20||bm==5&&bd<=20){z="Taurus";}if(bm==4&&bd>30){z="Huh?";}if(bm==5&&bd>=21||bm==6&&bd<=21){z="Gemini";}if(bm==5&&bd>31){z="Huh?";}if(bm==6&&bd>=22||bm==7&&bd<=22){z="Cancer";}if(bm==6&&bd>30){z="Huh?";}if(bm==7&&bd>=23||bm==8&&bd<=22){z="Leo";}if(bm==7&&bd>31){z="Huh?";}if(bm==8&&bd>=23||bm==9&&bd<=22){z="Virgo";}if(bm==8&&bd>31){z="Huh?";}if(bm==9&&bd>=23||bm==10&&bd<=22){z="Libra";}if(bm==9&&bd>30){z="Huh?";}if(bm==10&&bd>=23||bm==11&&bd<=21){z="Scorpio";}if(bm==10&&bd>31){z="Huh?";}if(bm==11&&bd>=22||bm==12&&bd<=21){z="Sagittarius";}if(bm==11&&bd>30){z="Huh?";}if(bm==12&&bd>=22||bm==1&&bd<=19){z="Capricorn";}if(bm==12&&bd>31){z="Huh?";}x=(s-by)%12;if(x==1||x==-11){c="Rat";}if(x==0){c="Ox";}if(x==11||x==-1){c="Tiger";}if(x==10||x==-2){c="Rabbit";}if(x==9||x==-3){c="Dragon";}if(x==8||x==-4){c="Snake";}if(x==7||x==-5){c="Horse";}if(x==6||x==-6){c="Sheep";}if(x==5||x==-7){c="Monkey";}if(x==4||x==-8){c="Cock";}if(x==3||x==-9){c="Dog";}if(x==2||x==-10){c="Boar";}wd=cd();
+
+	// var t = "<i>Sun Sign: </i><b>"+z+"</b><i>. Chinese Sign: </i><b>"+c+"</b>.<br /><i>You were born on a </i><b>"+wd+"</b>.<br /><br /><a href=\"http://www.meandweb.net/ig/bio/bio.html\">Calculate new biorhythm?</a>";
+	var t = "<i>Sun Sign: </i><b>"+z+"</b><i>. Chinese Sign: </i><b>"+c+"</b>.<br /><i>You were born on a </i><b>"+wd+"</b>.<br /><br />";
+
+	$("#zd").html(t);
+}
+</script>
+
+</body>
+</html>

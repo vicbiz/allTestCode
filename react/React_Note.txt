@@ -1,0 +1,15 @@
+Creating an App
+
+You¡¯ll need to have Node >= 6 on your local development machine (but it¡¯s not required on the server). You can use nvm (macOS/Linux) or nvm-windows to easily switch Node versions between different projects.
+To create a new app, you may choose one of the following methods:
+
+npx
+	npx create-react-app my-app
+	(npx comes with npm 5.2+ and higher, see instructions for older npm versions)
+
+npm
+	npm init react-app my-app
+	npm init <initializer> is available in npm 6+
+
+Yarn
+	yarn create react-app my-app

@@ -1,0 +1,17 @@
+extend layout
+
+block content
+    .container
+        h1 Contact Us
+        br
+        form(method='post', action='contact/send')
+            .form-group
+                label Name
+                input.form-control(type='text',name='name',placeholder='Enter Name')
+            .form-group
+                label Email
+                input.form-control(type='text',name='email',placeholder='Enter Email')
+            .form-group
+                label Name
+                textarea.form-control(type='text',name='message',placeholder='Enter Message....')
+            button.btn.btn-outline-secondary(type'submit') Submit

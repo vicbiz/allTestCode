@@ -1,0 +1,243 @@
+﻿/*
+﻿BioCalc
+Copyright (C) 2013 Last Unicorn
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* General Tags
+----------------------------------------------------------------------------- */
+
+body {
+	font: 14px Arial;
+	color: #303030;
+}
+
+input[type="text"] {
+	padding: 3px;
+	border: 1px solid #b0b0b0;
+	border-radius: 4px;
+	background-color: #f0f0f0;
+}
+
+input[type="text"]:hover {
+	background-color: #e8e8e8;
+	border-color: #909090;
+}
+
+input[type="text"]:focus {
+	background-color: #f8f8f8;
+}
+
+/* Common
+----------------------------------------------------------------------------- */
+
+.clear {
+	clear: both;
+}
+
+h2 {
+	font: 16px Arial;
+	font-weight: bold;
+}
+
+a[target="_blank"] {
+	color: blue;
+}
+
+.color-label {
+	background-color: #000000;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	position: relative;
+	top: 2px;
+}
+
+.external-link {
+	background: url('images/external_link.png') no-repeat right center;
+	padding-right: 11px;
+}
+
+/* Debug
+----------------------------------------------------------------------------- */
+
+#debug {
+	height: 200px;
+	border: 1px solid #aaa;
+	margin: 10px 0;
+	overflow: auto;
+}
+
+/* Page
+----------------------------------------------------------------------------- */
+
+.bio-calc-version {
+	text-align: right;
+	margin: 3px 0;
+	color: #a0a0a0;
+	display: inline;
+	font-size: 10px;
+}
+
+#pageContainer {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#pageContainer h2 {
+	margin-top: 30px; 
+}
+
+/* Biorhythm View
+----------------------------------------------------------------------------- */
+
+#biorhythmViewContainer {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#biorhythmViewContainer canvas {
+	border: 1px solid #c0c0c0;
+	outline: none;
+	border-radius: 5px;
+	margin: 0 auto;
+	cursor: move;
+}
+
+#birthdayTextBox, #firstDayTextBox {
+	width: 200px;
+}
+
+/* Biorhythm Legend
+----------------------------------------------------------------------------- */
+
+#bioLegend {
+	margin: 5px 0;
+}
+
+.bio-legend-item {
+	display: inline;
+	margin-left: 10px;
+	float: right;
+	cursor: pointer;
+}
+
+.bio-legend-item .color-label {
+	margin: 0 3px;
+}
+
+.bio-legend-label {
+	display: inline-block;
+}
+
+/* Header
+----------------------------------------------------------------------------- */
+
+header {
+	overflow: hidden;
+	width: 100%;
+}
+
+header h1 {
+	font: 25px Arial;
+	font-weight: bold;
+	color: #000;
+	float: left;
+	margin: 16px 0;
+}
+
+#mainToolbar {
+	float: right;
+	margin: 16px 4px 16px 0;
+}
+
+#mainToolbar .ui-button {
+	font-size: 12px;
+}
+
+/* Tabs
+----------------------------------------------------------------------------- */
+
+.ui-tabs {
+	font-size: 12px;
+}
+
+.ui-tabs ul li,
+.ui-tabs ul li a {
+	outline: none;
+}
+
+#clearBirthdayButton {
+	display: none;
+}
+
+/* Help/About Dialog
+----------------------------------------------------------------------------- */
+
+#helpDialog, #aboutDialog {
+	font-size: 12px;
+}
+
+#helpDialog p {
+	text-align: justify;
+}
+
+#helpDialog{
+	display: none;
+}
+
+#aboutDialog{
+	display: none;
+}
+
+#optionsDialog{
+	display: none;
+}
+
+/* jQuery Widgets
+----------------------------------------------------------------------------- */
+
+.ui-widget {
+    font: 13px Arial;
+}
+
+/* X Day Info
+----------------------------------------------------------------------------- */
+
+#xDayInfoContainer {
+	border: 1px dashed #d0d0d0;
+	padding: 7px;
+	margin: 5px 0;
+	background-color: #f0f0f0;
+	border-radius: 3px;
+}
+
+.x-day-item .color-label {
+	margin: 0 10px 0 10px; 
+}
+
+/* Date Limit Labels
+----------------------------------------------------------------------------- */
+
+#dateLimitsContainer {
+	color: #bbbbbb;
+	font-size: 0.9em;
+	margin: 3px 5px;
+}
+
+#dateLimitsContainer #firstDayLabel,
+#dateLimitsContainer #lastDayLabel {
+	cursor: pointer;
+}
