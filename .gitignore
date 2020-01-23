@@ -105,3 +105,4 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+react/my-app/src/App.js
