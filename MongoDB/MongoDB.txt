@@ -1,0 +1,107 @@
+
+https://www.tutorialspoint.com/mongodb/index.htm
+
+mongodb
+
+show dbs
+
+show collections
+
+use ng8crud
+
+//-----------------------------------------------------------------
+
+db.Product.insert([
+    {
+        ProductName: "Desktop Keyboard",
+        ProductDescription: "Jae's New Desktop Keyboard 2020",
+        ProductPrice: 19.99
+    },
+    {
+        ProductName: "Desktop Mouse",
+        ProductDescription: "Jae's New Desktop Mouse 2020",
+        ProductPrice: 9.99
+    }
+])
+
+//-----------------------------------------------------------------
+
+db.Product.find().limit(2)
+
+db.Product.find().sort({"ProductPrice":-1}) // or 1
+
+db.Product.find({ProdcutName: {$regex : "TV" }});
+db.Product.find({ ProductName: {$regex: "Key"}});
+db.Product.find({ ProductName: {$regex: /key/i}}); // ignore case
+db.Product.find({ ProductPrice: {$lt: 20} })
+db.Product.find({ ProductPrice: {$lt: 20}, ProductName: {$regex: /Mous/i} }) // Multiple Condition
+
+b.Product.find({}, {ProductName:1}) // Projection : only return ProductName
+
+//-----------------------------------------------------------------
+
+db.Product.update({ProductName:"TV"}, {$set: {ProductName: "TV New"} });
+
+//-----------------------------------------------------------------
+
+db.Product.remove({ProductName:'TV New'})
+
+//-----------------------------------------------------------------
+// Index... multiple
+db.Product.ensureIndex({"title":1,"description":-1})
+
+//-----------------------------------------------------------------
+// Relationships : 1:1, 1:N, N:1 or N:N
+
+>var result = db.users.findOne({"name":"Tom Benzamin"},{"address_ids":1})
+>var addresses = db.address.find({"_id":{"$in":result["address_ids"]}})
+
+//-----------------------------------------------------------------
+// Database References
+// $ref − This field specifies the collection of the referenced document
+// $id − This field specifies the _id field of the referenced document
+// $db − This is an optional field and contains the name of the database in which the referenced document lies
+
+        {
+        "_id":ObjectId("53402597d852426020000002"),
+        "address": {
+        "$ref": "address_home",
+        "$id": ObjectId("534009e4d852427820000002"),
+        "$db": "tutorialspoint"},
+        "contact": "987654321",
+        "dob": "01-01-1991",
+        "name": "Tom Benzamin"
+        }
+
+// The address DBRef field here specifies that the referenced address document lies in address_home collection under tutorialspoint database and has an id of 534009e4d852427820000002.
+// The following code dynamically looks in the collection specified by $ref parameter (address_home in our case) for a document with id as specified by $id parameter in DBRef.
+
+        >var user = db.users.findOne({"name":"Tom Benzamin"})
+        >var dbRef = user.address
+        >db[dbRef.$ref].findOne({"_id":(dbRef.$id)})
+
+// The above code returns the following address document present in address_home collection −
+
+        {
+        "_id" : ObjectId("534009e4d852427820000002"),
+        "building" : "22 A, Indiana Apt",
+        "pincode" : 123456,
+        "city" : "Los Angeles",
+        "state" : "California"
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
