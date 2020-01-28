@@ -73,5 +73,44 @@ Address : <? echo $address['street'] .', '. $address['city'] .' '. $address['sta
 
 
 
+
+
+
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "mysql";
+    $dbname = "classicmodels";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT customerNumber, customerName, phone FROM customers";
+    $result = $conn->query($sql);
+
+    echo "<br><br/><h1>Customer DB</h1><table border='1' cellpadding='10' cellspacing='0'><tr><td>Customer Number</td><td>Name</td><td>Phone Number</td></tr>";
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            // echo "customerNumber: " . $row["customerNumber"]. " - customerName: " . $row["customerName"]. " phone: " . $row["phone"]. "<br>";
+            echo "<tr><td>" . $row["customerNumber"]. "</td><td>" . $row["customerName"]. "</td><td>" . $row["phone"]. "</td></tr>";
+        }
+    } else {
+        echo "0 results";
+    }
+    echo "</table>";
+    $conn->close();
+
+
+
+
+
+?>
+
+
 </body>
 </html>
