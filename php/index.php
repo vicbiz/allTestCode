@@ -87,7 +87,7 @@
         $sql = "SELECT customerNumber, customerName, phone FROM customers";
         $result = $conn->query($sql);
 
-        echo "<br><br/><h1>Customer DB</h1><table border='1' cellpadding='10' cellspacing='0'><tr><td>Customer Number</td><td>Name</td><td>Phone Number</td></tr>";
+        echo "<br><br/><h1>Customer DB</h1><table class='table table-hover'><thead><tr class='table-primary'><th>Customer Number</th><th>Name</th><th>Phone Number</th></tr></thead>";
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
