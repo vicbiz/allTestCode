@@ -72,9 +72,11 @@
 
 
     <?php
-        $servername = "localhost";
+        // $servername = "localhost";
+        $servername = "127.0.0.1";
         $username = "root";
-        $password = "mysql";
+        // $password = "mysql";
+        $password = "jae@moon.com";
         $dbname = "classicmodels";
 
         // Create connection
