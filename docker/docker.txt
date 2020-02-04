@@ -1,4 +1,5 @@
 
+
 # show all containers:
 docker ps -a
 
@@ -13,5 +14,51 @@ docker rmi $(docker images -q)
 
 # remove all docker volumes
 docker volume ls -qf dangling=true | xargs -r docker volume rm
+
+
+
+
+##### Push to Docker hub
+
+# docker hub login 
+docker login --username=yourhubusername --email=youremail@company.com
+
+# show images
+docker images
+
+example output:
+REPOSITORY              TAG       IMAGE ID         CREATED           SIZE
+verse_gapminder_gsl     latest    023ab91c6291     3 minutes ago     1.975 GB
+verse_gapminder         latest    bb38976d03cf     13 minutes ago    1.955 GB
+rocker/verse            latest    0168d115f220     3 days ago        1.954 GB
+
+
+
+# Tag your imnage
+docker tag bb38976d03cf yourhubusername/verse_gapminder:firsttry
+
+# Push your image to the repository you created
+docker push yourhubusername/verse_gapminder
+
+################################################
+# Saving and loading images
+# Pushing to Docker Hub is great, but it does have some disadvantages:
+
+# Bandwidth - many ISPs have much lower upload bandwidth than download bandwidth.
+# Unless you’re paying extra for the private repositories, pushing equals publishing.
+# When working on some clusters, each time you launch a job that uses a Docker container it pulls the container from Docker Hub, and if you are running many jobs, this can be really slow.
+# Solutions to these problems can be to save the Docker container locally as a a tar archive, and then you can easily load that to an image when needed.
+
+# To save a Docker image after you have pulled, committed or built it you use the docker save command. For example, lets save a local copy of the verse_gapminder docker image we made:
+
+# docker save verse_gapminder > verse_gapminder.tar
+# If we want to load that Docker container from the archived tar file in the future, we can use the docker load command:
+
+# docker load --input verse_gapminder.tar
+
+
+
+
+
 
 
