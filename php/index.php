@@ -75,8 +75,9 @@
         // $servername = "localhost";
         $servername = "127.0.0.1";
         $username = "root";
-        // $password = "mysql";
-        $password = "jae@moon.com";
+        // $password = "mysql";  // Macbook Work i5
+        // $password = "jae@moon.com"; // Macbook Home i5
+        $password = ""; // Macbook Work i7
         $dbname = "classicmodels";
 
         // Create connection
