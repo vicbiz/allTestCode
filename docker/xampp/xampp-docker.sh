@@ -1,3 +1,6 @@
+# docker pull cswl/xampp
+
+
 IMAGE_NAME=cswl/xampp
 CONTAINER_NAME=xamppy-docker
 

@@ -1,3 +1,4 @@
+// npm i clear
 const cls = require("clear");
 cls();
 
