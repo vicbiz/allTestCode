@@ -38,20 +38,42 @@ function App() {
       {loading ? (
         "Loading..."
       ) : (
+
         <Container>
-          <Row>
-            {Object.values(destinations).map( (regionData, idx )=> {
-              console.log(Object.keys(destinations)[idx]);
-              return (
-                regionData.map(data => (
-                <Col xs={3} className="mb-5" key={`${data.id}`}>
-                  <DestinationCard data={data} />
-                </Col>
-                ))
-              )
-            })}
-          </Row>
-        </Container>
+        {
+          Object.values(destinations).map((regionData, i) => (
+            <div key={i} className="cardBlock">
+                <Row>
+                  <h2>{Object.keys(destinations)[i]}</h2>
+                  {/* <h2>{regionData[i].regionPrimaryLevel}</h2> */}
+                </Row>
+                <Row>
+                  {regionData.map((data, j) => (
+                    <Col xs={3} className="mb-5" key={`${data.id}`}>
+                      <DestinationCard data={data} />
+                    </Col>
+                    ))
+                  }
+                </Row>
+            </div>
+          ))
+        }
+      </Container>
+
+        // <Container>
+        //   <Row>
+        //     {Object.values(destinations).map( (regionData, idx )=> {
+        //       console.log(Object.keys(destinations)[idx]);
+        //       return (
+        //         regionData.map( (data, idx2) => (
+        //           <Col xs={3} className="mb-5" key={`${data.id}`}>
+        //             <DestinationCard data={data} />
+        //           </Col>
+        //         ))
+        //       )
+        //     })}
+        //   </Row>
+        // </Container>
         )}
     </>
 
