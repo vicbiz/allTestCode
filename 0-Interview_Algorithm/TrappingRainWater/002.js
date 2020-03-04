@@ -12,27 +12,65 @@ for(i=0; i<data.length; i++){
     if(i==0){
         dataSegment[i] = data[i] > 0 ? 1 : 0;
     } else {
-        let checkBoundary = data.findIndex( (it,j) => (j > i && it >= data[i]) ? true : false ) ;
-        console.log(i, data[i], "checkBoundary",checkBoundary);
+        let findEqualBigger = data.findIndex( (it,j) => (j > i && it >= data[i]) ? true : false ) ;
+        // console.log(i, data[i], "findEqualBigger",fisndEqualBigger);
 
-        if(data[i] > data[i-1]){
-            dataSegment[i] = 1;
-            dataSegment[i-1] = 0;
-
-
-            // if(checkBoundary > -1){
-            //     dataSegment[i] = 1;
-            //     dataSegment[i-1] = 0;
-            // } else {
-            //     dataSegment[i] = 1;
-            //     dataSegment[i-1] = 0;
-            // }
-        } else {
-            dataSegment[i] = 0;
-        }
+        // if(findEqualBigger > -1){
+            if(data[i] > data[i-1]){
+                dataSegment[i] = 1;
+                dataSegment[i-1] = 0;
+    
+    
+                // if(findEqualBigger > -1){
+                //     dataSegment[i] = 1;
+                //     dataSegment[i-1] = 0;
+                // } else {
+                //     dataSegment[i] = 1;
+                //     dataSegment[i-1] = 0;
+                // }
+            } else {
+                dataSegment[i] = 0;
+            }
+        // } else {
+        //     dataSegment[i] = 0;
+        // }
     }
 }
 console.log(dataSegment);
+
+// for(i=data.length; i>=0; i--){
+//     if(i==0){
+//         dataSegment[i] = data[i] > 0 ? 1 : 0;
+//     } else {
+//         let findEqualBigger = data.findIndex( (it,j) => (j <= i && it >= data[i]) ? true : false ) ;
+//         // console.log(i, data[i], "findEqualBigger",findEqualBigger);
+
+//         // if(findEqualBigger > -1){
+//             if(data[i] > data[i-1]){
+//                 dataSegment[i] = 1;
+//                 dataSegment[i-1] = 0;
+    
+    
+//                 // if(findEqualBigger > -1){
+//                 //     dataSegment[i] = 1;
+//                 //     dataSegment[i-1] = 0;
+//                 // } else {
+//                 //     dataSegment[i] = 1;
+//                 //     dataSegment[i-1] = 0;
+//                 // }
+//             } else {
+//                 dataSegment[i] = 0;
+//             }
+//         // } else {
+//         //     dataSegment[i] = 0;
+//         // }
+//     }
+// }
+// console.log(dataSegment);
+
+
+
+
 
 let segFrom = dataSegment.findIndex( it => it == 1 ? true : false );
 let segTo = 0;
