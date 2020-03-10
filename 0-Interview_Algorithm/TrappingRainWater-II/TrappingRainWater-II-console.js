@@ -12,6 +12,9 @@ var trapRainWater = function(heightMap) {
 
     if((rowMaxIdx == 0 && colMaxIdx == 0) || heightMap.length == 0 || !heightMap) return 0;
 
+
+    console.log("rowMaxIdx",rowMaxIdx,"colMaxIdx",colMaxIdx);
+
     let findUpBig = function(rowidx, colIdx){
         let bigNumber = 0;
         for(let i=rowidx-1; i >= 0; i--){
@@ -59,6 +62,7 @@ var trapRainWater = function(heightMap) {
             }
         }
     }
+    console.log(trappedRainCell,"\n\n\n");
 
     let isConnected = (c1, c2) => {
         if(c1 && c2){
@@ -73,6 +77,8 @@ var trapRainWater = function(heightMap) {
     }
 
     let finalData = [];
+    let idx0 = 0;
+    
     for(let idx = 0; idx < trappedRainCell.length; idx++){
         
         let ii = idx;
@@ -84,22 +90,39 @@ var trapRainWater = function(heightMap) {
         do{
             connected = isConnected(trappedRainCell[ii],trappedRainCell[ii+1]);
             if(connected){
+                // console.log(trappedRainCell[ii],trappedRainCell[ii+1]);
+                // console.log("connected",tempSet, " : " , trappedRainCell[ii+1], " : " , tempSet.indexOf(trappedRainCell[ii+1]));
+
                 if(tempSet.indexOf(trappedRainCell[ii+1]) == -1){
                     tempSet.push(trappedRainCell[ii+1]);
                     ii = ii+1;
                 }
+            } else {
+
             }
+            // console.log("tempSet",tempSet);
         } while (connected)
 
+        
         if(finalData.length > 0){
-            let intersection = finalData[0].filter(x => tempSet.includes(x));
-            if(intersection.length == 0){
-                finalData.push(tempSet);
+            for(let i=0; i<finalData.length; i++){
+                let intersection = finalData[i].filter(x => tempSet.includes(x));
+                if(intersection.length == 0){
+                    console.log("\n\nfinalData",finalData[i])
+                    console.log("tempSet",tempSet)
+                    console.log("intersection",intersection, intersection.length)
+                    finalData.push(tempSet);
+                    console.log("finalData",finalData[i],"\n\n");
+                }
             }
         } else {
             finalData.push(tempSet);
         }
+
+        // console.log(finalData, tempSet, finalData.indexOf(tempSet));
     }
+
+    console.log("finalData",finalData, "\n\n\n");
 
     finalData.forEach( it => {
         let a1, a2, a3, a4, cc;
@@ -119,11 +142,14 @@ var trapRainWater = function(heightMap) {
                 smallest = Math.min(a1,a2,a3,a4);
             }
         }
+        // console.log("aaaa",heightMap[cc[0]][cc[1]]);
 
         for(let i=0; i<it.length; i++){
             cc = it[i];
             let trappedCell = smallest - heightMap[cc[0]][cc[1]];
             if(trappedCell > 0 ) trappedRain += trappedCell;
+    
+            console.log(a1,a2,a3,a4,"smallest",smallest,"trappedCell",trappedCell,"trappedRain",trappedRain);
         }
 
     });
@@ -131,6 +157,8 @@ var trapRainWater = function(heightMap) {
 
     return trappedRain;
 };
+
+
 
 
 data = [];
