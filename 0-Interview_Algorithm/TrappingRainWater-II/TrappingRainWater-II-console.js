@@ -62,7 +62,7 @@ var trapRainWater = function(heightMap) {
             }
         }
     }
-    console.log(trappedRainCell,"\n\n\n");
+    console.log("\n\n","trappedRainCell",trappedRainCell,"\n\n\n");
 
     let isConnected = (c1, c2) => {
         if(c1 && c2){
@@ -76,51 +76,71 @@ var trapRainWater = function(heightMap) {
         }
     }
 
+
+
+
     let finalData = [];
-    let idx0 = 0;
-    
+
     for(let idx = 0; idx < trappedRainCell.length; idx++){
-        
-        let ii = idx;
-        let connected = false;
+
         let tempSet = [];
 
-        tempSet.push(trappedRainCell[ii]);
-        
-        do{
-            connected = isConnected(trappedRainCell[ii],trappedRainCell[ii+1]);
-            if(connected){
-                // console.log(trappedRainCell[ii],trappedRainCell[ii+1]);
-                // console.log("connected",tempSet, " : " , trappedRainCell[ii+1], " : " , tempSet.indexOf(trappedRainCell[ii+1]));
-
-                if(tempSet.indexOf(trappedRainCell[ii+1]) == -1){
-                    tempSet.push(trappedRainCell[ii+1]);
-                    ii = ii+1;
-                }
-            } else {
-
+        for(let i = idx+1; i < trappedRainCell.length; i++){
+            let connected = isConnected(trappedRainCell[idx],trappedRainCell[i]);
+            let foundInFinalData = JSON.stringify(finalData).indexOf(JSON.stringify(trappedRainCell[i])) > -1 ? true : false;
+            if(connected && !foundInFinalData){
+                tempSet.push(trappedRainCell[i]);
             }
-            // console.log("tempSet",tempSet);
-        } while (connected)
-
-        
-        if(finalData.length > 0){
-            for(let i=0; i<finalData.length; i++){
-                let intersection = finalData[i].filter(x => tempSet.includes(x));
-                if(intersection.length == 0){
-                    console.log("\n\nfinalData",finalData[i])
-                    console.log("tempSet",tempSet)
-                    console.log("intersection",intersection, intersection.length)
-                    finalData.push(tempSet);
-                    console.log("finalData",finalData[i],"\n\n");
-                }
-            }
-        } else {
-            finalData.push(tempSet);
         }
+        // console.log("\n","finalData",finalData,"trappedRainCell",trappedRainCell[idx],"tempSet",tempSet,"\n");
 
-        // console.log(finalData, tempSet, finalData.indexOf(tempSet));
+
+
+
+        if(finalData.length == 0 && tempSet.length > 0){
+            tempSet.unshift(trappedRainCell[idx]);
+            finalData.push(tempSet);
+        } else {
+          
+            let addNewData = true;
+
+            for(let i=0; i<finalData.length; i++){
+                let foundInFinalData = JSON.stringify(finalData[i]).indexOf(JSON.stringify(trappedRainCell[idx])) > -1 ? true : false;
+                console.log("finalData",finalData[i],"search",trappedRainCell[idx],"foundInFinalData",foundInFinalData,"tempSet",tempSet);
+
+                if(foundInFinalData){
+                    finalData[i] = [...finalData[i], ...tempSet];
+                    // finalData[i].concat(tempSet);
+                    addNewData = false;
+                    // continue;
+                    break;
+                }
+            }
+
+            if(addNewData){
+                if(tempSet.length == 0){
+                    console.log("11111",trappedRainCell[idx]);
+                    tempSet.push(trappedRainCell[idx])
+                    finalData.push(tempSet);
+                } else {
+                    tempSet = [trappedRainCell[idx], ...tempSet ];
+                    console.log("22222",tempSet);
+                    finalData.push(tempSet);
+                }
+            }
+
+        }
     }
+
+
+
+
+
+
+
+
+
+
 
     console.log("finalData",finalData, "\n\n\n");
 
@@ -129,6 +149,9 @@ var trapRainWater = function(heightMap) {
         let smallest;
         for(let i=0; i<it.length; i++){
             cc = it[i];
+
+            console.log("cc",cc);
+
             a1 = findUpBig(cc[0], cc[1]);
             a2 = findDownBig(cc[0], cc[1]);
             a3 = findLeftBig(cc[0], cc[1]);
@@ -141,15 +164,18 @@ var trapRainWater = function(heightMap) {
             } else {
                 smallest = Math.min(a1,a2,a3,a4);
             }
+
+
+            console.log(heightMap[cc[0]][cc[1]]," --- ", a1,a2,a3,a4,"smallest",smallest);
+            // console.log("smallest",smallest,heightMap[cc[0]][cc[1]]);
         }
-        // console.log("aaaa",heightMap[cc[0]][cc[1]]);
+
 
         for(let i=0; i<it.length; i++){
             cc = it[i];
             let trappedCell = smallest - heightMap[cc[0]][cc[1]];
             if(trappedCell > 0 ) trappedRain += trappedCell;
-    
-            console.log(a1,a2,a3,a4,"smallest",smallest,"trappedCell",trappedCell,"trappedRain",trappedRain);
+            // console.log(a1,a2,a3,a4,"smallest",smallest,"trappedCell",trappedCell,"trappedRain",trappedRain);
         }
 
     });
@@ -169,13 +195,13 @@ data = [
     [2,3,3,2,3,1]
 ] // 4
 
-// data = [
-//     [12,13,0,12],
-//     [13,4,13,12],
-//     [13,8,10,12],
-//     [12,13,12,12],
-//     [13,13,13,13]    
-// ] // 14
+data = [
+    [12,13,0,12],
+    [13,4,13,12],
+    [13,8,10,12],
+    [12,13,12,12],
+    [13,13,13,13]    
+] // 14
 
 data = [
     [9,9,9,9,9],
@@ -184,6 +210,23 @@ data = [
     [9,2,3,2,9],
     [9,9,9,9,9]
 ] // 57
+
+data = [
+    [3,3,4,4,4,2],
+    [3,1,3,2,1,4],
+    [7,3,1,6,4,1]
+] // 5
+
+
+data = [
+    [78,16,94,36],
+    [87,93,50,22],
+    [63,28,91,60],
+    [64,27,41,27],
+    [73,37,12,69],
+    [68,30,83,31],
+    [63,24,68,36]
+] // 44
 
 console.log(trapRainWater(data));
 
