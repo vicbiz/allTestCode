@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+
+            /* flex-direction: row-reverse; */
+            flex-direction: row;
+
+            /* justify-content: space-around; */
+            justify-content: space-between;
+
+            /* align-items: center;
+            align-items: flex-end; */
+            /* align-items: flex-start; */
+            align-items: flex-stretch;
+        }
+
+        .box{
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+
+            flex-basis: 32%;
+            margin: 10px 0;
+            
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+        }
+
+        .container2{
+            display: flex;
+            /* flex-direction: row; */
+            justify-content: space-between;
+            
+        }
+
+        .box2{
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            flex-basis: 32%;
+        }
+
+        #box1{ flex:4 2 100%; order: 1;}
+        #box2{ flex:2; order: 0; }
+        #box3{ flex:1; order: 2; }
+        /* #box4{ flex:2; }
+        #box5{ flex:2; }
+        #box6{ flex:2; } */
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <h3>Title 1</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div class="box">
+            <h3>Title 2</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="box">
+            <h3>Title 3</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div class="box">
+            <h3>Title 4</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div class="box">
+            <h3>Title 5</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="box">
+            <h3>Title 6</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div id="box1" class="box2">
+            <h3>Title 1</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div id="box2" class="box2">
+            <h3>Title 2</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div id="box3" class="box2">
+            <h3>Title 3</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <!-- <div id="box4" class="box2">
+            <h3>Title 4</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div id="box5" class="box2">
+            <h3>Title 5</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div id="box6" class="box2">
+            <h3>Title 6</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div> -->
+    </div>
+
+    
+</body>
+</html>

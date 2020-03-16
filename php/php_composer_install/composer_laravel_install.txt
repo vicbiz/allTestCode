@@ -1,0 +1,16 @@
+1. download https://getcomposer.org/download/
+2. php composer.phar
+3. make it global 
+   mv composer.phar /usr/local/bin/composer
+4. test
+   composer -V
+
+5. install Laravel globally
+   composer global require laravel/installer
+
+if you have problem with php zip extension. do below
+   brew install php@7.3
+   brew link php@7.3 --force
+   composer global require "laravel/installer"
+
+

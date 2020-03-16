@@ -17,13 +17,13 @@ data = [
 //     [13,13,13,13]    
 // ] // 14
 
-// data = [
-//     [9,9,9,9,9],
-//     [9,2,1,2,9],
-//     [9,2,8,2,9],
-//     [9,2,3,2,9],
-//     [9,9,9,9,9]
-// ] // 57
+data = [
+    [9,9,9,9,9],
+    [9,2,1,2,9],
+    [9,2,8,2,9],
+    [9,2,3,2,9],
+    [9,9,9,9,9]
+] // 57
 
 // data = [
 //     [3,3,4,4,4,2],
@@ -77,6 +77,7 @@ for(let i=0; i<heightMap.length; i++){
 // console.log(objData);
 
 let findNextBig = function(d){
+    // console.log("d",d);
     let b1 = b2 = b3 = b4 = 0;
     let x = d.pos[0];
     let y = d.pos[1];
@@ -91,8 +92,8 @@ let findNextBig = function(d){
 
     for(let i=x-1; i >= 0; i--)      { if(heightMap[i][y] <= h){s1.push([i,y])}; if (heightMap[i][y] > h && heightMap[i][y] > b1) { b1 = heightMap[i][y]; break;}}
     for(let i=x+1; i < rowMax; i++)  { if(heightMap[i][y] <= h){s2.push([i,y])}; if (heightMap[i][y] > h && heightMap[i][y] > b2) { b2 = heightMap[i][y]; break;}}
-    for(let i=y-1; i >= 0; i--)      { if(heightMap[x][i] <= h){s3.push([i,y])}; if (heightMap[x][i] > h && heightMap[x][i] > b3) { b3 = heightMap[x][i]; break;}}
-    for(let i=y+1; i < colMax; i++)  { if(heightMap[x][i] <= h){s4.push([i,y])}; if (heightMap[x][i] > h && heightMap[x][i] > b4) { b4 = heightMap[x][i]; break;}}
+    for(let i=y-1; i >= 0; i--)      { if(heightMap[x][i] <= h){s3.push([x,i])}; if (heightMap[x][i] > h && heightMap[x][i] > b3) { b3 = heightMap[x][i]; break;}}
+    for(let i=y+1; i < colMax; i++)  { if(heightMap[x][i] <= h){s4.push([x,i])}; if (heightMap[x][i] > h && heightMap[x][i] > b4) { b4 = heightMap[x][i]; break;}}
 
     let dir = "";
     let a = [b1, b2, b3, b4];
@@ -108,23 +109,40 @@ let findNextBig = function(d){
         console.log("s4",s4);
         console.log(`[${x}, ${y}]`, d.ht, " : ", b1, b2, b3, b4, "min",b, "index",c, "q",q, "\n\n" );
 
-        if(q.length > 0){
-            let nextObj = heightMap[q[0]];
-            console.log(q[0],"nextObj",nextObj);
-            findNextBig(nextObj);
-        } else {
-            return [b1, b2, b3, b4];
-        }
+        // if(q.length > 0){
+        //     let nextObj = objData.find( it => it.x == q[0][0] && it.y == q[0][1]);
+        //     console.log(q[0],"nextObj",nextObj);
+        //     findNextBig(nextObj);
+        // } else {
+            return [b1, b2, b3, b4, q];
+        // }
     }
 };
 
 let gTotal = 0;
 for(let i=0; i<objData.length; i++){
-    let a = findNextBig(objData[i]);
-    if(a){
-        let total = Math.min(a[0], a[1], a[2], a[3]) - objData[i].ht;
-        console.log("total",total);
-        gTotal += total;
+    let bigsArray = [];
+    let bigs = findNextBig(objData[i]);
+
+    if(bigs && bigs[4]){
+        let q = bigs[4];
+
+        console.log("q",q);
+    }
+
+
+    if(bigs){
+        // do {
+        //     a = findNextBig(objData[i]);
+        //     let nextObj = objData.find( it => it.x == q[0][0] && it.y == q[0][1]);
+        //     mins.push(a[0], a[1], a[2], a[3]);
+        // } while (a[4].length > 0);
+    
+        // console.log("mins", mins);
+
+        // let total = Math.min(mins) - objData[i].ht;
+        // console.log("total",total);
+        // gTotal += total;
     }
 }
 

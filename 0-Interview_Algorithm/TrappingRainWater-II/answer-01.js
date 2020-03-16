@@ -15,6 +15,7 @@ var trapRainWater = function(heightMap) {
 		minh[0][j] = heightMap[0][j];
 		minh[heightMap.length-1][j] = heightMap[heightMap.length-1][j];    			
 	}
+    console.log("minh",minh);
 	for(let i=1;i<heightMap.length-1;i++)
 		for(let j=1;j<heightMap[0].length-1;j++){
 			let min = Number.MAX_VALUE;
@@ -30,12 +31,12 @@ var trapRainWater = function(heightMap) {
 	
 	for(let i=1;i<heightMap.length-1;i++)
 		for(let j=1;j<heightMap[0].length-1;j++){
-            console.log(minh[i][j], heightMap[i][j], minh[i][j]-heightMap[i][j]);
+            // console.log(minh[i][j], heightMap[i][j], minh[i][j]-heightMap[i][j]);
 			water += minh[i][j]-heightMap[i][j];
 		}
     
     console.log("heightMap",heightMap);
-    console.log("minh",minh);
+    // console.log("minh",minh);
     return water;
 };
 
@@ -63,6 +64,12 @@ data = [
     [68,30,83,31],
     [63,24,68,36]
 ] // 44
+
+data = [
+    [1,4,3,1,3,2],
+    [3,2,1,3,2,4],
+    [2,3,3,2,3,1]
+] // 4
 
 console.log(trapRainWater(data));
 
