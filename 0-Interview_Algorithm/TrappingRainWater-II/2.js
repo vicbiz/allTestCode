@@ -31,19 +31,22 @@ data = [
 //     [7,3,1,6,4,1]
 // ] // 5
 
-data = [
-    [78,16,94,36],
-    [87,93,50,22],
-    [63,28,91,60],
-    [64,27,41,27],
-    [73,37,12,69],
-    [68,30,83,31],
-    [63,24,68,36]
-] // 44
+// data = [
+//     [78,16,94,36],
+//     [87,93,50,22],
+//     [63,28,91,60],
+//     [64,27,41,27],
+//     [73,37,12,69],
+//     [68,30,83,31],
+//     [63,24,68,36]
+// ] // 44
 
+console.log(data);
 
 
 let heightMap = data;
+
+
 
 const rowMax = data.length;
 const colMax = data[0].length;
@@ -95,21 +98,37 @@ let findNextBig = function(d){
     let a = [b1, b2, b3, b4];
     let b = Math.min(b1, b2, b3, b4);
     let c = a.findIndex( it => it == b);
+    let q = [];
 
     if(b1 != null && b2 != null && b3 != null && b4 != null && b1 != 0 && b2 != 0 && b3 != 0 && b4 != 0){
+        q.push(...s1, ...s2, ...s3, ...s4);
         console.log("\n\ns1",s1);
         console.log("s2",s2);
         console.log("s3",s3);
         console.log("s4",s4);
-        console.log(d.ht, " : ", b1, b2, b3, b4, "min",b, "index",c, "\n\n" );
+        console.log(`[${x}, ${y}]`, d.ht, " : ", b1, b2, b3, b4, "min",b, "index",c, "q",q, "\n\n" );
+
+        if(q.length > 0){
+            let nextObj = heightMap[q[0]];
+            console.log(q[0],"nextObj",nextObj);
+            findNextBig(nextObj);
+        } else {
+            return [b1, b2, b3, b4];
+        }
     }
-    return [b1, b2, b3, b4];
 };
 
-
+let gTotal = 0;
 for(let i=0; i<objData.length; i++){
     let a = findNextBig(objData[i]);
+    if(a){
+        let total = Math.min(a[0], a[1], a[2], a[3]) - objData[i].ht;
+        console.log("total",total);
+        gTotal += total;
+    }
 }
+
+console.log("gTotal",gTotal);
 
 console.log(trappedRainTotal);
 
