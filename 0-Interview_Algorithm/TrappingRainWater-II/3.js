@@ -14,6 +14,7 @@ var trapRainWater = function(heightMap) {
 
 
     let visitedArray = [];
+    let needToVisit = [];
 
     let checkVisited = function(x,y){
         let findP = visitedArray.findIndex(it => JSON.stringify(it) == JSON.stringify([x,y]));
@@ -26,23 +27,31 @@ var trapRainWater = function(heightMap) {
         let h = heightMap[x][y];
         let bigNumbers = [];
 
-        if (heightMap[x-1][y] > h && !checkVisited(x-1,y) ) { bigNumbers.push(heightMap[x-1][y])}
-        if (heightMap[x+1][y] > h && !checkVisited(x+1,y) ) { bigNumbers.push(heightMap[x+1][y])}
-        if (heightMap[x][y-1] > h && !checkVisited(x,y-1) ) { bigNumbers.push(heightMap[x][y-1])}
-        if (heightMap[x][y+1] > h && !checkVisited(x,y+1) ) { bigNumbers.push(heightMap[x][y+1])}
+        let dir = [[-1,0], [1,0], [0,-1], [0,1]];
+
+        dir.forEach( d => {
+            let newX = x + d[0];
+            let newY = y + d[1];
+            if (!checkVisited(newX,newY) ) { 
+                if (heightMap[newX][newY] > h) { 
+                    bigNumbers.push(heightMap[newX][newY])
+                } else { 
+                    if(newX > 0 && newX < M-1 && newY > 0 && newY < N-1){
+                        needToVisit.push([newX,newY])
+                    }
+                }
+            }
+            console.log(x,y, " - ",newX, newY, "h",h,"heightMap", heightMap[newX][newY],"bigNumbers",bigNumbers, "needToVisit",needToVisit);
+        });
 
         if(!checkVisited(x,y)) {
             visitedArray.push([x,y]);
         }
-
-        // for(let i=x-1; i >= 0; i--) { if (heightMap[i][y] > h && heightMap[i][y] > b1) { b1 = heightMap[i][y]; break;}}
-        // for(let i=x+1; i < M; i++)  { if (heightMap[i][y] > h && heightMap[i][y] > b2) { b2 = heightMap[i][y]; break;}}
-        // for(let i=y-1; i >= 0; i--) { if (heightMap[x][i] > h && heightMap[x][i] > b3) { b3 = heightMap[x][i]; break;}}
-        // for(let i=y+1; i < N; i++)  { if (heightMap[x][i] > h && heightMap[x][i] > b4) { b4 = heightMap[x][i]; break;}}
     
         let a = bigNumbers.length > 0 ? Math.min(...bigNumbers) : 0;
         let b = a > 0 ? a - h : 0;
-        console.log(bigNumbers, "h",h,"min",a,"trap",b, "\n\n" );
+        // console.log("needToVisit", needToVisit);
+        // console.log("bigNumbers", bigNumbers, "h",h,"min",a,"trap",b, "\n\n" );
     }
 
     for(let i=1; i<M-1 ; i++){
@@ -88,13 +97,13 @@ data = [
     [2,3,3,2,3,1]
 ] // 4
 
-data = [
-    [12,13,0,12],
-    [13,4,13,12],
-    [13,8,10,12],
-    [12,13,12,12],
-    [13,13,13,13]    
-] // 14
+// data = [
+//     [12,13,0,12],
+//     [13,4,13,12],
+//     [13,8,10,12],
+//     [12,13,12,12],
+//     [13,13,13,13]    
+// ] // 14
 
 // data = [
 //     [9,9,9,9,9],

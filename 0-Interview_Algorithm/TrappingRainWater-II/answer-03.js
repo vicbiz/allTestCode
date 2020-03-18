@@ -83,7 +83,7 @@ var trapRainWater = function(heightMap) {
             } 
         }
     }
-    // console.log(minHeap.heap, marked)
+    console.log(minHeap.heap, marked)
     let res = 0
     let dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]]
     while (minHeap.size()) {
