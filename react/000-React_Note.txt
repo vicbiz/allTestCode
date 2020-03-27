@@ -19,7 +19,8 @@
 
 
 
-
+******* Install Global Dependency (if "sudo npm i -g react-native-cli" not working)
+yarn global add react-native-cli
 
 
 
