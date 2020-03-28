@@ -9,7 +9,6 @@ const ListItem = ({item}) => {
       <View style={styles.listItemView}>
         <Text style={styles.listItemText}>{item.text}</Text>
         <Icon name="remove" size={20} color="firebrick" />
-        <Icon name="rocket" size={30} color="#900" />
       </View>
     </TouchableOpacity>
   );
