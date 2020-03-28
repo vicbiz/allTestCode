@@ -14,6 +14,7 @@ const ListItem = ({item}) => {
   );
 };
 
+
 const styles = StyleSheet.create({
   listItem: {
     padding: 15,
