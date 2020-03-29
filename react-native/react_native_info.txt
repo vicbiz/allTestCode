@@ -1,2 +1,75 @@
+
+
+rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && rm -rf node_modules/ && npm cache clean && npm install && npm start -- --reset-cache
+
+rm -rf $TMPDIR/metro-* && rm -rf $TMPDIR/haste-map-*
+
+
+rm -rf node_modules
+npm cache clean --force
+yarn start --reset-cache
+npm install
+
+
 pod deintegrate
 pod install
+
+
+git remote set-url origin git@github.com:vicbiz/allTestCode.git
+
+
+
+
+
+
+
+
+Unrecognized font family 'FontAwesome'
+
++[RCTFont updateFont:withFamily:size:weight:style:variant:scaleMultiplier:]
+    RCTFont.mm:316
+-[RCTTextAttributes effectiveFont]
+-[RCTTextAttributes effectiveTextAttributes]
+-[RCTBaseTextShadowView attributedTextWithBaseTextAttributes:]
+-[RCTBaseTextShadowView attributedTextWithBaseTextAttributes:]
+-[RCTTextShadowView attributedTextWithMeasuredAttachmentsThatFitSize:]
+-[RCTTextShadowView textStorageAndLayoutManagerThatFitsSize:exclusiveOwnership:]
+RCTTextShadowViewMeasure
+YGNode::measure(float, YGMeasureMode, float, YGMeasureMode, void*)
+YGNodeWithMeasureFuncSetMeasuredDimensions(YGNode*, float, float, YGMeasureMode, YGMeasureMode, float, float, facebook::yoga::LayoutData&, void*, facebook::yoga::LayoutPassReason)
+YGNodelayoutImpl(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int, facebook::yoga::LayoutPassReason)
+YGLayoutNodeInternal(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, facebook::yoga::LayoutPassReason, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodeComputeFlexBasisForChild(YGNode*, YGNode*, float, YGMeasureMode, float, float, float, YGMeasureMode, YGDirection, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodeComputeFlexBasisForChildren(YGNode*, float, float, YGMeasureMode, YGMeasureMode, YGDirection, YGFlexDirection, YGConfig*, bool, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodelayoutImpl(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int, facebook::yoga::LayoutPassReason)
+YGLayoutNodeInternal(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, facebook::yoga::LayoutPassReason, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodeComputeFlexBasisForChild(YGNode*, YGNode*, float, YGMeasureMode, float, float, float, YGMeasureMode, YGDirection, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodeComputeFlexBasisForChildren(YGNode*, float, float, YGMeasureMode, YGMeasureMode, YGDirection, YGFlexDirection, YGConfig*, bool, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodelayoutImpl(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int, facebook::yoga::LayoutPassReason)
+YGLayoutNodeInternal(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, facebook::yoga::LayoutPassReason, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodeComputeFlexBasisForChild(YGNode*, YGNode*, float, YGMeasureMode, float, float, float, YGMeasureMode, YGDirection, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodeComputeFlexBasisForChildren(YGNode*, float, float, YGMeasureMode, YGMeasureMode, YGDirection, YGFlexDirection, YGConfig*, bool, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodelayoutImpl(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int, facebook::yoga::LayoutPassReason)
+YGLayoutNodeInternal(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, facebook::yoga::LayoutPassReason, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodelayoutImpl(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int, facebook::yoga::LayoutPassReason)
+YGLayoutNodeInternal(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, facebook::yoga::LayoutPassReason, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodelayoutImpl(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int, facebook::yoga::LayoutPassReason)
+YGLayoutNodeInternal(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, facebook::yoga::LayoutPassReason, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodelayoutImpl(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int, facebook::yoga::LayoutPassReason)
+YGLayoutNodeInternal(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, facebook::yoga::LayoutPassReason, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNodeCalculateLayoutWithContext
+YGNodeCalculateLayout
+-[RCTShadowView layoutWithMinimumSize:maximumSize:layoutDirection:layoutContext:]
+-[RCTRootShadowView layoutWithAffectedShadowViews:]
+-[RCTUIManager uiBlockWithLayoutUpdateForRootView:]
+-[RCTUIManager _layoutAndMount]
+-[RCTUIManager batchDidComplete]
+__32-[RCTCxxBridge batchDidComplete]_block_invoke
+_dispatch_call_block_and_release
+_dispatch_client_callout
+_dispatch_lane_serial_drain
+_dispatch_lane_invoke
+_dispatch_workloop_worker_thread
+_pthread_wqthread
+start_wqthread
+
