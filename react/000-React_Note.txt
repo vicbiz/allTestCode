@@ -23,4 +23,15 @@
 yarn global add react-native-cli
 
 
+VSCode
+
+extension : Prettier
+
+preferences -> Settings -> search "formatonsave" -> check "Format on Save"
+
+
+Users > jmoon > Library > Application Support > Code > User > {} settings.json
+
+add => "editor.formatOnSave": true,
+
 
