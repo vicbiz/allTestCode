@@ -53,11 +53,14 @@ const WeatherEngine = ({ initLocation }) => {
   };
 
   const handleSearch = e => {
-    //   e.preventDefault();
     setQuery(e);
     console.log("e:", e, "query:", query);
-    getWeather(e);
+    // getWeather(e);
   };
+
+  useEffect(() => {
+    getWeather(query);
+  }, [query]);
 
   useEffect(() => {
     getWeather(initLocation);
@@ -79,16 +82,19 @@ const WeatherEngine = ({ initLocation }) => {
           <form>
             {/* Lose Focus */}
             {/* <input value={query} onChange={ e => setQuery(e.target.value)}/> */}
-
             {/* <input value={query} onChange={ handleChange }/> */}
 
             <GooglePlacesAutocomplete
+              autocompletionRequest={{
+                types: ["(cities)"]
+              }}
+              placeholder={query}
               loader={<img src={loader} alt="Loading..." />}
               initialValue={query}
+              //   onSelect={console.log}
               onSelect={({ description }) => handleSearch(description)}
             />
-
-            <button onClick={e => handleSearch(query)}>Search</button>
+            {/* <button onClick={e => handleSearch(query)}>Search</button> */}
           </form>
         </>
       )}
