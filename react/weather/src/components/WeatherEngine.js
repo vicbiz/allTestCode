@@ -54,8 +54,6 @@ const WeatherEngine = ({ initLocation }) => {
 
   const handleSearch = e => {
     setQuery(e);
-    console.log("e:", e, "query:", query);
-    // getWeather(e);
   };
 
   useEffect(() => {
