@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const AllDestinations = () => {
   const [destinations, setDestinations] = useState([]);
@@ -7,7 +7,7 @@ const AllDestinations = () => {
   useEffect(() => {
     console.log("useEffect");
     getData();
-  }, [destinations]);
+  }, []);
 
   const getData = async () => {
     const data = await fetch(

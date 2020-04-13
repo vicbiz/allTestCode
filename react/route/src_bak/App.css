@@ -64,12 +64,10 @@ nav > a:nth-child(2) {
 
 .loadingBlock {
   height: 80vh;
-  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  margin: 0 auto;
 }
 
 .loadingText {
@@ -135,129 +133,33 @@ nav > a:nth-child(2) {
 .destinationDetailWrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-.destinationDetailWrap::after {
-  content: "";
-  flex: auto;
+  justify-content: space-around;
 }
 
 .destinationBlock {
   border: 1px solid #ccc;
   padding: 10px;
-  /* width: 47%; */
-  width: 30%;
+  width: 45%;
   margin-bottom: 20px;
 }
 
 .destinationBlock .propImg {
   position: relative;
 }
-
-.destinationBlock .propImg .ratingWrap {
-  position: absolute;
-  width: 100%;
-  text-align: right;
-}
 .destinationBlock .propImg .rating {
+  position: absolute;
   color: #ffffff;
-  width: 50px;
-  margin: 10px;
+  width: 60px;
+  padding: 10px;
+  margin-left: 85%;
 }
 .destinationBlock .propImg .propertyImg {
   width: 100%;
-}
-
-#destinationTop .destinationPhoto img {
-  width: 100%;
-}
-#destinationTop .description {
-  font-size: 14px;
-  text-align: justify;
-}
-.propNameBlock {
-  min-height: 100px;
-}
-.propName {
-  font-size: 15px;
-  font-weight: bold;
-  margin: 10px;
-}
-.propHeadline {
-  font-size: 13px;
-}
-
-.contactForm {
-  margin: 30px auto 0;
-  width: 50%;
-}
-.formRow {
-  position: relative;
-  height: 60px;
-  overflow: hidden;
-}
-
-.contactForm input {
-  width: 100%;
-  height: 100%;
-  color: #595f6e;
-  outline: none;
-  padding-top: 20px;
-  border: none;
-  font-size: 14px;
-}
-
-.contactForm label {
-  position: absolute;
-  bottom: 0px;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-bottom: 1px solid #000000;
-  font-size: 14px;
-}
-
-.contactForm label::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: -1px;
-  height: 100%;
-  width: 100%;
-  border-bottom: 3px solid #5fa8d3;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-.content-name {
-  position: absolute;
-  bottom: 5px;
-  left: 0px;
-  transition: all 0.3s ease;
-}
-
-/* .contactForm input:valid {
-  background: #b9f3e6;
-}
-.contactForm input:invalid {
-  background: #eeeeee;
-} */
-
-.contactForm input:focus + .label-name .content-name,
-.contactForm input:valid + .label-name .content-name {
-  transform: translateY(-150%);
-  font-size: 14px;
-  color: #5fa8d3;
-}
-.contactForm input:focus + .label-name::after,
-.contactForm input:valid + .label-name::after {
-  transform: translateY(0);
 }
 
 @media all and (max-width: 660px) {
   .destListWrap .card {
     width: 100%;
     max-width: 100%;
-    pointer-events: none;
   }
 }

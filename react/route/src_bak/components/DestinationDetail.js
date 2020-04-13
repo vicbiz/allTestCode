@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Parser from "html-react-parser";
 
 import LoadingAnimation from "./Loading";
 import FtgLogo from "../assets/img/ftg-logo.svg";
 import MapIcon from "../assets/img/gps.svg";
-import { DestinationContext } from "../contexts/DestinationContext";
 
 export default function DestinationDetail({ match }) {
   useEffect(() => {
@@ -12,36 +11,29 @@ export default function DestinationDetail({ match }) {
   }, [match]);
 
   const [dest, setDest] = useState([]);
-  const [proploading, setProploading] = useState(true);
-  const { destinations, loading } = useContext(DestinationContext);
 
-  const currentDestination = destinations.filter(
-    (it) => it.uri === "/destinations/" + match.params.id
-  )[0];
-
-  const fetchDest = async (match) => {
+  const fetchDest = async match => {
     const fetchUrl = `https://www.forbestravelguide.com/api/property/destination/${match.params.id}.json`;
     const fetchData = await fetch(fetchUrl);
     const dest = await fetchData.json();
-    const destActive = await dest.filter((it) => it.active === true);
+    const destActive = await dest.filter(it => it.active === true);
     // console.log("destActive", destActive);
     setDest(destActive);
-    setProploading(false);
   };
 
-  let rating = function (d) {
+  let rating = function(d) {
     let rating = "";
     if (d.ratingObject.ratingValue !== "") {
-      rating = `<div class="ratingWrap"><img
+      rating = `<img
         class="rating"
         alt="FTG Rating"
         src="https://secure.s.forbestravelguide.com/images/icon-circle-${d.ratingObject.ratingValue}-star.svg"s
-      /></div>`;
+      />`;
     }
     return rating;
   };
 
-  if (proploading || loading) {
+  if (dest.length === 0) {
     return (
       <div className="loadingBlock">
         <div className="loadingText">Loading Data ....</div>
@@ -49,34 +41,14 @@ export default function DestinationDetail({ match }) {
       </div>
     );
   } else {
+    // console.log("aaaaaaaaaa", this.props.location.state);
     return (
-      <div className="container">
-        <h1>{currentDestination.name}</h1>
-        <div className="region">
-          {currentDestination.regionPrimaryLevel},{" "}
-          {currentDestination.regionSecondaryLevel}
-        </div>
-
-        <div className="container" id="destinationTop">
-          <div className="destinationPhoto">
-            <img
-              src={currentDestination.heroImage.extraLargeUrl}
-              alt={currentDestination.name}
-            />
-          </div>
-          <div
-            className="description"
-            dangerouslySetInnerHTML={{
-              __html: currentDestination.overview,
-            }}
-          ></div>
-        </div>
-
-        <div className="counter">
-          {dest.length > 0 ? dest.length : "No"} FTG Properties found.
-        </div>
+      <div>
+        <h1>{dest.length > 0 ? dest[0].destinationName : ""}</h1>
+        <div className="counter">{dest.length} Properties</div>
+        {/* message : {message} */}
         <div className="container destinationDetailWrap">
-          {dest.map((d) => {
+          {dest.map(d => {
             return (
               <div className="destinationBlock" key={d.propertyId}>
                 <div className="propImg">
@@ -87,10 +59,8 @@ export default function DestinationDetail({ match }) {
                     alt={d.media.description}
                   />
                 </div>
-                <div className="propNameBlock">
-                  <div className="propName">{d.propertyName}</div>
-                  <div className="propHeadline">{d.propertyHeadline}</div>
-                </div>
+                <div>{d.propertyName}</div>
+                <div>{d.propertyHeadline}</div>
                 <div className="externalLinks">
                   <a
                     target="_blank"
