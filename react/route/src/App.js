@@ -9,7 +9,7 @@ import About from "./components/About";
 import DestinationDetail from "./components/DestinationDetail";
 import DestinationContextProvider from "./contexts/DestinationContext";
 
-// useState **************
+// useState **************s
 // import FetchDataOne from "./components/FetchDataOne";
 
 // useReducer **************
