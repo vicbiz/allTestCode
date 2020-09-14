@@ -1,0 +1,38 @@
+abcdefghijklmnopqurtuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+1234567890
+
+Ha HaHa
+
+MetaCharacters (Need to be escaped):
+.[{()\^$|?*+
+
+coreyms.com
+
+\d{3}[-.]\d{3}[.-]\d{4}
+
+321-555-4321
+123.555.1234
+800-123-1234
+900.234-4690
+
+cat
+bat
+mat
+pat
+
+Mr. Schafer
+Mr Smith
+Ms Davis
+Mrs. Robinson
+Mr. T
+
+
+CoreyMSchafer@gmail.com
+corey.schafer@university.edu
+corey-321-schafer@my-work.net
+
+
+[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.(edu|net|com)
+[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
+

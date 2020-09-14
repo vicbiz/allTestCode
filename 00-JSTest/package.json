@@ -1,0 +1,16 @@
+{
+  "name": "jstest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "puppeteer": "^5.3.0"
+  }
+}
