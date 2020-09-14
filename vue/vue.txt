@@ -1,3 +1,15 @@
+sudo npm i -g @vue/cli
+vue --version
+
+VSCode Extension : Vetur
+
+
+
+yarn cache clean: cleans that directory
+yarn cache list: shows the list of cached dependencies
+yarn cache dir: prints out the path of your cached directory
+
+
 vue create my-app
 cd my-app
 npm run serve  -or-  yarn serve

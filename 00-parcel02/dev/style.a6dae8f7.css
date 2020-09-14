@@ -1,0 +1,37 @@
+div {
+  background: #eeeeee;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+body {
+  background: #cccccc;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.warning {
+  background-color: #ffc107;
+}
+
+#user {
+  max-width: 300px;
+}
+
+#getUserBtn {
+  background-color: #28a745;
+  color: #ffffff;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+}
+
+.userPicture {
+  width: 100%;
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */

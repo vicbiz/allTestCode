@@ -1,0 +1,39 @@
+@use "sass:map";
+
+@import "div";
+
+$bgColor: #cccccc;
+$fontSize: 25px;
+$theme-colors: (
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+);
+
+body {
+  background: $bgColor;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.warning {
+  background-color: map.get($theme-colors, "warning");
+}
+
+#user {
+  max-width: 300px;
+}
+
+#getUserBtn {
+  background-color: map.get($theme-colors, "success");
+  color: #ffffff;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+}
+
+.userPicture {
+  width: 100%;
+}

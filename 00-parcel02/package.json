@@ -1,0 +1,23 @@
+{
+  "name": "parcel02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rm -rf ./dev && parcel src/index.html --out-dir dev -p 3000 --no-cache",
+    "build": "parcel build src/index.html --out-dir dist --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10",
+    "scss": "^0.2.4"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
