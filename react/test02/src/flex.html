@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* flex-flow: row wrap; */
+        align-items: center;
+        justify-content: space-between;
+      }
+      .item {
+        width: 200px;
+        height: 200px;
+        margin: 5px 0;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ct {
+        display: flex;
+        height: 300px;
+        border: 1px solid #cccccc;
+
+        flex-wrap: wrap;
+
+        /* justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: space-evenly;
+        justify-content: space-between; */
+        justify-content: space-around;
+
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: center;
+        align-items: baseline;
+        align-items: stretch;
+
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: space-between;
+        /* align-content: stretch;
+        align-content: space-around; */
+      }
+      .itm {
+        width: 200px;
+        background: #aeaeae;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .c1 {
+        display: flex;
+        height: 100px;
+        align-items: center;
+      }
+      .mu {
+        padding: 10px;
+        color: #ffffff;
+        flex: 1;
+      }
+      .home {
+        background: #123456;
+        /* align-self: flex-start; */
+
+        /* flex: 1;  */
+        /* flex: 1 1 0; */
+
+        /* take extra space when container has more space */
+        /* flex-grow: 1;  */
+        /* take extra space when container has less space */
+        /* flex-shrink: 1; */
+        /* min width */
+        /* flex-basis: 0;  */
+
+        /* order: 0; */
+      }
+      .profile {
+        background: #aaaaaa;
+        /* flex: 1; */
+        /* order: 1; */
+      }
+      .search {
+        background: #456456;
+        /* flex: 2; */
+        /* order: 1; */
+      }
+      .logout {
+        background: #ff22ff;
+        margin-left: auto;
+        /* align-self: flex-end; */
+        /* flex: 1; */
+        /* order: -1; */
+      }
+
+      @media all and (max-width: 600px) {
+        .c1 {
+          flex-wrap: wrap;
+          height: 400px;
+        }
+        .mu {
+          flex: 1 1 50%;
+        }
+      }
+
+      .c2 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .c2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .c2 .item1 {
+        flex: 1 1 300px;
+      }
+    </style>
+
+    <div class="c1">
+      <div class="mu home">Home</div>
+      <div class="mu profile">Profile</div>
+      <div class="mu search"><input type="text" placeholder="Search" /></div>
+      <div class="mu logout">Logout</div>
+    </div>
+
+    <div class="c2">
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//AbuDhabi-iStockalan64.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//AlexandriaEgypt-CreditiStock_javarman3.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//AmalfiCoast-creditDanaTentis.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//AmeliaIsland-CreditDeremer-StudiosLLC.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//Amman-CreditiStock-Ayman-Alakhras.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//Amsterdam-CreditWindowsChannel.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//AnchorageAlaska-CreditNicoleGeils.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//Anguilla-CreditDaniloforcellini-iStock.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//Antigua-CreditIR_Stone-iStock.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item1">
+        <img
+          src="https://secure.s.forbestravelguide.com/img/destinations//Aruba-CreditWindowsChannel.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="item">item</div>
+      <div class="item">item</div>
+      <div class="item">item</div>
+      <div class="item">item</div>
+      <div class="item">item</div>
+      <div class="item">item</div>
+      <div class="item">item</div>
+      <div class="item">item</div>
+      <div class="item">item</div>
+      <div class="item">item</div>
+    </div>
+
+    <div class="ct">
+      <div class="itm">01</div>
+      <div class="itm">02</div>
+      <div class="itm">03</div>
+      <div class="itm">04</div>
+      <div class="itm">05</div>
+      <div class="itm">06</div>
+      <div class="itm">07</div>
+      <div class="itm">08</div>
+      <div class="itm">09</div>
+      <div class="itm">10</div>
+    </div>
+  </body>
+</html>

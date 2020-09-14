@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+  color: #555555;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  /* margin: 10px 0 20px; */
+  font-family: "PT Serif", serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.ftgTopLogo {
+  padding: 0 10px;
+}
+
+nav {
+  background: #49425b;
+  /* min-height: 10vh; */
+  min-height: 75px;
+  display: flex;
+}
+
+nav ul {
+  flex: 1;
+  display: flex;
+  list-style: none;
+  /* justify-content: space-around; */
+  justify-content: flex-end;
+}
+
+nav > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #eeeeee;
+  min-width: 100px;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+nav > a:nth-child(2) {
+  margin-left: auto;
+}
+
+.navbar__link--active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.loadingBlock {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.loadingText {
+  margin: 0 0 30px;
+  animation: blinkingText 1s linear infinite;
+}
+
+@keyframes blinkingText {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Destination Page */
+.destListWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.destListWrap .card {
+  width: 30%;
+  max-width: 350px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  line-height: 1.3rems;
+}
+.destListWrap .card .description {
+  height: 110px;
+  overflow: scroll;
+  color: #666666;
+  font-size: 0.8rem;
+  margin: 10px;
+  text-align: left;
+  display: none;
+}
+
+.destListWrap .card .photo img {
+  width: 100%;
+}
+
+.destListWrap .card .name {
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.destListWrap .card .externalLinks {
+  margin: 10px 0;
+}
+.ftgIcon {
+  width: 100px;
+  margin-right: 20px;
+}
+.mapIcon {
+  width: 35px;
+}
+
+/* Destination Detail */
+.destinationDetailWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.destinationBlock {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.destinationBlock .propImg {
+  position: relative;
+}
+.destinationBlock .propImg .rating {
+  position: absolute;
+  color: #ffffff;
+  width: 60px;
+  padding: 10px;
+  margin-left: 85%;
+}
+.destinationBlock .propImg .propertyImg {
+  width: 100%;
+}
+
+@media all and (max-width: 660px) {
+  .destListWrap .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}

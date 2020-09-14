@@ -15,7 +15,7 @@ var trapRainWater = function(heightMap) {
 		minh[0][j] = heightMap[0][j];
 		minh[heightMap.length-1][j] = heightMap[heightMap.length-1][j];    			
 	}
-    console.log("minh",minh);
+    console.log("minh 1",minh);
 	for(let i=1;i<heightMap.length-1;i++)
 		for(let j=1;j<heightMap[0].length-1;j++){
 			let min = Number.MAX_VALUE;
@@ -25,8 +25,11 @@ var trapRainWater = function(heightMap) {
 			if(minh[i][j-1]!==0) min = Math.min(min, minh[i][j-1]);    			
 			minh[i][j] = Math.max(heightMap[i][j], min);
 			//pass by
+			console.log("min",min,"minh 2",minh);
 			dfs(heightMap, minh, minh[i][j], i-1, j);    	 
+			console.log("minh 3",minh);
 	    	dfs(heightMap, minh, minh[i][j], i, j-1);    	    	
+			console.log("minh 4",minh);
 		}
 	
 	for(let i=1;i<heightMap.length-1;i++)
@@ -41,6 +44,7 @@ var trapRainWater = function(heightMap) {
 };
 
 var dfs = function(matrix, minh, h, i, j){
+	console.log("i",i,"j",j);
 	if(i===0||i==matrix.length-1||j===0||j==matrix[0].length-1) return;
 	if(minh[i][j]===0) return;
 	if(minh[i][j]>h&&minh[i][j]!=matrix[i][j]){
@@ -66,10 +70,18 @@ data = [
 ] // 44
 
 data = [
-    [1,4,3,1,3,2],
-    [3,2,1,3,2,4],
-    [2,3,3,2,3,1]
-] // 4
+    [12,13,0,12],
+    [13,4,13,12],
+    [13,8,10,12],
+    [12,13,12,12],
+    [13,13,13,13]    
+] // 14
+
+// data = [
+//     [1,4,3,1,3,2],
+//     [3,2,1,3,2,4],
+//     [2,3,3,2,3,1]
+// ] // 4
 
 console.log(trapRainWater(data));
 
