@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">Header</div>
+    <div class="body">
+      <div class="block">Body1</div>
+      <div class="block headingStatement">Body2</div>
+      <div class="block">Body3</div>
+      <div class="block headingStatement">Body4</div>
+      <div class="block">Body5</div>
+      <div class="block" id="body6">Body6</div>
+      <p>Paragraph1</p>
+      <p>Paragraph2</p>
+    </div>
+
+    <script>
+      let a = document.querySelector(".block"); // same as getElementsByClassName
+      a.style.cssText = "color: #808080";
+      let a1 = document.querySelectorAll(".block");
+      // a1.style.cssText = "color: #808080";
+
+      let b = document.querySelector(".headingStatement");
+      b.style.cssText = "color: #ff0000";
+
+      let c = document.getElementById("body6");
+      c.style.cssText = "color: #ff0000";
+
+      let d = document.querySelector("#body6");
+      d.style.cssText = "color: #ff8800";
+
+      var el = document.querySelector("p");
+      el.className += "headingStatement";
+      el.style.cssText += "background: #918918;";
+      el.style.padding = "30px";
+      el.style.textAlign = "center";
+      el.style.border = "2px solid #0000ff";
+    </script>
+  </body>
+</html>

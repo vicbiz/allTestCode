@@ -13,27 +13,27 @@ class InfoBox extends Component {
       allNumberCountsSortedByCount: [],
       pickPickCount: 5,
       pickedTop10: [],
-      pickedBtm10: []
+      pickedBtm10: [],
       // pickedTop10: [{powerball:'', pickedNumbers:[]}],
       // pickedBtm10: [{powerball:'', pickedNumbers:[]}],
     };
   }
 
-  updateSort = sortBy => {
+  updateSort = (sortBy) => {
     switch (sortBy) {
       case "pn":
         this.setState({
-          megaBallNumbers: this.state.allMegaballWithCountSortedByKey
+          megaBallNumbers: this.state.allMegaballWithCountSortedByKey,
         });
         break;
       case "pc":
         this.setState({
-          megaBallNumbers: this.state.allMegaballWithCounntSortedByCount
+          megaBallNumbers: this.state.allMegaballWithCounntSortedByCount,
         });
         break;
       case "nn":
         this.setState({
-          winNumbers: this.state.allNumbersWithCountSortedByKey
+          winNumbers: this.state.allNumbersWithCountSortedByKey,
         });
         break;
       case "nc":
@@ -44,7 +44,7 @@ class InfoBox extends Component {
     }
   };
 
-  quickPick = pickBy => {
+  quickPick = (pickBy) => {
     let megaNumbers = [];
     let winNumbers = [];
     const pickPickCount = this.state.pickPickCount;
@@ -88,14 +88,16 @@ class InfoBox extends Component {
           let pickedResult = [];
           while (pickedCount < 5) {
             let tempNumber = Math.floor(Math.random() * Math.floor(10));
-            if (!pickedResult.find(k => k === winNumbers[tempNumber].number)) {
+            if (
+              !pickedResult.find((k) => k === winNumbers[tempNumber].number)
+            ) {
               pickedCount++;
               pickedResult.push(winNumbers[tempNumber].number);
             }
           }
           Object.assign(pickedObj, {
             megaBall: megaNumbers[tempMega].powerball,
-            pickedNumbers: pickedResult.sort()
+            pickedNumbers: pickedResult.sort(),
           });
         }
         // console.log("pickedObj",pickedObj);
@@ -110,8 +112,8 @@ class InfoBox extends Component {
     const allResults = this.state.allResults;
     // console.log("allResults", allResults);
 
-    const allWinPowerBallsArray = allResults.map(result => result.mega_ball);
-    const allWinNumbersArray = allResults.map(data =>
+    const allWinPowerBallsArray = allResults.map((result) => result.mega_ball);
+    const allWinNumbersArray = allResults.map((data) =>
       data.winning_numbers.split(" ")
     );
     // console.log("allWinPowerBallsArray",allWinPowerBallsArray.length,allWinPowerBallsArray);
@@ -122,7 +124,7 @@ class InfoBox extends Component {
     console.log("allWinPowerBallsArraySet",allWinPowerBallsArraySet.length,allWinPowerBallsArraySet);
     */
 
-    const getCount = arrayNumbers =>
+    const getCount = (arrayNumbers) =>
       arrayNumbers.reduce(
         (a, b) => Object.assign(a, { [b]: (a[b] || 0) + 1 }),
         {}
@@ -131,32 +133,32 @@ class InfoBox extends Component {
     let allPowerBallCounts = getCount(allWinPowerBallsArray);
 
     // Fill up 0 win...
-    for (let i = 1; i < 26; i++) {
-      let tempKey = i < 10 ? "0" + i : "" + i;
-      !allPowerBallCounts[tempKey]
-        ? Object.assign(allPowerBallCounts, { [tempKey]: 0 })
-        : "";
-      // console.log("tempKey",tempKey, !allPowerBallCounts[tempKey]);
-    }
+    // for (let i = 1; i < 26; i++) {
+    //   let tempKey = i < 10 ? "0" + i : "" + i;
+    //   !allPowerBallCounts[tempKey]
+    //     ? Object.assign(allPowerBallCounts, { [tempKey]: 0 })
+    //     : "";
+    //   console.log("tempKey", tempKey, !allPowerBallCounts[tempKey]);
+    // }
 
     console.log("allPowerBallCounts", allPowerBallCounts, "length");
 
     const allMegaballWithCountSortedByKey = Object.keys(allPowerBallCounts)
       .sort((a, b) => a - b)
-      .map(item => {
+      .map((item) => {
         return { powerball: item, wincount: allPowerBallCounts[item] };
       });
     this.setState({
-      allMegaballWithCountSortedByKey: allMegaballWithCountSortedByKey
+      allMegaballWithCountSortedByKey: allMegaballWithCountSortedByKey,
     });
 
     const allMegaballWithCounntSortedByCount = Object.keys(allPowerBallCounts)
       .sort((a, b) => allPowerBallCounts[b] - allPowerBallCounts[a])
-      .map(item => {
+      .map((item) => {
         return { powerball: item, wincount: allPowerBallCounts[item] };
       });
     this.setState({
-      allMegaballWithCounntSortedByCount: allMegaballWithCounntSortedByCount
+      allMegaballWithCounntSortedByCount: allMegaballWithCounntSortedByCount,
     });
     this.setState({ megaBallNumbers: allMegaballWithCountSortedByKey });
 
@@ -164,20 +166,20 @@ class InfoBox extends Component {
     let allNumbersWithCount = getCount(allNumbersArray);
     let allNumbersWithCountSortedByKey = Object.keys(allNumbersWithCount)
       .sort((a, b) => a - b)
-      .map(item => {
+      .map((item) => {
         return { number: item, count: allNumbersWithCount[item] };
       });
     this.setState({
-      allNumbersWithCountSortedByKey: allNumbersWithCountSortedByKey
+      allNumbersWithCountSortedByKey: allNumbersWithCountSortedByKey,
     });
 
     let allNumberCountsSortedByCount = Object.keys(allNumbersWithCount)
       .sort((a, b) => allNumbersWithCount[b] - allNumbersWithCount[a])
-      .map(item => {
+      .map((item) => {
         return { number: item, count: allNumbersWithCount[item] };
       });
     this.setState({
-      allNumberCountsSortedByCount: allNumberCountsSortedByCount
+      allNumberCountsSortedByCount: allNumberCountsSortedByCount,
     });
 
     this.setState({ winNumbers: allNumbersWithCountSortedByKey });
