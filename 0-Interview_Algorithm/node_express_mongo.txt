@@ -1,0 +1,41 @@
+express : web server..
+body-parser : handle submit forms
+mongoose: mongodb handle
+nodemon : hot deploy node changes ... ex) nodemon  
+
+mongo
+use bookstore .... create db
+show collections
+db.createCollection('books')
+db.createCollection('genres')
+
+db.genres.insert({name: 'Suspense'})
+db.genres.insert({name: 'Self Help'})
+db.genres.find() .... list data
+
+db.books.insert({title: 'The murder hoise', description: 'book description here', author: 'James Patterson', publisher: 'Little, Brown and Company', pages: '480', image_url:'...some url..', buy_url:''})
+db.books.find().pretty()
+
+
+
+
+-------------------------------------------
+genre model....
+
+var mongoose = require('mongoose);
+// Genre Schema
+var genreSchema = mongoose.Schema({
+    name: {
+        name: String,
+        required: true
+    },
+    create_date: {
+        type: Data,
+        default: Date.now
+    }
+})
+var Genre = module.exports = mongoose.model('Genre', genreSchema);
+// Get genres
+module.exports.getGenres = function(callback, limit){
+    Genre.find(callback).limit(limit);
+}

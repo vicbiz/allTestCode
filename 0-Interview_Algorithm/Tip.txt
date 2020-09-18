@@ -1,0 +1,21 @@
+MongoDB Community Server
+
+-----------------------------------------------------------------
+Create Folders
+c:\data\db
+c:\data\log
+-----------------------------------------------------------------
+"C:\Program Files\MongoDB\Server\3.6\mongod.cfg"
+systemLog:
+    destination: file
+    path: C:\data\log\mongod.log
+storage:
+    dbPath: C:\data\db
+-----------------------------------------------------------------
+"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --config "C:\Program Files\MongoDB\Server\3.6\mongod.cfg" --install
+-----------------------------------------------------------------
+net start MongoDB
+set stop MongoDB
+
+
+

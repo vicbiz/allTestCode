@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    
+        /*
+        Mars Rover
+        
+        Build an API to navigate a rover along a topographical grid representation of Mars.
+        
+        Requirements
+        
+        - The rover when initialized will have an initial starting point (x, y) as well as a direction (N, S, E, W) that it is facing.
+        - The rover should recieve its commands as a string array. It should then iterate over the array executing the commands in sequence until either a) all commands have succeeded in which case return a OK status along with location and direction or b) a command failed due to an obstacle in which case return an OBSTACLE status code along with last successful location and direction
+        - If the rover recieves invalid commands immediatly an INVALID_COMMAND status along with location and direction of the last successful command
+        - The rover may move forward/backward with the (F, B) commands
+        - The rover may turn left and right with the (L, R) commands
+        - If the rover encounters obstacles in the terrain then it should return its last successfull location as well as a OBSTACLE status
+        - If the rover encounters the edge of the world it should stop and return its last successfull location as well as a OBSTACLE status
+        
+        Instructions
+        
+        - ES2015 is supported feel free to use it or use ES5
+        - Feel free to modify any code you wish to suit your preference. Also, don't feel limited to methods provided feel free add more (encouraged)
+        - If you modify Exersize code (i.e use funtional instead of class based Rover) you'll need to modify the tests accordingly
+        - Read the tests! They have helpful in better understanding the requirements
+        
+        Extra Credit
+        
+        - add a moveTo() method that takes the (x,y) coordinates to move the rover along the most optimal path bypassing obstacles
+        - https://en.wikipedia.org/wiki/A*_search_algorithm
+        - https://en.wikipedia.org/wiki/Dijkstra's_algorithm
+        */
+        const TERRAIN_TYPES = {
+            'P': {
+                obstacle: false,
+                description: 'plains'
+            },
+            'M': {
+                obstacle: true,
+                description: 'mountains'
+            },
+            'C': {
+                obstacle: true,
+                description: 'crevasse'
+            }
+        };
+
+        const STATUS_CODES = ['OK', 'OBSTACLE', 'INVALID_COMMAND'];
+
+        // top left corner is (X:0, Y:0)
+        // bottom right is (X:4, Y:4)
+        const WORLD = [
+            ['P', 'P', 'P', 'C', 'P'],
+            ['P', 'M', 'P', 'C', 'P'],
+            ['P', 'M', 'P', 'C', 'P'],
+            ['P', 'M', 'P', 'P', 'P'],
+            ['P', 'M', 'P', 'P', 'P']
+        ];
+
+        const DIRECTIONS = ['N', 'S', 'E', 'W'];
+        const COMMANDS = ['L', 'R', 'F', 'B'];
+
+        // Start: Exersize Code (Your Code)
+
+        // YOUR CODE BELOW
+        // NOTE: cntrl + enter to run tests
+        // Note: integrated firebug for console logs
+        class Rover {  
+            constructor(location, direction) {
+                this.movedPath = [];
+                const checkPosition = this.validatePosition(location[0], location[1]);
+                const checkDirection = this.validateDirection(direction);
+                const checkObstacle = this.isObstacle(location[0], location[1]);
+
+                if (checkPosition && checkDirection && checkObstacle){
+                    this.posX = location[0];
+                    this.posY = location[1];
+                    this.dir = direction;
+                    console.log("find",DIRECTIONS.find( dirElement => this.dir == dirElement));
+                } else {
+                    return {invalid:true};
+                }
+            }
+            command(commands) {
+                console.log("this.posX",this.posX,"this.posY",this.posY);
+                console.log("commands",commands);
+
+                const cmdSize = commands.length;
+                let cmd;
+                for(let i=0; i<cmdSize; i++){
+                    cmd = commands[i];
+
+                    if(this.validateCommand(cmd)){
+
+                        let newX, newY, newD;
+                        let nextW = () => { newX = this.posX;       newY = this.posY - 1;   newD = "W"; }
+                        let nextE = () => { newX = this.posX;       newY = this.posY + 1;   newD = "E"; }
+                        let nextS = () => { newX = this.posX + 1;   newY = this.posY;       newD = "S"; }
+                        let nextN = () => { newX = this.posX - 1;   newY = this.posY;       newD = "N"; }
+
+                        switch (this.dir) {
+                            case 'N' : 
+                                if (cmd == 'L') { nextW(); }
+                                if (cmd == 'R') { nextE(); }
+                                if (cmd == 'B') { nextS(); }
+                                if (cmd == 'F') { nextN(); }
+                                break;
+                            case 'S' : 
+                                if (cmd == 'L') { nextE(); }
+                                if (cmd == 'R') { nextW(); }
+                                if (cmd == 'B') { nextN(); }
+                                if (cmd == 'F') { nextS(); }
+                                break;
+                            case 'W' : 
+                                if (cmd == 'L') { nextS(); }
+                                if (cmd == 'R') { nextN(); }
+                                if (cmd == 'B') { nextE(); }
+                                if (cmd == 'F') { nextW(); }
+                                break;
+                            case 'E' : 
+                                if (cmd == 'L') { nextN(); }
+                                if (cmd == 'R') { nextS(); }
+                                if (cmd == 'B') { nextW(); }
+                                if (cmd == 'F') { nextE(); }
+                                break;
+                            default:
+                                console.log("error");
+                        }
+
+                        if(this.validatePosition(newX,newY)){
+                            // if(this.isObstacle(newX,newY)){
+
+                            // } else {
+                                this.posX = newX;
+                                this.posY = newY;
+                                this.dir  = newD;
+                                console.log("cmd : ", cmd, " new position : ["+this.posX+" , "+this.posY+"]","Data : ",WORLD[this.posX][this.posY],"new Dir :", this.dir);
+                            // }
+                        } else {
+
+                        }
+
+
+                    }
+                }
+            }
+
+            runCMD(cmd){
+
+
+            }
+
+
+            validatePosition(x,y){
+                if ((x >= 0 && x < WORLD.length) && (y >= 0 && y < WORLD[0].length)) {
+                    return true;
+                } else {
+                    showErrorMessage("Wrong position data! : data [ "+x+" , "+y+" ]");
+                }
+                return false;
+            }
+            validateDirection(dir){
+                if (DIRECTIONS.find( directionElement => dir === directionElement) !== undefined) {
+                    return true;
+                } else {
+                    showErrorMessage("Wrong Direction data! : data = "+dir);
+                }
+                return false;
+            }
+            isObstacle(x,y){
+                const positionData = WORLD[x][y];
+                console.log("positionData",positionData);
+                if (!TERRAIN_TYPES[positionData].obstacle) {
+                    return true;
+                } else {
+                    showErrorMessage("Obstacle Position [ "+x+" , "+y+" ] - Description : "+TERRAIN_TYPES[positionData].description);
+                }
+                return false;
+            }
+            validateCommand(cmd){
+                if (COMMANDS.find( cmdElement => cmd === cmdElement) !== undefined) {
+                    return true;
+                } else {
+                    showErrorMessage("Wrong Command data! : data = "+dir);
+                }
+                return false;
+            }
+        // ... feel free to extend
+        }
+
+        let showErrorMessage = (message) => {
+            alert("Error : "+message);
+        }
+
+        var rover1 = new Rover([2,2], 'N');
+        if(rover1.invalid){
+            showErrorMessage("Invalid initial Position DATA....");
+        } else {
+            // rover1.command(['F', 'F', 'R', 'F']);
+            rover1.command(['F', 'F', 'L', 'F', 'L', 'F']);
+        }
+
+        // End: Exersize Code (Your code)
+
+
+        /*
+
+        // Test Specs
+        mocha.setup('bdd');
+
+        var expect = chai.expect;
+
+        describe('Mars Rover', function() {
+        let rover1 = null;
+        beforeEach(function() {
+            rover1 = new Rover([2,2], 'N');
+        });
+            describe('When the Mars Rover is initialized', function() {
+            it('should set the starting location', function() {
+            expect(rover1.location).to.deep.equal([2,2]);
+            });
+            it('should set the starting direction', function() {
+                expect(rover1.direction).to.equal('N');
+            });
+        });
+        describe('When the rover recieves commands', function() {
+            it('should store the commands', function() {
+            rover1.command(['F', 'F', 'B']);
+            expect(rover1.commands).to.deep.equal(['F', 'F', 'B']);
+            });
+            it('should handle invalid commands', function() {
+                const status = rover1.command(['X']);
+            
+            expect(status).to.deep.equal({
+                status: 'INVALID_COMMAND',
+                loc: [2,2],
+                dir: 'N'
+            });
+            });
+        });
+        describe('When the rover executes valid commands', function() {
+            describe('When facing north', function() {
+                describe('When moving forward', function() {
+                it('should move north one tile', function() {
+                const status = rover1.command(['F']);
+                expect(status).to.deep.equal({
+                    status: 'OK',
+                    loc: [2,1],
+                    dir: 'N'
+                });
+                });
+            });
+            describe('When moving backward', function() {
+                it('should move south one tile', function() {
+                const status = rover1.command(['B']);
+                expect(status).to.deep.equal({
+                    status: 'OK',
+                    loc: [2,3],
+                    dir: 'N'
+                });
+                });
+            });
+            describe('When turning left', function() {
+                it('should be facing west', function() {
+                const status = rover1.command(['L']);
+                expect(status).to.deep.equal({
+                    status: 'OK',
+                    loc: [2,2],
+                    dir: 'W'
+                });
+                });
+            });
+            describe('When turning right', function() {
+                it('should be facing east', function() {
+                const status = rover1.command(['R']);
+                expect(status).to.deep.equal({
+                    status: 'OK',
+                    loc: [2,2],
+                    dir: 'E'
+                });
+                });
+            });
+            });
+        });
+        describe('When the rover encounters obstacles', function() {
+            describe('When encountering a mountain', function() {
+                it('should stop and return status', function() {
+                const status = rover1.command(['L', 'F']);
+                expect(status).to.deep.equal({
+                status: 'OBSTACLE',
+                loc: [2,2],
+                dir: 'W'
+                });
+            });
+            });
+            describe('When encountering a crevasse', function() {
+                it('should stop and return status', function() {
+                const status = rover1.command(['F', 'F', 'R', 'F']);
+                expect(status).to.deep.equal({
+                status: 'OBSTACLE',
+                loc: [2,0],
+                dir: 'E'
+                });
+            });
+            })
+            describe('When encountering the edge of the world', function() {
+                it('should stop and return status', function() {
+                const status = rover1.command(['F', 'F', 'F']);
+                expect(status).to.deep.equal({
+                status: 'OBSTACLE',
+                loc: [2,0],
+                dir: 'N'
+                });
+            });
+            });
+        });
+        });
+
+        mocha.run();
+        */
+    </script>
+</head>
+<body>
+    <div id="mocha"></div>
+</body>
+</html>

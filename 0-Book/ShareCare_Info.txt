@@ -1,0 +1,1597 @@
+
+
+
+
+
+
+
+*************************************************
+FHS Build (QA, STAGE…)
+
+cd ~/development/FHS/
+mvn clean package site -Denv=rc
+
+
+
+
+
+
+
+
+———————————————————————————————————————————————————————
+
+ApppleId
+vicbizmoon@hotmail.com
+Jae660918
+
+
+FTG-DEV
+FTG255epf!
+
+
+
+———————————————————————————————————————————————————————
+
+
+
+git commit . -m "init xdk app -02"
+git push -u origin master
+
+
+
+
+———————————————————————————————————————————————————————
+
+
+wpengine.com
+jmoon@forbestravelguide.com
+Moon660918
+
+
+———————————————————————————————————————————————————————
+
+
+
+
+MakeEveryDayAGreenDay!2017
+
+
+
+———————————————————————————————————————————————————————
+
+
+ShareCare Password : vic@vicbiz3
+
+FTG VPN
+Pulse Secure
+pass : vic@vicbiz3
+
+
+
+
+———————————————————————————————————————————————————————
+
+https://developers.arcgis.com
+jmoon66
+vic@vicbiz2
+
+
+https://www.openstreetmap.org/login?referer=%2Fuser%2FForbes%2520Travel%2520Guide%2Fconfirm
+vicbizmoon@hotmail.com	
+vic@vicbiz2
+
+
+
+———————————————————————————————————————————————————————
+
+
+http://www.qa.forbestravelguide.com/healthcheck
+
+
+———————————————————————————————————————————————————————
+
+long property name………….
+The Steakhouse at Agua Caliente Casino Resort Spa
+JW Marriott Scottsdale Camelback Inn Resort & Spa
+The Spa at Four Seasons Hotel Los Angeles at Beverly Hills
+The Canyon Suites at The Phoenician, A Luxury Collection Resortthanks
+The Spa at Four Seasons Resort Orlando at Walt Disney World Resort
+
+
+
+mongo FTG /Users/jmoon/development/ftg-poc/data/migration/07_seed_CMS_data_migration.js
+
+
+This is the mobile OS and desktop browser support I am proposing for FTG redesign:
+Mobile OS support
+Android 4.4 and above
+iOS 9 and above
+
+Browser support
+Chrome 55 and above
+IE 11.0
+Firefox 50.0 and above
+Safari 10 and above
+
+———————————————————————————————————————————————————————
+
+
+cd /Users/jmoon/development/ftg-poc/src/main/webapp/WEB-INF/build
+
+onchange ../src/scss -- ./build_css_only.sh
+
+
+cd /Users/jmoon/development/ftg-poc/src/main/webapp/WEB-INF/build
+
+./build_assets.sh
+
+
+cd /Users/jmoon/development/ftg-poc/data/migration
+mongo FTG ./0.1/07_property_thumbnail_module_seed_data.js
+
+
+
+mongo FTG /Users/jmoon/development/ftg-poc/data/migration/04_property_migration.js
+
+
+
+
+
+
+HomePage.groovy
+
+
+
+———————————————————————————————————————————————————————
+Dump QA FTG
+mongodump -h prod-1254.terminus2.openstack.internal:30001 -d FTG
+
+and 
+
+Drop FTG DB from Robomongo
+
+mongorestore dump
+
+———————————————————————————————————————————————————————
+
+
+Dump QA FHS Data
+uncheck lowercase act_*
+
+———————————————————————————————————————————————————————
+
+
+
+FHS PROD - mgr
+laurel-mgr / flair57
+laurel-set / flair57
+
+
+
+———————————————————————————————————————————————————————
+Expensify
+jmoon@forbestravelguide.com
+Vic@vicbiz2
+
+
+———————————————————————————————————————————————————————
+
+
+
+ns1.hi5korea.com	duke.ns.cloudflare.com
+ns2.hi5korea.com	emma.ns.cloudflare.com
+
+
+
+———————————————————————————————————————————————————————
+
+
+
+
+Prod Internal Servers logs
+http://prod-1005.equinix2.openstack.internal/logs/catalina.out
+
+Prod Reporting Servers logs
+http://prod-1010.equinix2.openstack.internal/logs/catalina.out
+http://prod-822.equinix2.openstack.internal/logs/catalina.out
+http://prod-1204.equinix2.openstack.internal/logs/catalina.out
+http://prod-1203.equinix2.openstack.internal/logs/catalina.out
+
+
+———————————————————————————————————————————————————————
+
+
+
+
+
+1 Toolbox Subscription
+
+Please use your JetBrains Account credentials to sign in to software.
+
+IntelliJ IDEA Ultimate 
+https://www.jetbrains.com/idea
+License ID:
+2LSM63JZ86
+Licensed to:	Forbes Travel Guide
+Fallback ver.:	2016.1
+Return license
+Download activation code for offline usage
+Generate legacy license key
+
+
+———————————————————————————————————————————————————————
+
+-Xms786M -Xmx1084M -XX:MaxPermSize=256m
+
+
+-Xms128m
+-Xmx1024m
+-XX:MaxPermSize=1024m
+-XX:ReservedCodeCacheSize=225m
+-XX:+UseCompressedOops
+
+———————————————————————————————————————————————————————
+
+Open External Website
+cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+<a class="item" href="#" onclick="window.open('http://www.starwars.com/', '_system', 'location=yes'); return false;">Go Somewhere in System Browser</a>
+
+
+
+
+
+ionic serve --lab
+
+ionic run android
+ionic run ios
+
+ionic emulate android
+ionic emulate ios
+
+phonegap serve
+
+
+ionic platform add android
+ionic platform add iOS
+
+
+=================================================================================================================
+
+
+
+
+
+nano ~/.bash_profile
+groovy -vesrion
+grails -version
+sdk list maven
+sdk list groovy
+sdk install groovy 2.4.5
+sdk list
+
+
+demo/memodemo
+jmoon-mgr/zcuGGiLV
+
+
+laurel-super / ap-fler57
+=================================================================================================================
+
+
+iCoac
+Username:  peter.chou
+Password:  Forbes2016
+
+
+export ANDROID_HOME=/Users/jmoon/Library/Android/sdk
+
+
+/Users/jmoon/Library/Android/sdk/platform-tools/adb push /Users/jmoon/development/iCoach/ftg-iCoach-android/app/build/outputs/apk/app-x86-debug.apk /data/local/tmp/com.forbes.icoach
+
+
+/Users/jmoon/Library/Android/sdk/platform-tools/adb shell pm install -r "/data/local/tmp/com.forbes.icoach"
+
+
+=================================================================================================================
+
+
+fb id
+517103173
+
+
+Mean
+admin : vicbizmoon@hotmail.com
+password : password
+
+
+
+=================================================================================================================
+
+Magnolia Landing Page Activation
+
+
+Configuration - Subscribers - true only one server rest of all false
+and activate in website - landing page - Activate include sub
+
+
+=================================================================================================================
+
+
+sudo npm install -g cordova ionic
+
+Error: cannot find module 'cordova-common'
+sudo npm uninstall -g cordova
+sudo npm install -g cordova@latest
+
+sudo npm install -g ios-sim
+
+ionic start myApp tabs
+$ cd myApp
+$ ionic platform add ios
+$ ionic build ios
+$ ionic emulate ios
+
+ionic emulate ios --livereload --consolelogs --serverlogs
+
+ionic start myApp tabs
+$ ionic platform add android
+$ ionic build android
+$ ionic emulate android
+ionic run android -l -c -s
+
+ionic emulate android --livereload --consolelogs --serverlogs
+
+—전화기에서 실행
+ionic run android
+
+=================================================================================================================
+
+cd ~/development/ftg-poc/src/main/resources/build/
+
+=================================================================================================================
+
+
+
+/Users/jmoon/development/0-test/angular/AngularJSDemos/AngularJSDemos
+npm start
+
+
+
+
+sudo npm install -g onchange
+
+cd /Users/jmoon/development/ftg-poc/src/main/resources/build
+onchange ../src -- ./build_assets.sh
+
+
+
+
+mongo FTG /Users/jmoon/development/ftg-poc/data/migration/02_migration.js
+
+=================================================================================================================
+El Capitan VPN Problem
+Problem solved by using "SonicWall Mobile Connect" app from AppStore.
+
+
+cd /Applications/NetExtender.app/Contents/MacOS/
+./netExtender
+atl-office.forbestravelguide.com:4433
+=================================================================================================================
+
+
+
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
+
+
+
+
+=================================================================================================================
+Award Winner Page right side image to show Feb 2016
+
+	_about.scss
+		.about-award-winners-container-photo{
+			display:inline-block
+
+
+JUST rename : style.css.bak.award_winners
+
+=================================================================================================================
+
+http://cleverstack.io/getting-started/
+
+clever init my-app -v -f
+
+
+=================================================================================================================
+redeem Plaque
+
+fhs-page-client.js (<p>Thank you! Your request has been submitted.)
+index.gsp (Visit the <a href="http://www.co-store.com/forbestravelguide" target="_blank">)
+fhs-internal.css (#promoTopRightBtnWrap{text-align: right; margin-top: 20px;})
+_moduleDashboardTopRightButton.gsp (<g:if test="${(rating.name() == 'FOUR_STAR' || rating.name() == 'RECOMMENDED') && promoControl?.plaqueActive == true}">)
+
+
+=================================================================================================================
+
+jmoon1751@comcast.net
+vic@vicbiz2
+=================================================================================================================
+
+
+node scripts/web-server.js
+
+
+
+
+http://smashingboxes.github.io/OwlCarousel2/
+
+
+
+=================================================================================================================
+
+npm install -- global phonegap
+npm install -- global cordova
+npm install -- global ionic
+
+Open the SDK manager by running: /Users/jmoon/Library/Android/sdk/tools/android
+1. "SDK Platform" for android-22
+2. "Android SDK Platform-tools (latest)
+3. "Android SDK Build-tools" (latest)
+
+Run emulator with Live Reload
+ionic run android -l -c -s
+
+ionic run android --target=Nexus_5_API_22 -l -c -s
+
+
+
+
+
+=================================================================================================================
+
+ls -lsa /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK
+8 lrwxr-xr-x   1 root  wheel   59 Feb 26  2014 CurrentJDK -> /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents
+
+
+http://brianoneill.blogspot.com/2012/11/installing-jdk-7-on-mac-os-x.html
+
+cd /System/Library/Frameworks/JavaVM.framework/Versions
+sudo rm CurrentJDK
+
+cd /System/Library/Frameworks/JavaVM.framework/Versions
+sudo ln -s /Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/ CurrentJDK
+
+
+************* This Worked ********************
+$ cd /Applications/IntelliJ\ IDEA\ 14.app/Contents
+Edited the Info.plist file, and changed this bit:
+
+<key>JVMVersion</key>
+<string>1.6*</string>
+to:
+
+<key>JVMVersion</key>
+<string>1.8*</string>
+
+
+
+
+=================================================================================================================
+
+
+
+For CMS
+
+/cms/js/plugins.js
+/cms/js/script.js
+
+
+=================================================================================================================
+For Award-Winning
+
+aboutAwardWinners.tag
+handlebars.js
+handlebars-prod.js
+award-winners-browser.js
+awardWinnersByLocation.handlebars
+awardWinnersByLocationNonUS.handlebars
+awardWinnersByRating.handlebars
+_about.scss
+gold-star.png
+details-recommended-tall.png
+
+------------------------------------------------------------------------------
+
+/css/style.css
+
+/img/gold-star.png
+/img/details-recommended-tall.png
+
+/js/main.js
+/js/pages/about.js
+/js/plugins/handlebars.js
+/js/modules/templates/awardWinnersByLocation.handlebars
+/js/modules/templates/awardWinnersByLocationNonUS.handlebars
+/js/modules/templates/awardWinnersByRating.handlebars
+
+=================================================================================================================
+
+
+
+sudo npm install uglify-js -g
+npm install uglify-js -g
+npm -g uninstall <name> --save
+
+
+
+
+
+
+CSS
+	CSS3
+	BootStrap 3 (CSS framework for developing responsive, mobile-first web sites)
+	SASS (Syntactically Awesome Stylesheets - CSS extension language)
+	Compass (CSS authoring framework using SASS)
+
+JS
+	jQuery
+	RequireJS (JavaScript file and module loader)
+	Node.js (runtime environment for developing server-side web applications)
+	AngularJS
+	Backbone.js
+
+
+
+==================================================================================================================
+
+
+http://localhost:8080/publication/clearTracker
+
+
+==================================================================================================================
+
+
+The command+shift+G keyboard shortcut makes it handy to summon.
+
+
+==================================================================================================================
+
+
+
+SELECT * FROM fhs.evaluation_response where notes LIKE "%cke_pastebin%";
+UPDATE fhs.evaluation_response SET notes = REPLACE(notes, 'body', '****') where notes LIKE "%cke_pastebin%";
+
+
+
+truncate table embargo_acknowledgement;
+
+==================================================================================================================
+
+
+
+
+git remote set-url origin https://github.com/ForbesTravelGuide/FHS.git
+
+git remote set-url origin https://github.com/ForbesTravelGuide/Startle.git
+
+
+
+
+
+Intellij
+
+rm -rf ~/.grails/.slcache/
+
+
+==================================================================================================================
+
+PDF Preview URL
+
+You should be able to put a breakpoint on line 67 of PDFReportService.groovy, and obtain the value for variable called "url"
+
+
+    def createPDFReport(Long id, Map params, HttpServletResponse response) {
+        def url = getReportingAppUrl() + WebUtils.toQueryString(params)
+ —————> def evaluation = null
+        def doStream = true
+
+
+==================================================================================================================
+
+
+Username	Password	Role Descriptionngocduong-mgr	QA-l0g!n	Executive Managerngocduong-ssa-ratings	QA-l0g!n	Super System Administrator (Ratings)ngocduong-ssa-ser	QA-l0g!n	Super System Administrator (SER)ngocduong-sa	QA-l0g!n	System Administratorngocduong-set	QA-l0g!n	Super Executive Trainerngocduong-et	QA-l0g!n	Executive Trainerngocduong-fe	QA-l0g!n	Field Evaluatorngocduong-ec	QA-l0g!n	Evaluation Coordinatorngocduong-pc	QA-l0g!n	Publishing Coordinatorngocduong-csuper	QA-l0g!n	Client Super Userngocduong-cmgr	QA-l0g!n	Client Managerngocduong-cgen	QA-l0g!n	Client General User		nhatdo-mgr	QA-l0g!n	Executive Managernhatdo-ssa-ratings	QA-l0g!n	Super System Administrator (Ratings)nhatdo-ssa-ser	QA-l0g!n	Super System Administrator (SER)nhatdo-sa	QA-l0g!n	System Administratornhatdo-set	QA-l0g!n	Super Executive Trainernhatdo-et	QA-l0g!n	Executive Trainernhatdo-fe	QA-l0g!n	Field Evaluatornhatdo-ec	QA-l0g!n	Evaluation Coordinatornhatdo-pc	QA-l0g!n	Publishing Coordinatornhatdo-csuper	QA-l0g!n	Client Super Usernhatdo-cmgr	QA-l0g!n	Client Managernhatdo-cgen	QA-l0g!n	Client General User
+
+
+
+
+
+
+==================================================================================================================
+
+Environment	Email			Password
+Local & Dev	ftg.dev@gmail.com	FTG_N0tification
+QA		ftg.qa1@gmail.com	FTG_N0tification
+Stage		ftg.stage@gmail.com	FTG_N0tification
+
+
+==================================================================================================================
+Intel XDK
+vicbizmoon@hotmail.com
+vic@vicbiz1
+==================================================================================================================
+FHS DEV
+
+ngocduong-csuper/QA-l0g!n
+laurel-csuper/ ap-fler57
+
+
+==================================================================================================================
+FHS Stage
+laurel-ssa-ratings / ap-fler57
+laurel-fe / flair57
+
+FHS PRod
+laurel-csuper/ ap-fler57
+laurel-mgr, ap-fler57
+
+
+
+
+FHS BLog PROD
+
+server : startle3333.wpengine.com
+user: startle3333-jmoon
+pass: ineweptame
+
+==================================================================================================================
+Export QA Data
+
+MySQL Workbench
+open FHS QA db - Server - Data Export - fhs - 오른쪽 창  제일 밑 (Except v_missed .. & v_standard..) uncheck
+Start exprot
+
+MySQL Workbench - local
+file 열때 textEdit 프로그램으로 열것… 빠름
+
+
+
+==================================================================================================================
+https://admin.forbestravelguide.com/.magnolia/pages/adminCentral.html
+superuser
+superuser
+
+To publish to both servers:
+ 
+1.	Publish the sweepstakes
+2.	Go to Configuration > Subscribers. Expand “publicInstance0” and “publicInstance1” and swap the true/false Active value
+
+	https://qsnapnet.com/snaps/f9oxkucz4fluwhf
+
+3.	Publish the sweepstakes again
+ 
+
+==================================================================================================================
+
+github
+
+jmoon@forbestravelguide.com vic@vicbiz2
+vicbizmoon@hotmail.com vic@vicbiz2
+==================================================================================================================
+
+Intel XDK
+vicbizmoon@hotmail.com
+Jae@moon2
+
+==================================================================================================================
+
+/
+
+
+Mac AppStore
+vicbizmoon@hotmail.com
+Jae660918
+
+
+
+laurel-sa
+ap-fler57
+
+
+==================================================================================================================
+
+Peter
+周岳賢
+주악현
+
+zhou you xien
+
+==================================================================================================================
+
+ITune & apple
+vicbizmoon@hotmail.com
+Jae660918
+
+
+Apple ID-
+jmoon@forbestravelguide.com
+Vic@vicbiz3
+
+==================================================================================================================
+
+the credentials for the dev / local notification e-mail account is 
+ftg.dev@gmail.com
+FTG_N0tification
+
+
+==================================================================================================================
+
+SCPublic :MakeEveryDayAGreenDay!2017
+FTGAccess : FTGAccess2013
+FTG-Private : FTG255epf!
+
+Juno VPN Client Download
+http://remoteaccess.uconn.edu/vpn-overview/connect-via-vpn-client-2/
+
+==================================================================================================================
+
+
+host: qa-258.terminus2.openstack.internal
+port: 3306
+user: fhs_dev
+pass: CHANGETHIS1
+
+==================================================================================================================
+
+
+FTG Blog Server 
+
+
+
+You should subscribe to our customer announcement list to get updates on new features, system developments, and account and billing information. You can of course unsubscribe at any time, and we use it only for infrequent but important announcements.
+
+Your DNS should either be set to CNAME to startle3333.wpengine.com or an A record to 50.116.57.156.
+
+Your SFTP access (not FTP!) is at hostname startle3333.wpengine.com or IP at 50.116.57.156 on port 22. Username and password starts out the same as you specified when you signed up for your blog (which was startle3333), but can be changed here.
+
+startle3333
+ciru96kara
+
+
+
+ip : 74.207.242.93
+user : startle3333
+pass : ciru96kara
+
+
+==================================================================================================================
+
+
+
+
+if you want to be super user run /bootstrap/devUser then login as dev/dev after updating and you can see all evaluations
+
+
+
+
+-- Hospitality -- 
+
+74.7.33.169 - WS01 (Chicago app server ) 
+Username: Administrator
+Password: apps4mtg#
+
+-- admin login --
+aagliam@forbestravelguide.com
+FTGaa7
+
+-- non-admin login --
+Username: ftg@ftg.com
+Password: client1
+
+
+
+
+
+
+
+Cherry Pick
+Move to master
+         change - log
+Branch : Release-1.5.0
+User : me
+Right Click history - cherry pick
+
+
+
+
+=============================================================================
+Export Magnolia Page - XML copy to 
+
+/Users/jmoon/development/StarSiteGit/Startle/view/src/main/resources/mgnl-bootstrap/startle
+
+
+
+
+=============================================================================
+
+
+Username: jae
+Password: 3333Piedmont
+http://server-523.lab1a.openstack.internal/wp-login.php
+
+
+http://blog.startle.com/wp-login.php
+username: startle3333
+password: Piedmont4444 
+
+
+=============================================================================
+
+
+BLOG TEST
+
+cd /Users/jmoon/development/FTG-BLOG-DEV
+ssh -i Downloads/ss.dev.pem  dev@dev-58.terminus1.openstack.internal
+cd /var/www/html
+
+
+
+
+=============================================================================
+
+Mac ;
+	Paros Jar
+	Tools - Local Proxy - 10.10.4.36 port: 8888
+iPad ;
+	settings - SCSecure -> HTTP Proxy - manual - server : 10.10.4.36 Port: 8888
+
+=============================================================================
+UI
+ /cms/user/decrypt-ajax/{encrypted id} 
+ /cms/user/decrypt-ajax/{plain text id}
+
+ /cms/user/encrypt-ajax/{plain text id}
+
+log in as an admin and then use.
+
+/cms/user/decrypt/{id}
+/cms/user/encrypt/{id}
+
+=============================================================================
+
+Tomcat Start / Stop
+/Users/jmoon/apps/startle-tomcat/bin/catalina.sh run
+/Users/jmoon/apps/startle-tomcat/bin/catalina.sh stop
+
+=============================================================================
+
+/usr/local/mysql/bin
+mysql   -u magnolia  -p3UIR780Q magnolia
+mysql> drop database magnolia;
+mysql> create database magnolia;
+
+
+
+
+
+=============================================================================
+Prod Server Log
+
+prod-798.equinix2.openstack.internal
+prod-880.equinix2.openstack.internal
+prod-1260.equinix2.openstack.internal
+prod-1262.equinix2.openstack.internal
+ 
+ 
+
+
+=============================================================================
+
+prod-165.terminus1.openstack.internal:30001
+Thats QA mongo
+
+=============================================================================
+Kill Tomcat
+ps -ef  | grep tomcat
+kill -9 PID
+
+
+cd /Users/jmoon/development/StarSiteGit/Startle/view/src/main/webapp/docroot/assets
+sass --watch css:css --style compressed
+
+compass watch --output-style=compressed
+
+
+
+
+cd /Users/jmoon/development/StarSiteGit/Startle/view/src/main/webapp/docroot/assets/cms
+sass --watch css:css --style compressed
+
+
+=============================================================================
+QA Build :
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
+
+Pushing a Startle Build to QA
+Skip to end of metadata
+Added by Kevin Hostler, last edited by John Vollmer on Sep 09, 2011  (view change) show comment Go to start of metadata
+Each developer has the capability to push a build to QA for testing.  Here's how:
+1.  Pull down trunk from SVN.  We only want to push trunk to QA, so merge all your changes  into the latest version of trunk.
+2. In a terminal, go to the root folder of the Parent project.  Type in:
+
+    mvn clean package site -Denv=rc
+
+3. From the build log, find the following entry:
+    UP Local [/Users/vstoessel/Projects/lastTrunk/view/target/auth.war] => S3[admin-starsites/builds/startle/rc/1.0.0.3,468]
+4. Copy the number from the S3 location.  ex. S3[admin-starsites/builds/startle/rc/1.0.0.3,468]
+5. Email Clint and Olivia that number (ex. 1.0.0.3,468)
+6. RING THE BELL!
+
+
+
+
+
+
+
+
+
+=============================================================================
+
+delete this directory
+.m2/repository/com/jamconsultg
+and then invalidate cache and restart Intellij under file
+that directory lives under your user directory
+
+=============================================================================
+
+
+
+move to project parent folder !!!
+
+cd /Users/jmoon/development/StarSiteGit/Startle
+
+
+QA Build
+mvn clean package site -Denv=rc -DskipTests
+
+DEV Build
+mvn clean package site -Denv=site -DskipTests
+mvn clean package site -Denv=site
+
+
+https://admin.be.jamconsultg.com/kohana/adminui
+admin admin
+
+
+
+vic@vicbiz2
+
+
+******************* Form Porject *************************
+1. Change file in Form project
+example: tyoedefine,asp.vtl
+
+2. maven -> install
+
+3.Startle Project
+run "formProcessTest"
+
+COPY *.* FROM
+
+/Users/jmoon/development/StarSiteGit/Startle/controller/src/main/webapp/WEB-INF/cmsforms/com/jamconsultg/form
+
+TO
+
+/Users/jmoon/development/StarSiteGit/Startle/controller/src/main/java/com/jamconsultg/form
+
+
+
+
+4. select all forms jsp files and  click refresh icon
+
+5. check if cmsforms jsp files got changes
+
+6. select all cmsforms/jsp files --> package file
+
+7. refresh browser to see the changes
+
+
+
+
+
+******************* Form Generate *************************
+Compile first
+run FormProcessorTest.java
+
+copy files from
+/Users/jmoon/development/StarSite/controller/src/main/webapp/WEB-INF/cmsforms/com/jamconsultg/form
+
+to
+/Users/jmoon/development/StarSite/controller/src/main/java/com/jamconsultg.form
+
+
+**** QuestionCMSController.java
+/Users/jmoon/development/StarSite/controller/src/main/java/com/jamconsultg.form/QuestionCMSController.java
+
+*** replace
+org.apache.maven.project.MavenProject
+com.starsite.data.Question
+
+MavenProject
+Question
+
+**********************************************************
+
+/usr/local/apache-tomcat-6.0.33/bin/catalina.sh stop
+
+
+=============================================================================
+
+IntelliJ Increase Memory
+
+vi /Applications/IntelliJ\ IDEA\ 11.app/Contents/Info.plist 
+
+      <key>VMOptions</key>
+      <string>-ea -Xverify:none -Xbootclasspath/a:../lib/boot.jar</string>
+
+      <key>VMOptions.i386</key>
+      <string>-Xms128m -Xmx512m -XX:MaxPermSize=250m -XX:ReservedCodeCacheSize=64m</string>
+
+      <key>VMOptions.x86_64</key>
+      <string>-Xms128m -Xmx800m -XX:MaxPermSize=350m -XX:ReservedCodeCacheSize=64m -XX:+UseCompressedOops</string>
+
+      <key>WorkingDirectory</key>
+      <string>$APP_PACKAGE/bin</string>
+
+
+
+
+
+
+**********************************************************
+
+
+
+https://secure.whatcounts.com/bin/login
+realm: arnoldmediaconsulting_ftg
+email: skennedy_cw@sharecare.com
+pass: St@rtle1234
+the templates are under    content—> templates in the menu
+
+
+
+**********************************************************
+
+
+Memcache IP Change
+/etc/config/tomcat/springconfig.xml
+
+sudo vi /etc/hosts
+
+
+
+
+**** form git ****
+git commit  <-- from intelliJ
+git push origin master
+git push vinny master
+git remote -v
+	origin    https://jlheard@github.com/jlheard/Forms.git (fetch)
+	origin    https://jlheard@github.com/jlheard/Forms.git (push)
+	vinny    git@github.com:vinny2020/Forms.git (fetch)
+	vinny    git@github.com:vinny2020/Forms.git (push)
+
+
+
+
+
+
+
+Jason Heard: jheard@sharecare.com
+Jason Heard: Smile123
+
+==================================================================================================================
+
+blog.startle.com
+user: blogadmin@startle.co
+pass: RFgL&;PyH3^3
+
+http://blog.startle.com/wp-admin/
+admin
+6vs8zp7L
+
+SFTP (File Zilla)
+Host : startle3333.wpengine.com
+user : startle3333-jmoon
+pass : ineweptame
+
+startle3333
+ciru96kara
+
+
+I went ahead and changed the password and reduced the role the user 'admin' to 'none'
+I created a new admin-level user that you can use to login with administrator privileges. Please use this account going forward.
+username: startle3333
+password: Piedmont4444 
+
+
+==================================================================================================================
+
+
+
+proxima-nova-soft,sans-serif
+
+<script type="text/javascript" src="http://use.typekit.com/lmv0rhf.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+==================================================================================================================
+
+
+
+
+
+
+
+s.sh
+
+sass --watch css:css --style compressed
+
+
+==================================================================================================================
+
+S3 Startlle
+
+accesskey=AKIAJ5KL2WIY34N7PL2A
+secretkey=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
+
+
+==================================================================================================================
+
+
+Dr. OZ Dev.
+--- /ec2/droz-dev.pem file permission 400
+
+
+cd /ec2/droz-dev
+./ssh.sh
+
+cd /var/www/site-doctoroz-www.doctoroz.com/
+
+use vi to change file..
+
+
+but js or css.. under static folder needs to ask Nick or Clint, Joey to updat DEV
+
+
+==================================================================================================================
+
+IntelliJ - Maven Build
+Parent Folder - b2.sh
+intelliJ - Tomcat Build
+
+==================================================================================================================
+
+
+intelliJ
+
+File Find Open : Command + Shift + N
+mouse over tag : command + alt + b
+Command + alt + arrow key (left, right)
+==================================================================================================================
+
+Build Site 
+
+1. Run command under Parent folder
+
+DEV :
+Wiki    : https://arnoldmedia.jira.com/wiki/display/STAR/Pushing+and+Deploying+a+Startle+build+to+DEV
+Command : mvn clean package site -Denv=rc -DskipTests
+
+QA :
+Wiki    : https://arnoldmedia.jira.com/wiki/display/STAR/Pushing+a+Startle+Build+to+QA
+Command : mvn clean package site -Denv=rc -DskipTests
+
+2. for QA send email to Olivia with Build number
+for DEV
+		https://admin.be.jamconsultg.com/
+		user : admin / admin
+
+Builds - Web / webauth / webpub
+		select build number - update
+
+Application - Tomcat
+		select dev.startle.com
+		restart
+
+
+
+
+
+
+
+
+==================================================================================================================
+http://10.10.2.186:8080/ajax/drill/new-york-city/destination/callback?propType=restaurant is restaurants in the new york destination
+
+
+http://localhost:8080/ajax/drill/USSO/region/callback
+http://localhost:8080/ajax/drill/GA/state/callback
+http://localhost:8080/ajax/drill/atlanta/destination/callback?propType=restaurant&rating=C1-5STAR
+
+
+
+
+James 
+==================================================================================================================
+mvn clean package -DskipTests=true -Denv=riakQA; rm -rf ~/Apps/apache-tomcat-6.0.32/webapps/ROOT* ~/Apps/apache-tomcat-6.0.32/webapps/auth* ~/Apps/apache-tomcat-6.0.32/webapps/pub01*; rm ~/Apps/apache-tomcat-6.0.32/lib/DataModel*; rm ~/Apps/apache-tomcat-6.0.32/lib/model*; cp ../controller/target/ROOT/WEB-INF/sharedlib/* ~/Apps/apache-tomcat-6.0.32/lib/; cp ../view/target/*.war ~/Apps/apache-tomcat-6.0.32/webapps/; cp ../controller/target/*.war ~/Apps/apache-tomcat-6.0.32/webapps/;
+
+
+Jae1 
+==================================================================================================================
+mvn clean package -DskipTests=true -Denv=riakQA; rm -rf ~/apps/apache-tomcat-6.0.32/webapps/ROOT* ~/apps/apache-tomcat-6.0.32/webapps/auth* ~/apps/apache-tomcat-6.0.32/webapps/pub01*; rm ~/apps/apache-tomcat-6.0.32/lib/DataModel*; rm ~/apps/apache-tomcat-6.0.32/lib/model*; cp ../controller/target/ROOT/WEB-INF/sharedlib/* ~/apps/apache-tomcat-6.0.32/lib/; cp ../view/target/*.war ~/apps/apache-tomcat-6.0.32/webapps/; cp ../controller/target/*.war ~/apps/apache-tomcat-6.0.32/webapps/;
+
+
+/usr/bin/r.sh
+==================================================================================================================
+
+rm /Users/jmoon/development/StarSite/Parent/buildnumber.properties; svn up; mvn clean package -DskipTests=true -Denv=riakQA; rm -rf ~/apps/apache-tomcat-6.0.32/webapps/ROOT* ~/apps/apache-tomcat-6.0.32/webapps/auth* ~/apps/apache-tomcat-6.0.32/webapps/pub01*; rm ~/apps/apache-tomcat-6.0.32/lib/DataModel*; rm ~/apps/apache-tomcat-6.0.32/lib/model*; cp ../controller/target/ROOT/WEB-INF/sharedlib/* ~/apps/apache-tomcat-6.0.32/lib/; cp ../view/target/*.war ~/apps/apache-tomcat-6.0.32/webapps/; cp ../controller/target/*.war ~/apps/apache-tomcat-6.0.32/webapps/;
+
+
+
+
+
+
+==================================================================================================================
+
+
+S3 : Box
+accesskey=AKIAJ5KL2WIY34N7PL2A
+secretkey=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
+
+==================================================================================================================
+
+
+
+Installing the mysql database:
+username: magnolia
+password: 3UIR780Q
+db name: magnolia
+Creating the database from the command line : mysql -u root
+mysql> create database magnolia;
+Create and GRANT user:
+mysql> grant all on *.* to 'magnolia'@'localhost' identified by '3UIR780Q'
+;
+mysql> quit
+create magnolia's cache directory: /var/magnolia
+
+
+
+
+/usr/local/apache-tomcat-6.0.33/webapps
+
+
+emails goes to testdsemail@gmail.com
+here is the password:   DSPassword1.
+
+
+
+
+==================================================================================================================
+
+/etc/init.d/httpd restart
+
+==================================================================================================================
+1.Add Subdomain to dailystrength.org.
+
+VM  :  /etc/hosts
+------------------------------------------------------------------------------------------------------------------
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 www.doctoroz.com admin.doctoroz.com  www.dailystrength.org static.dailystrength.org
+#static.dailystrength.org www.dailystrength.org
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+------------------------------------------------------------------------------------------------------------------
+
+
+VM : /etc/httpd/conf.d/site-dailystrength-static.dailystrength.org.conf
+------------------------------------------------------------------------------------------------------------------
+<VirtualHost *:80>
+    ServerName static.dailystrength.org
+
+    DocumentRoot "/var/www/site-dailystrength-dailystrength.org/static"
+    ErrorLog logs/dailystrength.org-error_log
+    CustomLog logs/dailystrength.org-access_log combined
+    php_value session.cache_limiter none
+
+    <Directory "/var/www/site-dailystrength-dailystrength.org/static">
+        Options None
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+</VirtualHost>
+------------------------------------------------------------------------------------------------------------------
+
+2. Modified Theme index.php file (/var/www/site-dailystrength-dailystrength.org/DS/templates/cs_crystalpill/index.php)
+
+Note : When I modified file from Mac the changes not showing up correctly on VM, but if I modify on VM it browser catching up changes instantly.
+
+Line 81:
+
+    <?php
+        require($mosConfig_absolute_path . "/templates/" . $mainframe->getTemplate() . "/templateConfiguration.inc.php");
+        print('<link rel="stylesheet" type="text/css" href="'.$mosConfig_static_site.'/global.css?version=' . Hswi_StaticVersion::getVersion() . '" />'."\n");
+        print('<script src="'.$mosConfig_static_site.'/global.js?version=' . Hswi_StaticVersion::getVersion() . '"></script>'."\n");
+        if($_SERVER['HSW_ENV'] != "prod") {
+            print('<script type="text/javascript">var HSW_ENV = \''.$_SERVER['HSW_ENV'].' - '.php_uname('n').'\';</script>'."\n");
+            print('<script src="'.$mosConfig_static_site.'/js/identifyEnv.js"></script>'."\n");
+            print('<script src="'.$mosConfig_static_site.'/js/firebugx.js"></script>'."\n");
+        }
+    ?>
+
+Change to :
+
+    <?php
+        require($mosConfig_absolute_path . "/templates/" . $mainframe->getTemplate() . "/templateConfiguration.inc.php");
+
+        if (($_SERVER['HSW_ENV'] == "prod") || ($_SERVER['HSW_ENV'] == "qa")) {
+        	print('<link rel="stylesheet" type="text/css" href="'.$mosConfig_static_site.'/global.css?version=' . Hswi_StaticVersion::getVersion() . '" />'."\n");
+        	print('<script src="'.$mosConfig_static_site.'/global.js?version=' . Hswi_StaticVersion::getVersion() . '"></script>'."\n");
+        	 
+        } else {
+		foreach ($css_rollup['global'] as $cssfile) {
+			print('<link rel="stylesheet" type="text/css" href="'.$mosConfig_static_site.$cssfile. '" />'."\n");
+		}
+
+		foreach ($js_rollup['global'] as $jsfile) {
+			print('<script type="text/javascript" src="'.$mosConfig_static_site.$jsfile. '" />'."\n");
+		}
+        }
+        
+    ?>
+==================================================================================================================
+
+printer ip address is 10.10.4.23 (windows pees have to add it as a local printer)
+10:16
+type is HP Clor LaserJet CM4540... I did not find the driver and chosen the losest CM3560 (the closest)
+peeps*
+closest*
+
+
+
+
+INTELLIJ ====================================================================================================================
+
+Bash
+Static Build Script
+SCRIPT NAME : /Users/jmoon/development/StarSite/view/src/main/webapp/docroot/build.sh
+Bash interpreter : /bin/bash
+Make
+share Configuratoin
+
+
+
+JUnit (---> project : controller - sec - test - java - com.starsite - serivice - FormProcessorTest)
+FormProcessorTest
+Test kind : Class
+Fork mode :none
+Working Directory : com.starsite.service.FormProcessorTest
+Use Claspath of module : ROOT
+share configuration
+
+
+
+
+Tomcat 6
+Application Server : Tomcat 6
+--> Configuration : 
+    Tomcat home : /Users/jmoon/apps/startle-tomcat
+    Tomcat base : /Users/jmoon/apps/startle-tomcat
+Start browser
+Startup page : http://localhost:8080/
+VM Options : -Xmx1024M -Xms1024M
+On 'update' action : Update classes and resources
+On frame deactivation : Do nothing
+HTTP port : 8080
+# Build 'ROOT:war exploded' artifact
+
+-Xms786M -Xmx1084M -XX:MaxPermSize=256m
+
+--------->>>
+
+/Users/jmoon/apps/startle-tomcat/conf/catalina.properties
+
+
+
+
+
+
+Jae Moon
+	
+Help
+
+Use these settings to access your e-mail using POP, IMAP, or SMTP.
+
+POP setting
+Server name: pod51009.outlook.com
+Port: 995
+Encryption method: SSL
+
+IMAP setting
+Server name: pod51009.outlook.com
+Port: 993
+Encryption method: SSL
+
+SMTP setting
+Server name: pod51009.outlook.com
+Port: 587
+Encryption method: TLS
+
+
+
+
+UI Skill Set
+
+- HTML5, CSS3
+- Javascript (jQuery), AJAX
+- Sass
+- NodeJS
+- Handlebar
+- JSTL (will be plus)
+
+
+
+Core Skills:
+
+Education: A combination of Computer Science, Web Design and Web Development. A diverse educational background is a good indication of the UI Engineering hybrid skill set.
+Experience: 5+ years of professional experience with links to work samples and/or online portfolio
+High proficiency (able to create new code and maintain existing code) and project based experience expected in:
+HTML / XHTML / HTML5
+CSS2 / CSS3
+JavaScript / DOM Scripting / jQuery
+JSP (JavaServer Pages)
+Alternates to JSP would be advanced PHP or ASP .NET
+JSF (JavsServer Faces) is relatively new and a nice to have
+Photoshop for image slicing and optimization
+If this opportunity is not something you would be interested in, we do offer a $1000 referral bonus for placed candidates. If you know of anyone that you think would be a fit for this opportunity, please send me their information! Either way, I look forward to hearing from you. Hope you have a great day!
+
+
+As a Web developer for our online healthcare-information company, you will design and build XHTML/CSS/JS pages and applications, create and troubleshoot XSLT style sheets, and perform technical support of consumer site. Jscript experience is essential for this position. The perfect candidate will be working different requirements in Phase 2 of the launch of fit.webmd.com.
+Day to Day duties and technical knowhow includes:
+• Work with internal teams to develop front-end XHTML, CSS, and JavaScript.
+• Solid knowledge and real-world experience working with XML, XSL, and XSLT style sheets.
+• Expert knowledge and experience with JavaScript and jQuery.
+• Ability to start with a Photoshop design, and then develop and QA valid standard XHTML and CSS on strict deadlines.
+• Knowledge and experience creating dynamic JSON/XML driven XHTML applications.
+• Ability to aid in architecture and creation of front-end applications starting with business and product requirement documents. 
+• Understanding of browser specific compatibility issues.
+• Provide front-end troubleshooting support.
+• Assist in managing versioning of web assets like graphics, HTML templates, JavaScript, and style sheets in the repository.
+
+Required Skills: 
+5+ Years HTML, CSS, JavaScript 
+3+ Years JQuery or similar JavaScript framework 
+3+ Years JSP and JSTL 
+Expert in hand-coded, cross browser supported, W3C compliant web pages 
+Expert in UI inspection and debugging tools like Firebug, Google Page Speed, Y-Slow etc. 
+Demonstrable portfolio of websites that implement progressive enhancement 
+Solid understanding of ADA (American Disabilities Act) with demonstrable 508 Compliance knowledge 
+Experience with source control repositories, Subversion preferred 
+
+
+Education: 
+Bachelor's degree in Computer Science or related field preferred
+
+
+
+
+As a UI developer for our world class online travel guide company, you will build XHTML/CSS/JS pages and applications, create and troubleshoot style sheets, Javascript. Javascript experience is essential for this position.
+
+Day to Day duties and technical knowhow includes:
+• Work with internal teams to develop front-end XHTML, CSS, and JavaScript.
+• Expert knowledge and experience with JavaScript and jQuery.
+• Ability to start with a Photoshop design, and then develop and QA valid standard XHTML and CSS on strict deadlines.
+• Knowledge and experience creating dynamic JSON/XML driven XHTML applications.
+• Ability to aid in architecture and creation of front-end applications. 
+• Understanding of browser specific compatibility issues.
+• Provide front-end troubleshooting support.
+• Assist in managing versioning of web assets like graphics, HTML templates, JavaScript, and style sheets in the repository.
+
+
+Required Skills: 
+• HTML / XHTML / HTML5
+• CSS2 / CSS3
+• JavaScript / DOM Scripting / jQuery / AJAX
+• JSTL
+• Sass / NodeJS / Handlebar
+• Omniture
+• Expert in hand-coded, cross browser supported, W3C compliant web pages 
+• Expert in UI inspection and debugging tools like Firebug, Google Page Speed, Y-Slow etc. 
+• Experience with source control repositories, Git preferred 
+
+Education: 
+Bachelor's degree in Computer Science or related field preferred
+
+
+STAR-6502 : Working on London Announcement Landing Page - fixed 25 places - 02 
+
+
+
+
+
+
+
+
+
+Qui dove il mare lucida
+E tira forte il vento
+Sulla vecchia terazza
+Davanti al golfo di surriento
+
+Un uomo abbraccia una ragazza
+Dopo che aveva pianto
+Poi si sciarisce la voce
+E ricomincia il canto
+
+Ti voglio bene sai
+Ma tanto tanto bene sai
+e una cantena ormai
+Che sciogliei sangue dinte vene sai
+
+Vide le luci in mezzo al mare
+Pens alla notti la in America
+Ma erano solo le lampare
+E la bianca scia d'unelica
+
+Sent il dolore della musica
+E si alz dal pianoforte
+Ma quando vide uscire la luna da una nuvola
+Gli sembro pi dolce anche la morte
+
+Guard negli occhi la ragazza
+Quegli occhi verdi come il mare
+Poi allimprovisso usci una lacrima
+E lui credette di affogare
+
+Ti voglio bene sai
+Ma tanto tanto bene sai
+una cantena ormai
+Che sciogliei sangue dinte vene sai
+
+Potenza della lirica
+Dove ogni dramma un falso
+Che con un podi trucco e con la mimica
+Puoi diventare un altro
+
+Ma due occhi che ti guardano
+Cos vicini e veri
+Ti fan scordare le parole
+Confondono I pensieri
+
+Cos diventa tutto piccolo
+Anche le notti l in America
+Ti volti e vedi la tua vita
+Dietro la scia di unelica
+
+Ma s, la vita che finisce
+E non ci penso poi tanto
+Anzi, si sentiva gi felice
+E ricominci il suo canto
+
+Ti voglio bene assai
+Ma tanto tanto bene sai
+una cantena ormai
+Che sciogliei sangue dinte vene sai
+
+Ti voglio bene sai
+Ma tanto tanto bene sai
+una cantena ormai
+Che sciogliei sangue dinte vene sai
+
+
+
+Read more: Andrea Bocelli - Caruso Lyrics | MetroLyrics 
+
+
+

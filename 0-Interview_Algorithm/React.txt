@@ -1,0 +1,655 @@
+
+——————————————————————————————————————————————————————————————————————————————————
+ES6
+
+let : Block Scoping
+const
+	const a = 5;  ==> Can’t Change
+	
+	// CAN Change (Array or Object) cause const a pointing value position doesn’t have value
+	const a = [1,2,3];
+		a.push(4);
+	const a = { age: 24 }
+		a.age = 30;
+
+*******************************************
+
+a = 27;
+let a;   ===> Error , not like var
+
+*******************************************
+
+function a(){ age = 27 }
+let age;
+a();
+console.log(age);  ====> will be 27, cause let defined before function call
+
+*******************************************
+
+var fn = () => ‘Hello’;
+var fn = (a,b) => ‘Hello’;
+var fn = a => ‘Hello’;
+
+setTimeout( ()=>console.log(‘Hello’), 1000 );
+
+*******************************************
+
+var button = document.querySelector(‘button’);    // .querySelectorAll()
+
+var fn = () => console.log(this);   // this will be window object
+button.addEventListener(‘click’, fn);  // window object
+
+fn2 = function(){
+	console.log(this);
+}
+button.addEventListener(‘click’, fn2);  // BUTTON object !!!
+
+*******************************************
+
+Default function Argument value
+
+function isEqualTo(number, compare = 0){
+
+	return number == compare;
+}
+console.log(isEqualTo(10));
+
+
+*******************************************
+
+// You can use string as object field name and function name also
+
+let name = ‘Anna’;
+let age = 24;
+let obj = {
+	“name” 	: ‘Max’,
+	age,
+	“greet”(){ console.log( this.name + ‘ , ‘ + this.age )}
+}};
+
+obj[“greet”]();
+
+*******************************************
+
+Rest Operator (unfixed parameters) …
+
+function sumUp(…toAdd){
+	let result = 0;
+	for(let i=0; i<toAdd.length; i++){
+		result += toAdd[i];
+	}
+	return result;
+}
+
+console.log(sumUp(100,20,30));
+console.log(sumUp(1,2,3,4,5,6,));
+
+*******************************************
+
+Spreading Array
+
+let numbers = [1,2,3,4,5];
+
+console.log(…numbers);
+
+console.log(Math.max(numbers));  ===> ERROR  // Math.max(1,2,3,4,5); works
+
+console.log(Math.max(…numbers));  ===> WORKS~!
+
+*******************************************
+
+let testResults = [1,2,3];
+
+for(let a of testResults) {
+	console.log(a);
+}
+
+*******************************************
+
+Template Literals ( `` : back tag?)
+
+let name = ‘Max’;
+let description = `
+	Hello I’m ${name}
+`;
+
+*******************************************
+
+Destructuring Array
+
+let numbers = [1,2,3,4,5,6];
+let [a,b] = numbers;    ===> same as  let a=number[0]; let b=number[1];
+let [a, …b] = numbers;  ===> b is [2,3,4,5,6]
+
+let a = 5;
+let b = 10;
+[b,a] = [a,b];  ==> Swap Value
+
+*******************************************
+
+Destructuring Object
+
+let obj = {
+	name: ‘Max’,
+	age: 27,
+	greet: function(){
+		console.log(‘Hi’);
+	}
+}
+
+let {name, age} = obj;   ===> same as   let name = obj.name; let age = obj.age; /// MUST be same as object field name and var name
+
+let {greet} = obj;  ===>  if you want to change function name    let{greet:hello} = obj;
+
+greet(); 
+
+——————————————————————————————————————————————————————————————————————————————————
+
+ES7
+
+object.values({prop1:1, prop2:2});   ===> [1,2]
+
+object.entries({prop1:1, prop2:2});  ===> [[‘prop1’,1],[‘prop2’,2]]
+
+*******************************************
+
+String Padding
+
+“word”.padStart(10, ‘ ‘) ==> ‘          word’
+
+“9”.padStart(2,’0’)  ===> ’09’
+
+*******************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+——————————————————————————————————————————————————————————————————————————————————
+// Traceur : ES6 사용가능하게 해주는 plugin.  https://google.github.io/traceur-compiler/bin/traceur.js
+// https://github.com/google/traceur-compiler/wiki/Getting-Started
+// <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+// <script src="generators.js" type="module"></script>  // type module로 해야 Traceur 작동
+
+
+// Destructuring
+
+var foo = {
+	bar: 1,
+	baz: 2
+}
+var {bar, baz} = foo;
+
+var bar = foo.bar;
+var baz = foo.baz
+console.log(bar); ===> 1
+console.log(baz); ===> 2
+
+----------------------------------------------
+
+
+var tense = ["me","you","he"];
+var [firstPersion, secondPerson] = tense;
+
+console.log([firstPersion]);  ===> "me"
+console.log([secondPerson]);  ===> "you"
+
+----------------------------------------------
+
+Promise.all([promise1, promise2]).then(function(results){
+	var [ result1, result2 ] = results;
+})
+
+==> SAME
+
+Promise.all([promise1, promise2]).then(function([ result1, result2 ]){
+	
+})
+
+----------------------------------------------
+
+var foo = 2;
+var obj = {
+	bar: 1,
+	foo                 <=== same as foo: foo;
+}
+
+----------------------------------------------
+
+var name = "will";
+var age = 34;
+some.method({ name, age });
+{
+	name: name,
+	age: age
+}
+
+----------------------------------------------
+
+var name = "will";
+var obj = {};
+obj["name"+name] = "some value";
+
+----------------------------------------------
+
+function calcBmi(weight, height, max, callback){
+	var bim = weight / Math.pow(height, 2);
+	if (bim > max){
+		console.log("you're overweight");
+	}
+	if(callback){
+		callback(bmi);
+	}
+}
+calcBmi(weight, height, 25);
+calcBmi(weight, height, function(bimResult){   <==== will error because missing max param
+	console.log(bimResult);
+});
+
+===> Equal
+
+function calcBmi({weight, height, max = 25, callback}){     <== default max value...cool
+	var bim = weight / Math.pow(height, 2);
+	if (bim > max){
+		console.log("you're overweight");
+	}
+	if(callback){
+		callback(bmi);
+	}
+}
+calcBmi({weight, height, max:25});
+calcBmi({weight, height, callback : function(bimResult){   <=== object... so no error
+	console.log(bimResult);
+}});
+
+----------------------------------------------
+// Template Strings
+
+var name = "Will";
+var thing = "party";
+var greet = `hi, my name is ${name}
+             and I like to ${thing}!`;
+
+----------------------------------------------
+
+"const" is block scope
+"let", "var" is scope
+
+----------------------------------------------
+// Class
+
+function Parent(){
+	
+}
+Parent.prototype.foo = function(){};
+Parent.prototype.bar = function(){};
+
+====> ES6
+
+class Parent {
+	age = 34;
+
+	constructor(){
+
+	}
+
+	static foo(){
+
+	}
+
+	bar(){
+
+	}
+}
+
+class Child extends Parent {
+	contructor(){
+		super();  // Parent's contructor
+	}
+
+	baz(){
+
+	}
+}
+
+var child = new Child();
+
+child.age  -------> 34
+child.baz
+child.bar
+child.foo
+----------------------------------------------
+
+// Arrow Function
+
+var foo = function(a,b){
+	return a+b;
+}
+
+==> arrow function
+
+var foo = (a,b) => {
+	return a+b;
+}
+
+
+do.something(function(a,b){
+	return a+b;
+})
+
+===
+
+do.something((a,b) => { return a+b; });
+
+==
+
+do.something((a,b) => return a+b;);
+
+==
+
+do.something((a,b) => a+b);
+
+
+
+[0,1,2].map(val => val++); // [1,2,3]
+
+
+*************************************
+
+var module = {
+	age: 34,
+	foo: function(){
+		console.log(this.age);
+	}
+};
+module.foo(); // 34
+
+-->
+
+var module = {
+	age: 34,
+	foo: function(){
+		setTimeout(function(){
+			console.log(this.age);
+		}.bind(this), 1000);
+		console.log(this.age);
+	}
+};
+module.foo(); // 34
+
+-->
+
+var module = {
+	age: 34,
+	foo: function(){
+		setTimeout(() => {            // arrow function bind this automatically
+			console.log(this.age);
+		}, 1000);
+		console.log(this.age);
+	}
+};
+module.foo(); // 34
+
+----------------------------------------------
+// Modules
+
+// myModule.js
+module.exports.foo = function(){
+};
+
+module.exports.bar = function(){
+};
+
+
+// another file
+var myModule = require("myModule");
+var foo = myModule.foo;
+
+====>
+
+import myModule from "myModule";
+var foo = myModule.foo;
+
+====>
+
+import { foo, bar } from "myModule";
+foo;
+
+
+import {each, omit} from "lodash";
+omit(obj, "key");
+
+//ES6
+
+export var foo1 = 3;
+
+export function foo(){
+}
+
+export function bar(){
+}
+
+// another file
+import {foo1, foo as foolish, bar} from "myModule";
+
+console.log(foolish);
+
+----------------------------------------------
+// Async
+
+async function(){
+	var friends = await $.get("http://somesite/com/getFriends");
+	console.log(friends);
+}
+
+----------------------------------------------
+// Generator -- Promises
+
+Promise.coroutine(function* (){
+	var tweets = yield $.get("/api/tweets.json");
+	var profile = yield $.get("/api/profile.json");
+	var friends = yield $.get("/api/friends.json");
+	console.log(tweets, profile, friends);
+})();
+
+
+Promise.coroutine(function* (){
+	var data = yield {
+		tweets: $.get("/api/tweets.json"),
+		profile: $.get("/api/profile.json")
+	};
+	console.log(data.tweets, data.profile)
+})();
+
+
+Promise.coroutine(function* (){
+	var [tweets, profile] = yield [
+		$.get("/api/tweets.json");
+		$.get("/api/profile.json");
+	];
+	console.log(tweets, profile);
+})();
+
+
+var [a, b] = [10, 11]; // same as var a = 10, b = 11;
+
+----------------------------------------------
+
+var getProfile = $.ajax({ type:"GET", url: 'profile.json'});
+getProfile.then(
+	function(data){
+		console.log(data);
+	}, function(xhr, state, error){
+		console.log(error);
+	}
+);
+
+===
+
+$.get('profile.json').then(
+	function(data){
+		console.log(data);
+	}, function(xhr, state, error){
+		console.log(error);
+	}
+);
+
+===> next get
+
+$.get('profile.json').then( function(profile){
+	return $.get('friend.json?id='+profile.id);
+}).then( function(friend){
+	// do something with friend
+}, function(xhr, status, error){
+	// do error handler
+});
+
+
+==> multiple at once.
+
+var getProfile = $.get('profile.json');
+var getFriend = $.get('friend.json');
+$.when(getProfile, getFriend).then(function(profile, friend){
+	console.log(profile[0]);
+	console.log(friend[0]);
+}, function(){
+	// handle error
+});
+
+
+===> ES6
+
+var $status = $('#status');
+
+Promise.coroutine(function* (){
+	var profile = yield $.get('profile.json');
+	$status.append('<li>got profile</li>');
+
+	var tweets = yield $.get('tweets.json?id='+profile.id);
+	$status.append('<li>got tweets</li>');
+	$('#tweets-pre').html(JSON.stringify(friend));
+
+})().catch(function(errors){
+	// handle errors
+});
+
+
+
+
+
+——————————————————————————————————————————————————————————————————————————————————
+
+create-react-app react-complete-guide
+
+cd react-complete-guide
+
+nam start
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Welcome to React</h1>
+      </div>
+    );
+    // Behind JSX... Real React doing.....
+    // return React.createElement('div', {className: 'App'}, React.createElement('h1', null ,'Welcome to React'));
+  }
+}
+
+return <p>I'm a person and I am {Math.floor(Math.random() * 30)} years old!</p>
+
+
+
+// JSX Children….
+function UserName(props) {
+  return (
+      <div>
+      <b>{ props.children.lastName }</b>,
+      { props.children.firstName }
+    </div>
+  );
+}
+
+function App() {
+  var user = {
+    firstName: 'Krasimir',
+    lastName: 'Tsonev'
+  };
+    return (
+    <UserName>{ user }</UserName>
+  );
+}
+
+
+
+
+
+<button onClick={this.switchNameHandler()}>Switch Name</button>  // No… it will execute when loading 
+<button onClick={this.switchNameHandler}>Switch Name</button>  // Yes… it will execute when Clicked
+
+
+
+
+
+
+
+
+
+
+
+
+
+——————————————————————————————————————————————————————————————————————————————————
+
+git init
+
+
+#git add .       (or git add -A)
+#git reset -- somefolder_to_exclude
+
+# create .gitignore and below folder
+# node_modules/
+
+
+
+git commit -m "First commit"
+
+git remote add origin https://github.com/vicbiz/react-test-01.git
+# Sets the new remote
+git remote -v
+# Verifies the new remote URL
+
+git push -u origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+
+
+
+
