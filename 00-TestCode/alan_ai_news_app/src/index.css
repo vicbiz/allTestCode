@@ -1,0 +1,25 @@
+#root,
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  /* background-color: whitesmoke; */
+
+  background-image: url(./images/bg_map.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #304b5d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}

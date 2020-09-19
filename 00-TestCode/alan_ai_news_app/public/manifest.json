@@ -1,0 +1,16 @@
+{
+  "short_name": "React AlanAi News App",
+  "name": "React News Application with Alan-AI Voice",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "type": "image/png",
+      "purpose": "any maskable",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
