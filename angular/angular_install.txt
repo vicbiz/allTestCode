@@ -1,0 +1,17 @@
+sudo npm remove -g @angular/cli
+sudo npm install --cache /tmp/empty-cache
+sudo npm install -g @angular/cli
+
+@angular/cli@10.1.2 postinstall /Users/jmoon/.npm-packages/lib/node_modules/@angular/cli
+
+
+vi  ~/.bashrc
+
+alias ng="/Users/jmoon/.npm-packages/lib/node_modules/@angular/cli/bin/ng"
+          /Users/jmoon/.npm-packages/lib/node_modules/@angular/cli/bin/ng
+source .bashrc
+
+
+
+
+

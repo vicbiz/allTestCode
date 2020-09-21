@@ -1,0 +1,267 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 1em/1.6 "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+  background: #0a283c;
+  padding: 0 calc(10px + 2vw);
+  margin: 0 auto;
+}
+
+body > * {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  font-family: inherit;
+  font-size: 1.25em;
+}
+
+pre,
+code {
+  font: normal 0.9em/2 Consolas, monospace;
+  color: #0c0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.4em;
+}
+
+pre {
+  padding: 0.9em 15px;
+  white-space: pre-wrap;
+}
+
+small {
+  font-size: 1em;
+  opacity: 0.5;
+}
+
+a {
+  color: inherit;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  opacity: 0.8;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+b {
+  font-weight: 700;
+}
+
+h2,
+h3 {
+  margin-top: 2.7em;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+button {
+  color: #c60;
+  background: #fff;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.8;
+}
+
+.preview {
+  visibility: hidden;
+  position: fixed;
+  top: 1em;
+  left: 0;
+  width: 100%;
+}
+
+.preview > * {
+  display: block;
+  margin: 1em auto;
+}
+
+.preview > progress {
+  width: 60%;
+}
+
+.working .preview {
+  visibility: visible;
+}
+
+.ui {
+  transform: 0.2s;
+}
+
+.working .ui {
+  opacity: 0.5;
+}
+
+@media (min-width: 767px) {
+  .ui {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ui > * {
+    flex: 0 0 45%;
+  }
+  .ui > *:first-child {
+    padding-right: 50px;
+  }
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.selection label {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 2px;
+  transition: 0.2s;
+}
+
+.selection input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.selection label span {
+  font-weight: 700;
+  line-height: 1.4;
+  position: relative;
+  display: block;
+  padding: 0.4em 2.4rem 0.6em 0.8rem;
+}
+.selection label small {
+  font-weight: 400;
+  display: block;
+}
+
+.selection .legacy {
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.selection label span:before {
+  color: #000;
+  background: #fff;
+  border-radius: 100%;
+  content: "+";
+  height: 1.5em;
+  top: 0.5em;
+  right: 0.4rem;
+  line-height: 1.2;
+  position: absolute;
+  text-align: center;
+  width: 1.5em;
+}
+
+.selection label:hover,
+.selection input[type="checkbox"]:focus ~ span {
+  outline: 2px solid;
+}
+
+.selection input[type="checkbox"]:focus ~ .legacy {
+  opacity: 1;
+}
+
+.selection input[type="checkbox"]:checked ~ span:before {
+  font-weight: 200;
+  content: "×";
+}
+
+.selection input[type="checkbox"]:checked ~ span {
+  color: #000;
+  background: #fff;
+}
+
+.input label,
+.input span {
+  display: block;
+}
+
+.input label {
+  margin-top: 1.8em;
+}
+
+.input input[type="range"] {
+  width: 100%;
+  margin: 0;
+}
+
+.files {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.7);
+  cursor: copy;
+  width: 100%;
+  padding: 50px 10px;
+  margin-bottom: 1.6em;
+}
+
+.files:hover {
+  opacity: 0.7;
+}
+
+canvas {
+  background: #000;
+}
+
+.downloadable .output {
+  display: block;
+}
+
+.output {
+  display: none;
+  margin: 3.2em 0;
+}
+
+.output h3 {
+  padding-top: 1em;
+  border-top: 1px dashed;
+  margin-top: 3.2em;
+}
+
+.output h4 {
+  margin-top: 1.6em;
+}
+
+.output a {
+  display: inline-block;
+  font-size: 0.8em;
+  border: none;
+  margin: 0 50px 1.6em 0;
+}
+
+.output img {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.2) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.2) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.2) 75%);
+  background-size: 15px 15px;
+  background-position: center;
+}
