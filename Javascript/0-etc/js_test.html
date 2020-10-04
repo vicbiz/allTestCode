@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+
+
+<script>
+
+console.log("Map : ************************************************");
+// The map() method creates a new array with the results of calling a function for every array element.
+// The map() method calls the provided function once for each element in an array, in order.
+// Note: map() does not execute the function for array elements without values.
+// Note: map() does not change the original array.
+// array.map(function(currentValue, index, arr), thisValue)
+
+console.log("map() test 1  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+let a0 = [1, 5, 7, -1, -2, 8, 9, 13, -7];
+let a1 = [];
+let a2 = 6;
+a0.map(function(currentValue, idx, arr){
+//	console.log(currentValue, idx, arr);
+  	for(j = idx+1; j < arr.length; j++){
+  		if(currentValue + arr[j] == a2){
+  			console.log(currentValue +" + "+ arr[j] +" = "+ a2);
+        }
+    }
+});
+
+a1 = a0.map(function(currentValue){
+	return currentValue, Math.pow(currentValue, 2);
+});
+console.log("Original : ", a0);
+console.log("pow 2 : ", a1);
+
+console.log("\n\n");
+
+
+console.log("map() test 2  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+const doSomeMapFunc = function(cv, idx, arr){
+	console.log(cv, idx, arr);
+}
+a0.map(doSomeMapFunc);
+
+
+
+
+console.log("\n\n\nFilter : ************************************************");
+// The filter() method creates an array filled with all array elements that pass a test (provided as a function).
+// Note: filter() does not execute the function for array elements without values.
+// Note: filter() does not change the original array.
+// array.filter(function(currentValue, index, arr), thisValue)
+
+var ages = [32, 33, 16, 40];
+var adultAge = 18;
+function checkAdult(age) {
+    return age >= adultAge;
+}
+console.log(`Original Array `,ages);
+console.log(`ages more than ${adultAge} `,ages.filter(checkAdult), "\n\n");
+
+
+let b1 = [];
+b1 = a0.filter(function(currentValue, idx, arr){
+	// console.log(currentValue, idx, arr);
+	return currentValue > a2;
+});
+console.log(`numbers greater than ${a2} `,b1);
+
+
+
+
+
+
+
+console.log("\n\n\nRecude : ************************************************");
+// The reduce() method reduces the array to a single value.
+// The reduce() method executes a provided function for each value of the array (from left-to-right).
+// The return value of the function is stored in an accumulator (result/total).
+// Note: reduce() does not execute the function for array elements without values.
+// array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+console.log("Recude() test 1  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+const ary1 = [1, 2, 3, 4, 5];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+console.log(ary1.reduce(reducer)); // 1 + 2 + 3 + 4 // expected output: 10
+console.log(ary1.reduce(reducer, 5)); // 5 + 1 + 2 + 3 + 4 // expected output: 15
+
+
+
+console.log("Recude() test 2  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+const reducerParams = function(total, currentValue, currentIndex, arr){
+	var t1 = total + currentValue;
+	console.log("total", total, 't1', t1 , 'currentValue', currentValue, 'currentIndex', currentIndex, 'arr', arr);
+	return t1;
+};
+var sum = ary1.reduce(reducerParams)
+console.log("sum",sum); 
+
+
+
+
+
+
+console.log("\n\n\nSet (ES6): ************************************************");
+// Set objects are collections of values. You can iterate through the elements of a set in insertion order. 
+// A value in the Set may only occur once; it is unique in the Set's collection.
+
+console.log("\nSet() test 1  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+const set1 = new Set([1, 2, 3, 4, 5]);
+console.log("set1", set1);
+console.log("set1.has(1)",set1.has(1)); // expected output: true
+console.log("set1.has(5)",set1.has(5)); // expected output: true
+console.log("set1.has(6)",set1.has(6)); // expected output: false
+
+const set2 = new Set([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]);
+console.log("\n\neliminate duplicates ",[1, 2, 3, 4, 5, 1, 2, 3, 4, 5], ' TO ', set2);
+console.log("set to array using Array.from >>>> ",Array.from(set2));
+
+
+
+
+
+
+console.log("\nSet() test 2  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+var mySet = new Set();
+
+mySet.add(1); // Set [ 1 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add('some text'); // Set [ 1, 5, 'some text' ]
+var o = {a: 1, b: 2};
+mySet.add(o);
+
+mySet.add({a: 1, b: 2}); // o is referencing a different object so this is okay
+
+mySet.has(1); // true
+mySet.has(3); // false, 3 has not been added to the set
+mySet.has(5);              // true
+mySet.has(Math.sqrt(25));  // true
+mySet.has('Some Text'.toLowerCase()); // true
+mySet.has(o); // true
+
+mySet.size; // 5
+
+mySet.delete(5); // removes 5 from the set
+mySet.has(5);    // false, 5 has been removed
+
+mySet.size; // 4, we just removed one value
+console.log("mySet : ", mySet);// Set [ 1, "some text", Object {a: 1, b: 2}, Object {a: 1, b: 2} ]
+
+
+
+
+
+console.log("\nSet() test 3  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+// iterate over items in set
+// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2} 
+for (let item of mySet) console.log("item : ",item);
+console.log("\n");
+
+// index, value only works with Array not with Set... !!!!
+console.log("index, value with mySet ***");
+for (const [index, value] of mySet.entries()) console.log("index : ",index, 'value', value);
+console.log("\n");
+
+console.log("index, value with Set ***");
+for (const [index, value] of new Set([100,200,300,400,500]).entries()) console.log("index : ",index, 'value', value);
+console.log("\n");
+
+console.log("index, value with Array... Works ***");
+for (const [index, value] of [100,200,300,400,500].entries()) console.log("index : ",index, 'value', value);
+console.log("\n");
+
+// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2} 
+console.log("mySet.keys() ***");
+for (let item of mySet.keys()) console.log("keys() : ",item);
+console.log("\n");
+ 
+// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2} 
+console.log("mySet.values() ***");
+for (let item of mySet.values()) console.log(item);
+console.log("\n");
+
+// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2} 
+//(key and value are the same here)
+console.log("[key, value] mySet.entries() ***");
+for (let [key, value] of mySet.entries()) console.log(key);
+console.log("\n");
+
+// convert Set object to an Array object, with Array.from
+var myArr = Array.from(mySet); // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+
+// the following will also work if run in an HTML document
+mySet.add(document.body);
+mySet.has(document.querySelector('body')); // true
+
+// converting between Set and Array... same as Array.from()
+mySet2 = new Set([1, 2, 3, 4]); // to Set
+mySet2.size; // 4
+var spreaded = [...mySet2]; // [1, 2, 3, 4] // to Array
+console.log("spreaded : ",spreaded);
+console.log("spreaded typeof([...mySet2]) : ",typeof(spreaded)); // object
+console.log("Array.isArray(spreaded): ",Array.isArray(spreaded)); // object
+console.log("spreaded.length : ",spreaded.length); // object
+
+console.log("\n\n");
+
+// intersect can be simulated via 
+var intersection = new Set([...set1].filter(x => set2.has(x)));
+
+// difference can be simulated via
+var difference = new Set([...set1].filter(x => !set2.has(x)));
+
+console.log("Iterate set entries with forEach... no index....!!!");
+mySet.forEach(function(value, idx, set) {
+  console.log("value : ", value, "idx : ", idx, "set : ", set);
+});
+
+
+
+
+
+
+
+
+
+console.log("\nSet() test 4  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+var isSuperset = function(set, subset) {
+    for (var elem of subset) {
+        if (!set.has(elem)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+var union = function(setA, setB) {
+    var _union = new Set(setA);
+    for (var elem of setB) {
+        _union.add(elem);
+    }
+    return _union;
+}
+
+var intersection = function(setA, setB) {
+    var _intersection = new Set();
+    for (var elem of setB) {
+        if (setA.has(elem)) {
+            _intersection.add(elem);
+        }
+    }
+    return _intersection;
+}
+
+var difference = function(setA, setB) {
+    var _difference = new Set(setA);
+    for (var elem of setB) {
+        _difference.delete(elem);
+    }
+    return _difference;
+}
+
+//Examples
+var setA = new Set([1, 2, 3, 4]),
+    setB = new Set([2, 3]),
+    setC = new Set([3, 4, 5, 6]);
+
+console.log("isSuperset(setA, setB)", isSuperset(setA, setB)); // => true
+console.log("union(setA, setC)", union(setA, setC)); // => Set [1, 2, 3, 4, 5, 6]
+console.log("intersection(setA, setC)", intersection(setA, setC)); // => Set [3, 4]
+console.log("difference(setA, setC)", difference(setA, setC)); // => Set [1, 2]
+
+
+console.log("\nSet() test 5  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+var myArray = ['value1', 'value2', 'value3'];
+
+// Use the regular Set constructor to transform an Array into a Set
+var mySet = new Set(myArray);
+mySet.has('value1'); // returns true
+
+// Use the spread operator to transform a set into an Array.
+console.log([...mySet]); // Will show you exactly the same Array as myArray
+
+
+
+
+console.log("\nSet() test 6  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+var text = 'Korea';
+
+var mySet = new Set(text);  // Set ['K', 'o', 'r', 'e', 'a']
+mySet.size;  // 5
+
+
+
+console.log([..."korea"]);
+
+
+
+console.log("\n\n\nEliminate duplicates : ************************************************");
+
+let c0 = [1, 2, 3, 1, 2, 3];
+let c1 = new Set(c0); // [1, 2, 3]
+console.log(c0,c1);
+
+let c2 = c0.reduce((x, y) => x.includes(y) ? x : [...x, y], []);
+console.log(c0,c2);
+
+let c3 = c0.filter((el, i, a) => i === a.indexOf(el))
+console.log(c0,c3);
+
+let array1 = [{"id":1,"name":"apple","id":2,"name":"orange"}];
+let array2 = [{"id":1,"name":"apple","id":4,"name":"purple"}];
+
+let unique = array1.concat(array2).filter((obj, key, array) => array.map((obj2) => obj.id !== obj2.id));
+console.log(unique);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+    </head>
+    <body>
+        
+    </body>
+</html>

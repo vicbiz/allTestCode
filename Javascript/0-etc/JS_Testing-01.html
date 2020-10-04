@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS Promise Testing</h1>
+  </body>
+
+  <script>
+    const userLeft = true;
+    const userWatchingCatMeme = false;
+
+    // Call Back
+    function watchTutorial(callback, errorCallback) {
+      if (userLeft) {
+        errorCallback({
+          name: "User Left",
+          message: "Sad.........",
+        });
+      } else if (userWatchingCatMeme) {
+        errorCallback({
+          name: "User watching Cat Meme",
+          message: "tutorial < cat",
+        });
+      } else {
+        callback("Thumbs up");
+      }
+    }
+
+    watchTutorial(
+      (message) => {
+        console.log("Success :  " + message);
+      },
+      (error) => {
+        console.log(error.name + " " + error.message);
+      }
+    );
+
+    // Promise
+    function watchPromise() {
+      return new Promise((resolve, reject) => {
+        if (userLeft) {
+          reject({
+            name: "User Left",
+            message: "Sad.........",
+          });
+        } else if (userWatchingCatMeme) {
+          reject({
+            name: "User watching Cat Meme",
+            message: "tutorial < cat",
+          });
+        } else {
+          resolve("Thums up");
+        }
+      });
+    }
+
+    watchPromise()
+      .then((message) => console.log("Thumbs up"))
+      .catch((error) => {
+        console.log(error.name + " " + error.message);
+      });
+  </script>
+</html>
