@@ -13,7 +13,7 @@ window.addEventListener("load", async (e) => {
 });
 
 async function updateSources() {
-  const url = `http://newsapi.org/v2/sources/?apiKey=${apiKey}`;
+  const url = `http://cors-anywhere.herokuapp.com/http://newsapi.org/v2/sources/?apiKey=${apiKey}`;
   const request = new Request(url);
 
   fetch(request)
@@ -31,7 +31,7 @@ async function updateSources() {
 }
 
 async function updateNews(source = defaultSource) {
-  const url = `http://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`;
+  const url = `http://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`;
   const request = new Request(url);
 
   fetch(request)
