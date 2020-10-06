@@ -1,0 +1,7 @@
+[
+  { "title": "Title 1", "author": "author 1", "price": 1.99 },
+  { "title": "Title 2", "author": "author 2", "price": 2.99 },
+  { "title": "Title 3", "author": "author 3", "price": 3.99 },
+  { "title": "Title 4", "author": "author 4", "price": 4.99 },
+  { "title": "Title 5", "author": "author 5", "price": 5.99 }
+]
